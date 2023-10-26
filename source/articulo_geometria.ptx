@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- This is the main file of the pretext template book provided -->
+<!-- by the `pretext new book` command.  The main.ptx here always-->
+<!-- starts with <pretext> tags.  In this example, the main file -->
+<!-- just imports other .ptx files which contain content. Open   -->
+<!-- those files to see more pretext features                    -->
+
+<pretext xml:lang="es-ES" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <!-- we first include a file which contains the docinfo element: -->
+  <xi:include href="./meta_docinfo.ptx" />
+
+  <!-- The <book> tags wrap all the content.  Change the @xml:id   -->
+  <!-- to some short (non-spaced) description of your book         -->
+  <article xml:id="geometria">
+    <!-- The book needs a title and can have a subtitle  -->
+    <title>Geometría</title>
+    <subtitle>Resumen teórico y ejercicios.</subtitle>
+
+    <xi:include href="geometria/sec_ecuaciones-recta.ptx" />
+	<xi:include href="geometria/sec_ecuaciones-plano.ptx" />
+	<xi:include href="geometria/sec_posicion-dos-planos.ptx" />
+	<xi:include href="geometria/sec_ecuacion-implicita-recta.ptx" />
+	<xi:include href="geometria/sec_posicion-tres-planos.ptx" />
+	<xi:include href="geometria/sec_posicion-dos-rectas.ptx" />
+	<xi:include href="geometria/sec_posicion-recta-plano.ptx" />
+	<xi:include href="geometria/sec_proyeccion-punto.ptx" />
+	<xi:include href="geometria/sec_punto-simetrico.ptx" />
+	<xi:include href="geometria/sec_problemas-geometricos.ptx" />
+	<!-- One or more of the sections of a chapter might be exercises-->
+	<xi:include href="geometria/ex_geometria-afin.ptx"/> 
+  </article>
+</pretext>

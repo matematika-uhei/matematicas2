@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- This is the main file of the pretext template book provided -->
+<!-- by the `pretext new book` command.  The main.ptx here always-->
+<!-- starts with <pretext> tags.  In this example, the main file -->
+<!-- just imports other .ptx files which contain content. Open   -->
+<!-- those files to see more pretext features                    -->
+
+<pretext xml:lang="es-ES" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <!-- we first include a file which contains the docinfo element: -->
+  <xi:include href="./meta_docinfo.ptx" />
+
+  <!-- The <book> tags wrap all the content.  Change the @xml:id   -->
+  <!-- to some short (non-spaced) description of your book         -->
+  <article xml:id="limites">
+    <!-- The book needs a title and can have a subtitle  -->
+    <title>Límites y Continuidad</title>
+    <subtitle>Resumen teórico y ejercicios.</subtitle>
+
+    <objectives>
+				<ul>
+					<li>
+						<p>
+							Destrezas para operar con números reales, vectores y matrices. Cálculo mental o escrito en los casos sencillos y uso de herramientas tecnológicas en los casos más complejos.
+						</p>
+					</li>
+					<li>
+						<p>
+							Adición y producto de vectores y matrices: comprensión y uso adecuado de las propiedades.
+						</p>
+					</li>
+					<li>
+						<p>
+							Matrices para midelizar situaciones derivadas de contextos científicos, sociales y de la vida cotidiana.
+						</p>
+					</li>
+				</ul>
+		</objectives>
+
+		<xi:include href="limites/sec_limites.ptx" />
+		<xi:include href="limites/sec_calculo-analitico-limites.ptx" />
+		<xi:include href="limites/sec_indeterminacion-0-0.ptx" />
+  	<xi:include href="limites/sec_limites-infinito.ptx" />
+  	<xi:include href="limites/sec_continuidad.ptx" />
+  	<xi:include href="limites/sec_continuidad-funcion-intervalo.ptx" />
+  	<xi:include href="limites/sec_teoremas-continuidad.ptx" />
+
+    <!-- Finaly we place the backmatter in its own file and inlcude-->
+    <!-- <xi:include href="./meta_backmatter.ptx" /> -->
+  </article>
+</pretext>

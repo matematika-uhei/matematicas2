@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Chapters are enclosed with <chapter> tags. Use xml:id to -->
+<!-- uniquely identify the chapter.  The @xmlns:xi attribute  -->
+<!-- is needed if you use xi:include in this file             -->
+<chapter xml:id="ch_probabilidad" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+	<!-- Change title when you have one: -->
+	<title>Probabilidad</title>
+	<!-- If the chapter has sections, there may be an introduction -->
+	<!-- before those sections. Note the <p> tags around content.  -->
+	<introduction>
+		<objectives>
+				<ul>
+					<li>
+						<p>
+							Expresar una recta mediante su ecuación.
+						</p>
+					</li>
+					<li>
+						<p>
+							Expresar un plano mediante alguna de sus ecuaciones.
+						</p>
+					</li>
+					<li>
+						<p>
+							Hallar la posición relativa de dos planos y de tres planos.
+						</p>
+					</li>
+					<li>
+						<p>
+							Calcular la posición relativa de dos rectas.
+						</p>
+					</li>
+					<li>
+						<p>
+							Hallar la posición relativa de una recta y un plano .
+						</p>
+					</li>
+				</ul>
+		</objectives>
+	</introduction>
+	<!-- Sections can be written directly here, but it might help  -->
+	<!-- with organization to include them as separate files.      -->
+	<!-- That way it is easy to include the section in a different -->
+	<!-- chapter later if you change your mind about the order.    -->
+		<xi:include href="probabilidad/sec_experimentos_aleatorios.ptx" />
+    <!--<xi:include href="probabilidad/sec_combinatoria.ptx" />-->
+    <xi:include href="probabilidad/sec_probabilidad.ptx" />
+    <xi:include href="probabilidad/sec_calculo_probabilidades.ptx" />
+    <xi:include href="probabilidad/sec_tablas_de_contingencia.ptx" />
+    <xi:include href="probabilidad/sec_experimentos_compuestos.ptx" />
+    <xi:include href="probabilidad/sec_probabilidad_total.ptx" />
+    <xi:include href="probabilidad/sec_teorema_de_bayes.ptx" />
+    <!--<xi:include href="probabilidad/sec_problemas.ptx" />-->
+</chapter>

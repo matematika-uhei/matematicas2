@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright 2018 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<chapter xml:id="ch_matrices-determinantes" xmlns:xi="http://www.w3.org/2001/XInclude">
+	<title>Matrices y determinantes</title>
+	<objectives>
+				<ul>
+					<li>
+						<p>
+							Destrezas para operar con números reales, vectores y matrices. Cálculo mental o escrito en los casos sencillos y uso de herramientas tecnológicas en los casos más complejos.
+						</p>
+					</li>
+					<li>
+						<p>
+							Adición y producto de vectores y matrices: comprensión y uso adecuado de las propiedades.
+						</p>
+					</li>
+					<li>
+						<p>
+							Matrices para midelizar situaciones derivadas de contextos científicos, sociales y de la vida cotidiana.
+						</p>
+					</li>
+				</ul>
+		</objectives>
+
+	<xi:include href="matrices/sec_definicion-matriz.ptx" />
+  	<!-- <xi:include href="matrices/sec_tipos-matrices.ptx" />-->
+  <xi:include href="matrices/sec_operaciones-matrices.ptx" />
+	<xi:include href="matrices/sec_determinantes.ptx" />
+	<xi:include href="matrices/sec_matriz-adjunta.ptx" />
+	<xi:include href="matrices/sec_desarrollo-determinante-adjuntos.ptx" />
+	<xi:include href="matrices/sec_matriz-inversa.ptx" />
+	<xi:include href="matrices/sec_rango-matriz.ptx" />
+	<xi:include href="matrices/sec_ecuaciones-matriciales.ptx" />
+	<xi:include href="ejercicios/ex_matrices-resueltos.ptx" />
+	<xi:include href="ejercicios/ex_matrices.ptx" />
+</chapter>

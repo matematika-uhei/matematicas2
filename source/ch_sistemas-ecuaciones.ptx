@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright 2018 Joel Feldman, Andrew Rechnitzer and Elyse Yeager -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License-->
+<!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+<chapter xml:id="ch_sistemas-ecuaciones" xmlns:xi="http://www.w3.org/2001/XInclude">
+	<title>Sistemas de Ecuaciones</title>
+	<introduction>
+		<p>
+		En este tema veremos que son y para que sirven los sistemas de ecuaciones, así como varios métodos para resolverlos.
+		</p>
+	</introduction>
+
+	<xi:include href="sistemas/sec_sistemas-ecuaciones.ptx" />
+  <xi:include href="sistemas/sec_resolucion-sistemas-ecuaciones.ptx" />-->
+	<xi:include href="sistemas/sec_teorema-rouche-frobenius.ptx" />-->
+	<xi:include href="sistemas/sec_sistemas-parametros.ptx" />
+	<!--<xi:include href="matrices/sec_determinantes.ptx" />-->
+	<!--<xi:include href="matrices/sec_matriz-adjunta.ptx" />-->
+	<!--<xi:include href="matrices/sec_matriz-inversa.ptx" />-->
+	<!--<xi:include href="matrices/sec_rango-matriz.ptx" />-->
+	<!--<xi:include href="matrices/sec_ecuaciones-matriciales.ptx" />-->
+	<!--<xi:include href="ejercicios/ex_matrices-resueltos.ptx" />-->
+	<xi:include href="ejercicios/ex_sistemas-ecuaciones.ptx" />
+</chapter>

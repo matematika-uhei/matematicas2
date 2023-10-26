@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- This is the main file of the pretext template book provided -->
+<!-- by the `pretext new book` command.  The main.ptx here always-->
+<!-- starts with <pretext> tags.  In this example, the main file -->
+<!-- just imports other .ptx files which contain content. Open   -->
+<!-- those files to see more pretext features                    -->
+
+<pretext xml:lang="es-ES" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <!-- we first include a file which contains the docinfo element: -->
+  <xi:include href="./meta_docinfo.ptx" />
+
+  <!-- The <book> tags wrap all the content.  Change the @xml:id   -->
+  <!-- to some short (non-spaced) description of your book         -->
+  <article xml:id="vectores">
+    <!-- The book needs a title and can have a subtitle  -->
+    <title>Vectores</title>
+    <subtitle>Resumen teórico y ejercicios.</subtitle>
+
+    <xi:include href="vectores/sec_vectores-operaciones.ptx" />
+	  <xi:include href="vectores/sec_sistema-referencia-vectores.ptx" />
+	  <xi:include href="vectores/sec_operaciones-componentes.ptx" />
+	  <xi:include href="vectores/sec_producto-escalar.ptx" />
+	  <xi:include href="vectores/sec_producto-vectorial.ptx" />
+	  <xi:include href="vectores/sec_producto-mixto.ptx" />
+	  <!-- One or more of the sections of a chapter might be exercises-->
+	  <xi:include href="vectores/ex_vectores.ptx"/> 
+
+    <!-- Finaly we place the backmatter in its own file and inlcude-->
+    <!-- <xi:include href="./meta_backmatter.ptx" /> -->
+  </article>
+</pretext>

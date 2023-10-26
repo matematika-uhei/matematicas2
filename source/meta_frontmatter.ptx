@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This frontmatter division will contain all content before the -->
+<!-- first chapter.  Fill in and comment/uncomment to see how this -->
+<!-- works.                                                        -->
+
+<frontmatter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="meta_frontmatter">
+  <titlepage>
+    <author>
+      <personname>Profesores Matemáticas</personname>
+      <department>Departemento de Matemáticas</department>
+      <institution>U.H.E.I - I.V.E.D.</institution>
+    </author>
+    <date><today/></date>
+  </titlepage>
+
+  <colophon>
+
+    <website>
+      <name><c>Web</c></name>
+      <address>http://ived.eus</address>
+    </website>
+
+    <copyright>
+      <!-- In addition to specifying the copyright holder, you should  -->
+      <!-- include a license, such as the cc-by-sa license shown below -->
+      <!-- so people reading your book know how they can use it.       -->
+      <year>2022<ndash/>2023</year>
+      <holder>Profesores de Matemáticas</holder>
+      <!-- <minilicense><image source="../images/by-sa.png" /></minilicense> -->
+      <shortlicense>
+        <!-- <image source="../images/by-sa.png" width="15%"/>  -->
+        This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License.
+        To view a copy of this license, visit
+        <url 
+          href="http://creativecommons.org/licenses/by-sa/4.0/"
+          visual="creativecommons.org/licenses/by-sa/4.0">
+          CreativeCommons.org</url>
+      </shortlicense>
+    </copyright>
+
+  </colophon>
+
+  <dedication>
+    <p>
+      For ...
+    </p>
+  </dedication>
+
+  <acknowledgement>
+    <p>
+      Gracias a todos los que han leido y corregido este libro.
+    </p>
+  </acknowledgement>
+
+  <preface xml:id="meta_frontmatter-preface">
+    <!-- You should be a little careful about what you put here -->
+    <!-- Avoid elements that should have a number, for example  -->
+    <p>
+      Este libro es un resumen de la asignatura de Matemáticas II de 2º de Bachillerato. Espero que mis alumnos disfruten estudiando con él, lo mismo que nosotros hemos disfrutado escribiendolo.
+    </p>
+  </preface>
+
+  <!-- You can have more than one preface. -->
+
+</frontmatter>
+
