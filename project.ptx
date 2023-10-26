@@ -1,10 +1,150 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Managed automatically by PreTeXt authoring tools -->
-<!-- (delete the above line to manage this file manually) -->
-<!-- This file, the project manifest, provides the overall configuration for your PreTeXt project. To edit the content of your document, open `source/main.ptx`. See https://pretextbook.org/doc/guide/html/processing-CLI.html#cli-project-manifest. -->
-<project ptx-version="2">
+<!--
+    This file provides the overall configuration for your PreTeXt
+    project. To edit the content of your document, open `source/main.ptx`
+    (default location).
+-->
+<project>
   <targets>
-    <target name="web" format="html" />
-    <target name="print" format="pdf" />
+    <!-- To build this target, run `pretext build web` -->
+    <target name="web">
+      <format>html</format>
+      <source>source/matematicas2.ptx</source>
+      <publication>publication/publication.ptx</publication>
+      <output-dir>output/web</output-dir>
+    </target>
+    <target name="print" pdf-method="xelatex">
+      <format>pdf</format>
+      <source>source/matematicas2.ptx</source>
+      <publication>publication/publication.ptx</publication>
+      <output-dir>output/print</output-dir>
+			<xsl>xsl/apc-latex.xsl</xsl>
+    </target>
+    <target name="print-latex">
+      <format>latex</format>
+      <source>source/matematicas2.ptx</source>
+      <publication>publication/publication.ptx</publication>
+      <output-dir>output/print-latex</output-dir>
+	    <xsl>xsl/apc-latex.xsl</xsl>
+    </target>
+    <target name="solutions">
+      <format>latex</format>
+      <source>source/matematicas2.ptx</source>
+      <publication>publication/publication.ptx</publication>
+      <output-dir>output/solutions</output-dir>
+	    <xsl>xsl/apc-solution-manual.xsl</xsl>
+    </target>
+    <target name="subset">
+      <format>html</format>
+      <source>source/matematicas2.ptx</source>
+      <publication>publication/publication.ptx</publication>
+      <output-dir>output/subset</output-dir>
+      <stringparam key="debug.skip-knowls" value="yes"/>
+      <!-- edit this to change the section/chapter/etc. to include
+           in your subset build -->
+      <xmlid-root>ch_derivadas</xmlid-root>
+    </target>
+    <target name="matrices">
+      <format>html</format>
+      <source>source/articulo_matrices.ptx</source>
+      <publication>publication/publication2.ptx</publication>
+      <output-dir>output/web/matrices</output-dir>
+    </target>
+    <target name="ej-matrices">
+      <format>html</format>
+      <source>source/ejercicios_matrices.ptx</source>
+      <publication>publication/publication2.ptx</publication>
+      <output-dir>output/web/ejercicios/matrices</output-dir>
+    </target>
+    <target name="print-matrices">
+      <format>pdf</format>
+      <source>source/articulo_matrices.ptx</source>
+      <publication>publication/publication2.ptx</publication>
+      <output-dir>output/print/matrices</output-dir>
+      <xsl>xsl/apc-latex-art.xsl</xsl>
+    </target>
+    <target name="print-ej-matrices">
+      <format>pdf</format>
+      <source>source/ejercicios_matrices.ptx</source>
+      <publication>publication/publication2.ptx</publication>
+      <output-dir>output/print/ejercicios/matrices</output-dir>
+       <xsl>xsl/apc-latex-art.xsl</xsl>
+    </target>
+    <target name="sistemas">
+      <format>html</format>
+      <source>source/articulo_sistemas.ptx</source>
+      <publication>publication/publication2.ptx</publication>
+      <output-dir>output/web/sistemas</output-dir>
+    </target>
+     <target name="print-sistemas">
+      <format>pdf</format>
+      <source>source/articulo_sistemas.ptx</source>
+      <publication>publication/publication2.ptx</publication>
+      <output-dir>output/print/sistemas</output-dir>
+      <xsl>xsl/apc-latex-art.xsl</xsl>
+    </target>
+    <target name="vectores">
+      <format>html</format>
+      <source>source/articulo_vectores.ptx</source>
+      <publication>publication/publication2.ptx</publication>
+      <output-dir>output/web/vectores</output-dir>
+    </target>
+    <target name="geometria">
+      <format>html</format>
+      <source>source/articulo_geometria.ptx</source>
+      <publication>publication/publication2.ptx</publication>
+      <output-dir>output/web/geometria</output-dir>
+    </target>
+    <target name="probabilidad">
+      <format>html</format>
+      <source>source/articulo_probabilidad.ptx</source>
+      <publication>publication/publication.ptx</publication>
+      <output-dir>output/web/probabilidad</output-dir>
+    </target>
+    <target name="distribuciones">
+      <format>html</format>
+      <source>source/articulo_distribuciones.ptx</source>
+      <publication>publication/publication.ptx</publication>
+      <output-dir>output/web/distribuciones</output-dir>
+    </target>
+    <target name="limites">
+      <format>html</format>
+      <source>source/articulo_limites.ptx</source>
+      <publication>publication/publication2.ptx</publication>
+      <output-dir>output/web/limites</output-dir>
+    </target>
+    <target name="derivadas">
+      <format>html</format>
+      <source>source/articulo_derivadas.ptx</source>
+      <publication>publication/publication2.ptx</publication>
+      <output-dir>output/web/derivadas</output-dir>
+    </target>
+    <target name="integrales">
+      <format>html</format>
+      <source>source/articulo_integrales.ptx</source>
+      <publication>publication/publication2.ptx</publication>
+      <output-dir>output/web/vectores</output-dir>
+    </target>
+    <target name="print-derivadas" pdf-method="xelatex">
+      <format>pdf</format>
+      <source>source/articulo_derivadas.ptx</source>
+      <publication>publication/publication2.ptx</publication>
+      <output-dir>output/print/derivadas</output-dir>
+      <xsl>xsl/apc-latex-art.xsl</xsl>
+    </target>
   </targets>
+  <executables>
+      <latex>latex</latex>
+      <pdflatex>pdflatex</pdflatex>
+      <xelatex>xelatex</xelatex>
+      <pdfsvg>pdf2svg</pdfsvg>
+      <asy>asy</asy>
+      <sage>sage</sage>
+      <pdfpng>convert</pdfpng>
+      <pdfeps>pdftops</pdfeps>
+      <pdfcrop>pdf-crop-margins</pdfcrop>
+      <pageres>pageres</pageres>
+      <node>node</node>
+      <liblouis>file2brl</liblouis>
+    </executables>
 </project>

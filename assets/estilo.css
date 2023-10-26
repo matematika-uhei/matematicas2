@@ -1,0 +1,9 @@
+body.pretext {
+/*
+    position: relative;
+*/
+    width: 1800px;  /* To match PreTeXt */
+    margin: 0 auto 0 auto;  /* centered content */
+    padding: 0;
+    box-sizing: border-box;
+}
