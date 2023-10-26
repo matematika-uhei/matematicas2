@@ -1,0 +1,669 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercises xml:id="ex_distribuciones" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <!-- You can ommit the title and just get the default "Exercises" -->
+	<title>Ejercicios Distribuciones</title>
+
+  <exercise>
+		<statement>
+			<p>
+				De los estudiantes universitarios, uno de cada 5 abandona sus estudios. Se seleccionan 5 estudiantes universitarios al azar, de modo independiente: 
+			</p>
+			<p>
+				<ol>
+					<li>
+					<p>
+						¿Cuál es la probabilidad de que uno o ninguno de dichos estudiantes abandonen sus estudios?.
+					</p>
+				</li>
+				<li>
+					<p>
+						¿Qué es más probable, que todos abandonen sus estudios, o que ninguno lo haga? Razone la respuesta de modo numérico.
+					</p>
+				</li>
+				</ol>
+			</p>
+		</statement>
+		<answer>
+			<p>
+				<ol>
+					<li>
+					<p>
+						¿Cuál es la probabilidad de que uno o ninguno de dichos estudiantes abandonen sus estudios?.
+					</p>
+				</li>
+				<li>
+					<p>
+						¿Qué es más probable, que todos abandonen sus estudios, o que ninguno lo haga? Razone la respuesta de modo numérico.
+					</p>
+				</li>
+				</ol>
+			</p>
+		</answer>
+		<solution>
+			<p>
+				<m>X:B\left( 9; \dfrac{1}{5} \right)</m>
+			</p>
+			<p>
+				<ol>
+					<li>
+					<p>
+						<md>
+							<mrow>P(X = 1) +P(X = 0) \amp = \binom{5}{1} \cdot \left( \dfrac{1}{5} \right)^1 \cdot \left( \dfrac{1}{5} \right)^4 + \binom{5}{0} \cdot \left( \dfrac{1}{5} \right)^0 \cdot \left( \dfrac{1}{5} \right)^5</mrow>
+							<mrow> \amp =0.4096+0.3277=0,7373</mrow>
+						</md>
+					</p>
+				</li>
+				<li>
+					<p>
+						<md>
+							<mrow> P(X = 0)  =   \binom{5}{0} \cdot \left( \dfrac{1}{5} \right)^0 \cdot \left( \dfrac{1}{5} \right)^5=0.3277</mrow>
+							<mrow> P(X = 5) = \binom{5}{5} \cdot \left( \dfrac{1}{5} \right)^54 \cdot \left( \dfrac{1}{5} \right)^0=0.00032</mrow>
+						</md>
+					</p>
+					<p>
+						Es más probable que no abandone ninguno
+					</p>
+				</li>
+				</ol>
+			</p>
+		</solution>
+	</exercise>
+
+	<exercise>
+		<statement>
+			<p>
+				Se tiene un suceso con variable aleatoria <m>X</m> que sigue una distribución normal de media <m>\mu = 10</m> y desviación típica <m>\sigma = 2</m>: Calcula:
+			</p>
+			<p>
+				<ol>
+					<li>
+						<p>
+							La probabilidad de que <m>X \in [6,10]</m>
+						</p>
+					</li>
+					<li>
+						<p>
+              Se hace una revisión de los datos y se observa que la media coincide pero la probabilidad del 80% se alcanza en el valor <m> X \leq 12</m>. ¿Cuál es la nueva desviación típica? 
+						</p>
+					</li>
+				</ol>
+			</p>
+		</statement>
+		<answer>
+			<p>
+				<ol>
+					<li>
+						<p>
+							<m>0.4772</m>
+						</p>
+					</li>
+					<li>
+						<p>
+              <m>\sigma = 2.381</m>
+						</p>
+					</li>
+				</ol>
+			</p>
+		</answer>
+		<solution>
+			<p>
+				<ol>
+					<li>
+						<p>
+							<m>X:N(10;2)</m>
+						</p>
+            <p>
+              <md>
+                <mrow>
+                  p(6 \leq X \leq 10) \amp = p \left( \dfrac{6-10}{2} \leq z \leq \dfrac{10-10}{2} \right) =p(-2.00 \leq z \leq 0)   
+                </mrow>
+                <mrow>
+                  \amp =p(z \leq 0)-p(z \leq -2.00)= p(z\leq 0)-p(z \geq 2.00)
+                </mrow>
+                \<mrow>
+                  \amp =p(z \leq 0)-[1-p(z \leq 2.00)]
+                </mrow>
+                <mrow>
+                  \amp  =0.5000-(1-0.9772)=0.4772
+                </mrow>
+              </md>
+            </p>
+					</li>
+					<li>
+						<p>
+              <me>p(z \leq k)=0.8 \Rightarrow k=0.84</me>
+              <me>0.84=\dfrac{12-10}{\sigma} \Rightarrow \sigma=2.381</me>
+            </p>
+					</li>
+				</ol>
+			</p>
+		</solution>
+	</exercise>
+
+	<exercise>
+		<statement>
+			<p>
+				 Las calificaciones de un examen en una clase siguen una distribución normal de media <m>\mu = 20</m> y desviación típica <m>\sigma = 10 </m>. Calcula:
+			</p>
+			<p>
+				<ol>
+					<li>
+						<p>
+							La probabilidad de que un alumno obtenga una calificación entre 15 y 25.
+						</p>
+					</li>
+					<li>
+						<p>
+							La calificación que sólo superan o igualan el 20% de los alumnos.
+						</p>
+					</li>
+				</ol>
+			</p>
+		</statement>
+		<answer>
+			<p>
+				<ol>
+					<li>
+						<p>
+							<m>0.383</m>
+						</p>
+					</li>
+					<li>
+						<p>
+							 <m>X=28.4</m>
+						</p>
+					</li>
+				</ol>
+			</p>
+		</answer>
+		<solution>
+			<p>
+				<m>X:N\left( 20; 10 \right)</m>
+			</p>
+			<p>
+				<ol>
+					<li>
+						<p>
+							<md>
+                <mrow>
+                  p(15 \leq X \leq 25) \amp = p \left( \dfrac{15-20}{10} \leq z \leq \dfrac{25-20}{10} \right) =p(-0.50 \leq z \leq 0.50)   
+                </mrow>
+                <mrow>
+                  \amp =p(z \leq 0.50)-p(z \leq -0.50)= p(z\leq 0.50)-p(z \geq 0.50)
+                </mrow>
+                \<mrow>
+                  \amp =p(z \leq 0.50)-[1-p(z \leq 0.50)]
+                </mrow>
+                <mrow>
+                  \amp  =0.6915-(1-0.6915)=0.383
+                </mrow>
+              </md>
+						</p>
+					</li>
+					<li>
+						<p>
+              <me>p(z \geq k)=0.2 \Rightarrow p(z \leq k)=0.8 \Rightarrow k=0.84</me>
+              <me>0.84=\dfrac{X-20}{10} \Rightarrow X=28.4</me>
+            </p>
+					</li>
+				</ol>
+			</p>
+		</solution>
+	</exercise>
+
+	<exercise>
+		<statement>
+			<p>
+				Un monitor de tenis compra un cañón para lanzar bolas. En las especificaciones del cañón se indica que falla el lanzamiento el 10% de las veces.
+			</p>
+			<p>
+				<ol>
+					<li>
+					<p>
+						¿Cuál es la probabilidad de que, de 20 bolas lanzadas, se tengan exactamente 5 fallos?
+					</p>
+				</li>
+				<li>
+					<p>
+						¿Cuál es la probabilidad de que como mucho falle 2 veces de los 20 lanzamientos? 
+					</p>
+				</li>
+				</ol>
+			</p>
+		</statement>
+		<answer>
+			<p>
+				<ol>
+					<li>
+					<p>
+						<m>0.032</m>
+					</p>
+				</li>
+				<li>
+					<p>
+						<m>0.677</m>
+					</p>
+				</li>
+				</ol>
+			</p>
+		</answer>
+		<solution>
+			<p>
+				<m>X:B\left( 20; 0.1 \right)</m>
+			</p>
+			<p>
+				<ol>
+					<li>
+					<p>
+						<me>P(X = 5) = \binom{20}{5} \cdot 0.1^5 \cdot 0.9^15=0.032</me>
+					</p>
+				</li>
+				<li>
+					<p>
+						<md>
+							<mrow>
+								P(X \leq 2) \amp =P(X = 0) +P(X = 1)+P(X = 2)
+							</mrow>
+							<mrow>
+								\amp = \binom{20}{0} \cdot 0.1^0 \cdot 0.9^{20} + \binom{20}{1} \cdot 0.1^1 \cdot 0.9^{19} +\binom{20}{2} \cdot 0.1^2 \cdot 0.9^{18}
+							</mrow>
+							<mrow>
+								\amp = 0.1216 + 0.2702 + 0.2852 = 0.677
+							</mrow>
+						</md>
+					</p>
+				</li>
+				</ol>
+			</p>
+		</solution>
+	</exercise>
+
+	<exercise>
+		<statement>
+			<p>
+				El tiempo de duración de las actualizaciones de cierto programa antivirus sigue una distribución estadística normal de media 8.8 meses con una desviación típica de 3 meses.
+			</p>
+			<p>
+				<ol>
+					<li>
+						<p>
+							¿Qué porcentaje de las actualizaciones supera los 10 meses?
+						</p>
+					</li>
+					<li>
+						<p>
+							¿Qué porcentaje de las actualizaciones se ha mantenido entre 7 y 10 meses?
+						</p>
+					</li>
+					<li>
+						<p>
+							¿Para qué valor del parámetro c se tiene que el intervalo <m>(8.8-c; 8.8+c)</m> es el intervalo de tiempo de duración del 98 % de las actualizaciones? 
+						</p>
+					</li>
+				</ol>
+			</p>
+		</statement>
+		<answer>
+			<p>
+				<ol>
+					<li>
+						<p>
+							<m>0.3446</m>
+						</p>
+					</li>
+					<li>
+						<p>
+							<m>0.3811</m>
+						</p>
+					</li>
+					<li>
+						<p>
+							<m>c = 6.975</m> 
+						</p>
+					</li>
+				</ol>
+			</p>
+		</answer>
+	</exercise>
+
+	<exercise>
+		<statement>
+			<p>
+				La altura de las personas de una clase se distribuyen según una normal de media 160 cm y desviación típica 10 cm. Calcula la probabilidad de que, escogida una persona al azar de la clase, su altura:
+			</p>
+			<p>
+				<ol>
+					<li>
+						<p>
+							sobrepase los 170 cm.
+						</p>
+					</li>
+					<li>
+						<p>
+							sea menor que 155 cm.
+						</p>
+					</li>
+					<li>
+						<p>
+							este comprendida entre 155 y 170 cm.
+						</p>
+					</li>
+				</ol>
+			</p>
+		</statement>
+		<answer>
+			<p>
+				<ol>
+					<li>
+						<p>
+							<m>0.1587</m>
+						</p>
+					</li>
+					<li>
+						<p>
+							<m>0.3085</m>
+						</p>
+					</li>
+					<li>
+						<p>
+							<m>0.5328</m>
+						</p>
+					</li>
+				</ol>
+			</p>
+		</answer>
+	</exercise>
+
+	<exercise>
+		<statement>
+			<p>
+				Una compañía aérea ha observado que el peso de las maletas de un determinado trayecto siguen una distribución normal de media 7,5 kg y desviación típica de 0,4
+kg. Calcula la probabilida de que, escogida una maleta al azar:
+			</p>
+			<p>
+				<ol>
+					<li>
+						<p>
+							pese menos de 7,2 kg pero mas de 7 kg.
+						</p>
+					</li>
+					<li>
+						<p>
+							pese entre 7,8 kg y 8 kg.
+						</p>
+					</li>
+					<li>
+						<p>
+							Si en un trayecto hay 90 maletas, ¿cuántas maletas se espera que pesen al menos 8,1 kg?
+						</p>
+					</li>
+				</ol>
+			</p>
+		</statement>
+		<answer>
+			<p>
+				<ol>
+					<li>
+						<p>
+							<m>0.121</m>
+						</p>
+					</li>
+					<li>
+						<p>
+							<m>0.121</m>
+						</p>
+					</li>
+					<li>
+						<p>
+							<m>\approx 6</m>
+						</p>
+					</li>
+				</ol>
+			</p>
+		</answer>
+	</exercise>
+
+	<exercise>
+		<statement>
+			<p>
+				El peso de un grupo de personas sigue una distribución normal de media 54,3 kg y desviación típica de 6,5 kg. 
+			</p>
+			<p>
+				<ol>
+					<li>
+						<p>
+							¿Cuál es el percentaje de personas con peso superior a 57 kg?
+						</p>
+					</li>
+					<li>
+						<p>
+							¿Cuál es el percentaje de personas que pesan entre 50 y 57 kg?
+						</p>
+					</li>
+					<li>
+						<p>
+							Si se escoge una persona al azar que esta dentro del 70% de las personas que menos pesan, como máximo, ¿cuántos kilos debería  pesar?
+						</p>
+					</li>
+				</ol>
+			</p>
+		</statement>
+		<answer>
+			<p>
+				<ol>
+					<li>
+						<p>
+							<m>0.3372</m>
+						</p>
+					</li>
+					<li>
+						<p>
+							<m>0.4082</m>
+						</p>
+					</li>
+					<li>
+						<p>
+							<m>57.7 </m> kilos.
+						</p>
+					</li>
+				</ol>
+			</p>
+		</answer>
+	</exercise>
+
+	<exercise>
+		<statement>
+			<p>
+				Una prueba, utilizada para determinar la presencia de plomo en una aleación de acero, es errónea en 8 de cada 100 análisis realizados.
+			</p>
+			<p>
+				<ol>
+					<li>
+						<p>
+							Se realizan 10 análisis con esta prueba, ¿cuál es la probabilidad de que exactamente 3 de estos análisis sean erróneos?
+						</p>
+					</li>
+					<li>
+						<p>
+							 Comprueba si es cierta la siguiente afirmación: “En 10 análisis realizados con esta prueba, hay menos de un 5% de posibilidades de encontrar más de dos análisis erróneos”
+						</p>
+					</li>
+					<li>
+						<p>
+							Si se realizan 100 análisis con esta prueba, ¿cuál es el número esperado de análisis correctos?
+						</p>
+					</li>
+				</ol>
+			</p>
+		</statement>
+		<answer>
+			<p>
+				<ol>
+					<li>
+						<p>
+							<m>0.034</m>
+						</p>
+					</li>
+					<li>
+						<p>
+							 <m>p( X > 2 )= 0.04</m> Por lo tanto es cierta la afirmación.
+						</p>
+					</li>
+					<li>
+						<p>
+							<m>92</m>
+						</p>
+					</li>
+				</ol>
+			</p>
+		</answer> 
+	</exercise>
+
+	<exercise>
+		<statement>
+			<p>
+				El número de ventas diarias de periódicos en un quiosco se distribuye como una distribución normal de media 30 periódicos y desviación típica <m>\sqrt{2}</m>. 
+			</p>
+			<p>
+				Determina:
+			</p>
+			<p>
+				<ol>
+					<li>
+						<p>
+							La probabilidad de que en un día se vendan entre 28 y 31 periódicos
+						</p>
+					</li>
+					<li>
+						<p>
+							Justifica si es cierto que la probabilidad de vender más de 32 periódicos es menor que 0.1
+						</p>
+					</li>
+					<li>
+						<p>
+							El dueño del quiosco considera que su puesto está situado en una buena zona, ya que sabe que hay más de un 80% de posibilidades de vender más de 29 periódicos diarios. ¿Está en lo cierto? Justifícalo
+						</p>
+					</li>
+				</ol>
+			</p>
+		</statement>
+		<answer>
+			<p>
+				<ol>
+					<li>
+						<p>
+							<m>0.6818</m>>
+						</p>
+					</li>
+					<li>
+						<p>
+							<m>p(x \geq 32)=0.0793</m>. Verdadero.
+						</p>
+					</li>
+					<li>
+						<p>
+							<m>p(x \geq 29)=0.7611</m>. Es falso, ya que hay un 76.11% de posibilidades de vender más de 29 periódicos.
+						</p>
+					</li>
+				</ol>
+			</p>
+		</answer>
+	</exercise>
+
+	<exercise>
+		<statement>
+			<p>
+				Con el objetivo de llevar a cabo el proceso de control de calidad de las arandelas, estas se organizan en lotes de 20 arandelas. Si la probabilidad de que una arandela sea defectuosa es de 0.01 y considerando independencia de sucesos:
+			</p>
+			<p>
+				<ol>
+					<li>
+						<p>
+							Determinar si la probabilidad de encontrar en un lote 1 o 2 arandelas defectuosas es mayor del 20%
+						</p>
+					</li>
+					<li>
+						<p>
+							Si un lote se rechaza cuando se encuentra al menos una arandela defectuosa, ¿cuál es la probabilidad de rechazar el lote?
+						</p>
+					</li>
+					<li>
+						<p>
+							¿Cuál es el número esperado de arandelas sin defectos si el lote fuera de 200 arandelas?
+						</p>
+					</li>
+				</ol>
+			</p>
+		</statement>
+		<answer>
+			<p>
+				<ol>
+					<li>
+						<p>
+							<m>p(X=1)+p(X=2)=0.1811</m>. Es menor que el 20%.
+						</p>
+					</li>
+					<li>
+						<p>
+							<m>p(x \geq 1 )= 0.1821</m>
+						</p>
+					</li>
+					<li>
+						<p>
+							<m>198</m>>
+						</p>
+					</li>
+				</ol>
+			</p>
+		</answer>
+	</exercise>
+
+	<exercise>
+		<statement>
+			<p>
+				Si una bombilla fluorescente presenta un 90% de posibilidades de tener una vida útil de al menos 800 horas, seleccionando 20 bombillas fluorescentes de este tipo, justificar si las siguientes afirmaciones son ciertas:
+			</p>
+			<p>
+				<ol>
+					<li>
+						<p>
+							Al seleccionar exactamente 18 bombillas fluorescentes, más del 30% tienen una vida útil de al menos 800 horas.
+						</p>	
+					</li>
+					<li>
+						<p>
+							La probabilidad de que dos bombillas fluorescentes o menos NO tengan una duración de al menos 800 horas es menor que 0,7.
+						</p>
+					</li>
+					<li>
+						<p>
+							El valor esperado de bombillas con una vida útil de al menos 800 horas si se toma una muestra de 100 bombillas fluorescentes es igual a 10
+						</p>
+					</li>
+				</ol>
+			</p>
+		</statement>
+		<answer>
+			<p>
+				<ol>
+					<li>
+						<p>
+							Falso, la probabilidad es: <m>0.2852</m>
+						</p>	
+					</li>
+					<li>
+						<p>
+							Verdadero, <m>p(X=20)+p(X=19)+p(X=18)=0.6769</m>.
+						</p>
+					</li>
+					<li>
+						<p>
+							Falso, el valor esperado es <m>90</m>
+						</p>
+					</li>
+				</ol>
+			</p>
+		</answer>
+	</exercise>
+</exercises>

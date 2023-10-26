@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercises xml:id="ex_binomial" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <!-- You can ommit the title and just get the default "Exercises" -->
+	<title>Ejercicios Binomial</title>
+	
+	<exercise>
+		<statement>
+			<p>
+				La probabilidad de que cierto jugador de baloncesto enceste una canasta de 3 puntos es <m>0.3</m>. ¿Cuál es la probabilidad de que enceste, exactamente dos canastas de cinco lanzamientos?
+			</p>
+		</statement>
+		<answer></answer>
+		<solution>
+			<p>
+				<m>X</m> es <m>B(5;0,3)</m>
+			</p>    
+			<me>
+				P(X=2)=p(2)=\binom{5}{2} \cdot 0,3^2 \cdot 0,7^3=0,3087
+			</me> 
+		</solution>   
+	</exercise>
+	
+	<exercise>
+		<statement>
+			<p>
+				La probabilidad de romper una galleta al ser envasada es el 1%. Si en un envase hay 10 galletas, ¿cuál es la probabilidad de que al menos una galleta esté rota debido a la operación de envasado?
+			</p>
+		</statement>
+		<answer></answer>
+		<solution>
+			<p>
+				<m>X</m> es <m>B(10;0,01)</m>
+			</p>
+			<md>
+				<mrow>P(X \geq 1) \amp =1-P(X &lt; 1)=1-p(0)</mrow>
+				<mrow> \amp =1-\binom{10}{0} \cdot 0,01^0 \cdot 0,99^{10}</mrow>
+				<mrow> \amp =1-0,9044=0,096</mrow>
+			</md>
+		</solution>
+	</exercise>
+    
+	
+   
+	<exercise>
+		<statement>
+			<p>
+				El 10% de los huevos de un supermercado están rotos. Halla la probabilidad de que un cliente que compra media docena de huevos encuentre como mucho un huevo roto.	
+			</p>    
+		</statement>
+		<answer>
+			<p>
+				<m>0.8857</m>
+			</p>
+		</answer>
+		<solution>
+			<p>
+				<m>X</m> es <m>B(6;0,1)</m>
+			</p>
+			<me>
+				P(X\leq 1)=p(0)+p(1)=\binom{6}{0} \cdot 0,1^0 \cdot 0,9^6+\binom{6}{1} \cdot 0,1^1 \cdot 0,9^5=0,5314+0,3543=0,8857
+			</me>
+		</solution>
+	</exercise>
+    
+	<exercise>
+		<statement>
+			<p>
+				En cierto instituto aprueba la asignatura de filosofía el 80% de los alumnos. ¿Cuál es la probabilidad de que de un grupo de 8 alumnos elegidos al azar hayan aprobado 6 alumnos?.
+			</p>
+		</statement>
+		<answer>
+			<p>
+				<m>0,2936</m>
+			</p>
+		</answer>
+		<solution>
+			<p>
+				<m>X</m> es <m>B(8;0,8)</m>
+			</p>    
+			<me>P(X=6)=p(2)=\binom{8}{6} \cdot 0,8^8 \cdot 0,2^2=0,2936</me>
+		</solution>
+	</exercise>
+   
+	<exercise>
+		<statement>
+			<p>
+				En una localidad llueve en 73 de los 365 días del año. ¿Cuál es la probabilidad de que llueva más de 2 días en una semana cualquiera?
+			</p>
+		</statement>
+		<answer>
+			<p>
+
+			</p>
+		</answer>
+		<solution>
+			<p>
+				Soludion
+			</p>
+		</solution>
+	</exercise>
+     
+	<exercise>
+		<statement>
+			<p>
+				En un grupo de 8 amigos se encuentran los 3 agraciados con un viaje para visitar Lisboa sorteado por la embajada portuguesa. Si hay 4 amigos que ya han visitado Lisboa, ¿cuál es la probabilidad de que ninguno de los agraciados haya visitado Lisboa?
+			</p>
+		</statement>
+		<answer>
+			<p>
+
+			</p>
+		</answer>
+		<solution>
+			<p>
+				Solucion
+			</p>
+		</solution>
+	</exercise>
+
+	<exercise>
+		<statement>
+			<p>
+				De los huevos que se producen diariamente en una granja, deben desecharse el 20% por no ser aptos para su consumo. Se seleccionan de manera aleatoria e independiente 5 huevos:
+			</p>
+			<p>
+				<ol>
+					<li>
+						<p>
+							Calcula la probabilidad de que tengamos que desechar alguno de los huevos seleccionados.
+						</p>
+					</li>
+					<li>
+						<p>
+							¿Qué es más probable, que haya exactamente 2 huevos no aptos, o que haya exactamente 3 huevos no aptos? Obtén estas probabilidades. 
+						</p>
+					</li>
+				</ol>
+			</p>
+		</statement>
+		<answer>
+			<p>
+
+			</p>
+		</answer>
+		<solution>
+			<p>
+				Solucion
+			</p>
+		</solution>
+	</exercise>
+
+	<exercise>
+		<statement>
+			<p>
+				Uno de cada 7 deportistas de la selección de gimnasia deportiva, será elegido para las próximas olimpiadas. Se escogen aleatoriamente y de modo independiente 9 deportistas de dicha selección.
+			</p>
+			<p>
+				<ol>
+					<li>
+						<p>
+							¿Cuál es la probabilidad de que sean elegidos exactamente 2 de estos 9 deportistas para las próximas olimpiadas?
+						</p>
+					</li>
+					<li>
+						<p>
+							¿Cuál es la probabilidad de que alguno (al menos 1) de estos 9 deportistas sea elegido para las próximas olimpiadas? 
+						</p>
+					</li>
+				</ol>
+			</p>
+		</statement>
+		<answer>
+			<p>
+				<ol>
+					<li>
+						<p>
+							¿Cuál es la probabilidad de que sean elegidos exactamente 2 de estos 9 deportistas para las próximas olimpiadas?
+						</p>
+					</li>
+					<li>
+						<p>
+							¿Cuál es la probabilidad de que alguno (al menos 1) de estos 9 deportistas sea elegido para las próximas olimpiadas? 
+						</p>
+					</li>
+				</ol>
+			</p>
+		</answer>
+		<solution>
+			<p>
+				<m>X:B\left( 9; \dfrac{1}{7} \right)</m>
+			</p>
+			<p>
+				<ol>
+					<li>
+						<p>
+							<me>P(X=2)=p(2)=\binom{9}{2} \cdot \left( \dfrac{1}{7} \right)^2 \cdot \left( \dfrac{6}{7} \right)^7=0.2497</me>
+						</p>
+					</li>
+					<li>
+						<p>
+							<md>
+								<mrow>P(X \geq 1) \amp =1-P(X &lt; 1)=1-p(0)</mrow>
+								<mrow> \amp =1-\binom{9}{0} \cdot \left( \dfrac{1}{7} \right)^0 \cdot \left( \dfrac{6}{7} \right)^9</mrow>
+								<mrow> \amp =1-0,2497=0,7503</mrow>
+							</md>
+						</p>
+					</li>
+				</ol>
+			</p>
+		</solution>
+	</exercise>
+
+	<exercise>
+		<statement>
+			<p>
+				La probabilidad de que una persona escriba un mensaje de Twitter sin faltas de ortografía es 0.75. Se sabe además que una persona escribe a lo largo del día 20 mensajes de Twitter.
+			</p>
+			<p>
+				A partir de esta información, responde a las siguientes cuestiones. 
+			</p>
+			<p>
+				<ol>
+					<li>
+						<p>
+							¿Cuál es la probabilidad de que exactamente la mitad de los mensajes escritos en un día, es decir 10, no tengan faltas de ortografía?
+						</p>
+					</li>
+					<li>
+						<p>
+							¿Cuál es la probabilidad de que ningún mensaje de los 20 escritos en un día tenga faltas de ortografía?
+						</p>
+					</li>
+					<li>
+						<p>
+							¿Cuál es la probabilidad de que 18 o más mensajes de los 20 escritos en un día sí tengan faltas de ortografía?
+						</p>
+					</li>
+				</ol>
+			</p>
+		</statement>
+		<answer>
+			<p>
+				<ol>
+					<li>
+						<p>
+							<m>0.0099</m>
+						</p>
+					</li>
+					<li>
+						<p>
+							<m>0.0032</m>>
+						</p>
+					</li>
+					<li>
+						<p>
+							<m>0.00000000161</m>
+						</p>
+					</li>
+				</ol>
+			</p>
+		</answer>
+		<solution>
+			<p>
+				<m>X:B(20;0.75)</m>
+			</p>
+			<p>
+				<ol>
+					<li>
+						<p>
+							<md>
+								<mrow>
+									p(X=10)=\binom{20}{10}\cdot 0.75^{10} \cdot 0.25^{10}=0.0099
+								</mrow>
+							</md>
+						</p>
+					</li>
+					<li>
+						<p>
+							<md>
+								<mrow>
+									p(X=20)=\binom{20}{20}\cdot 0.75^{20} \cdot 0.25^{0}=0.0032
+								</mrow>
+							</md>
+						</p>
+					</li>
+					<li>
+						<p>
+							<md>
+								<mrow>
+									P(X \leq 2) \amp p(X =0)+p(X=1)+p(X=2)=\binom{20}{10}\cdot 0.75^{10} \cdot 0.25^{10}=0.0099
+								</mrow>
+								<mrow>
+									\amp \binom{20}{0}\cdot 0.75^{0} \cdot 0.25^{20} + \binom{20}{1}\cdot 0.75^{1} \cdot 0.25^{19} + \binom{20}{2}\cdot 0.75^{2} \cdot 0.25^{18}
+								</mrow>
+								<mrow>
+									\amp = 9.1 \cdot 10^{-13}+5.5 \cdot 10^{-11}+1.56 \cdot 10^{-9} = 0.00000000161
+								</mrow>
+							</md>
+						</p>
+					</li>
+				</ol>
+			</p>
+		</solution>
+	</exercise>
+
+	<exercise>
+		<statement>
+			<p>
+				Se lanza 10 veces un dado equilibrado (es decir un dado donde todas sus caras tiene la misma probabilidad de aparecer). 
+			</p>
+			<p>
+				<ol>
+					<li>
+						<p>
+							Determine la probabilidad de que salga un número par en todos los lanzamientos.
+						</p>
+					</li>
+					<li>
+						<p>
+							Determine la probabilidad de que salga un número par exactamente en tres lanzamientos.
+						</p>
+					</li>
+				</ol>
+			</p>
+		</statement>
+		<answer>
+			<p>
+				<ol>
+					<li>
+						<p>
+							<m> \dfrac{1}{1024}</m>>
+						</p>
+					</li>
+					<li>
+						<p>
+							<m> \dfrac{120}{1024}</m>
+						</p>
+					</li>
+				</ol>
+			</p>
+		</answer>
+		<solution>
+			<p>
+				<m>X:B\left(10; \dfrac{1}{2} \right)</m>
+			</p>
+			<p>
+				<ol>
+					<li>
+						<p>
+							<me>p(X=10)=\binom{10}{10} \cdot \left( \dfrac{1}{2} \right)^{10} \cdot \left( \dfrac{1}{2} \right)^{0}= \dfrac{1}{1024}</me>
+						</p>
+					</li>
+					<li>
+						<p>
+							<me>p(X=3)=\binom{10}{3} \cdot \left( \dfrac{1}{2} \right)^{3} \cdot \left( \dfrac{1}{2} \right)^{7}= \dfrac{120}{1024}</me>
+						</p>
+					</li>
+				</ol>
+			</p>
+		</solution>
+	</exercise>
+</exercises>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<section xml:id="sec_continuidad">
+	<title>Continuidad</title>
+	<sidebyside widths="30% 30% 30%" valigns="middle middle middle">
+		<figure xml:id="fig_nofuncion">
+			<image xml:id="img_continuidad-nofuncion" source="images/img_continuidad-nofuncion" />
+		</figure>
+		<figure xml:id="fig_nolimite">
+			<image xml:id="img_continuidad-nolimite" source="images/img_continuidad-nolimite" />
+		</figure>
+		<figure xml:id="fig_noiguales">
+			<image xml:id="img_continuidad-noiguales" source="images/img_continuidad-noiguales" />
+		</figure>
+	</sidebyside>	
+		<p>
+			Como vemos en la figura <xref ref="fig_nofuncion" /> la función en el punto <m>x=2</m> es discontinua porque no existe la función en ese punto, es decir la primera condición para que una función sea continua es que exista la función en ese punto.
+		</p>
+
+		<p>
+			Como vemos en la figura <xref ref="fig_nolimite" /> la función en el punto <m>x=2</m> es discontinua porque aunque existe la función no existe el límite de la función en ese punto, es decir la segunda condición para que una función sea continua es que exista el límite de la función en ese punto.
+		</p>
+
+		<p>
+			Como vemos en la figura <xref ref="fig_noiguales" /> la función en el punto <m>x=2</m> es discontinua porque aunque existe la función y el límite en ese punto, no son iguales, es decir la tercera condición para que una función sea continua es que la función y el límite de la función en ese punto tienen que ser iguales.
+		</p>
+
+		<p>
+			Una función <m>f(x)</m> es continua en un punto <m>x=a</m> si se cumple:
+		</p>
+
+		<p><ol>
+			<li>
+					<p>
+			Existe<m>f(a)</m>
+		</p>
+			</li>
+
+			<li>
+					<p>
+			Existe <m>\displaystyle  \lim_{x \rightarrow a} f(x)</m>
+		</p>
+			</li>
+
+			<li>
+					<p>
+			<m>\displaystyle  \lim_{x \rightarrow a} f(x)=f(a)</m>
+		</p>
+			</li>
+
+		</ol></p>
+
+		<p>
+			Comprobar si la función <m>f(x)=\dfrac{x+2}{x-2}</m> es continua en los puntos:
+		</p>
+
+		<p><ol>
+			<li>
+					<p>
+			<m>x=0</m>
+		</p>
+			</li>
+
+			<li>
+					<p>
+			<m>x=2</m>
+		</p>
+			</li>
+
+		</ol></p>
+
+		<p><ol>
+			<li>
+					<p>
+			<m>x=0</m> Comprobamos si existe la función en el punto: <m>f(0)=\dfrac{0+2}{0-2}=-1</m>
+		</p>
+
+		<p>
+			Comprobamos si existe el límite: <m>\displaystyle \lim_{x \rightarrow 2} \dfrac{x+2}{x-2}=-1</m>
+		</p>
+
+		<p>
+			Comprobamos si son iguales: <m>-1=-1</m>
+		</p>
+
+		<p>
+			Por lo tanto, la función es continua en el punto <m>x=0</m>
+		</p>
+			</li>
+
+			<li>
+					<p>
+			<m>x=2</m>
+		</p>
+
+		<p>
+			Comprobamos si existe la función en el punto: <m>f(2)=\dfrac{2+2}{2-2}=\dfrac{4}{0}</m>.
+		</p>
+
+		<p>
+			No existe la función en el punto, por lo tanto, la función es discontinua en el punto <m>x=2</m>
+		</p>
+			</li>
+
+		</ol></p>
+
+
+		<subsection xml:id="tipos-de-discontinuidad">
+			<title>Tipos de discontinuidad</title>
+
+			<p>
+				<term>Discontinuidad evitable:</term>
+			</p>
+
+			<p>
+				Este tipo de discontinuidad se produce cuando existe el límite de la función en el punto, pero:
+			</p>
+
+			<p><ul>
+				<li>
+							<p>
+				No existe la función en el punto.
+			</p>
+				</li>
+
+				<li>
+							<p>
+				Existe la función en el punto pero su valor no es el mismo que el límite.
+			</p>
+				</li>
+
+			</ul></p>
+
+			<p>
+				<term>Discontinuidad inevitable de salto finito:</term>
+			</p>
+
+			<p>
+				Ser produce cuando no existe el límite de la función en el punto porque los límites laterales no coinciden aunque ambos son finitos.
+			</p>
+
+			<p>
+				<term>Discontinuidad inevitable de salto infinito:</term>
+			</p>
+
+			<p>
+				Esta discontinuidad se produce cuando uno o los dos límites laterales son infinito.
+			</p>
+
+		</subsection>
+	</section>
+
+	

@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+		<subsection xml:id="derivabilidad-y-continuidad">
+			<title>Derivabilidad y continuidad</title>
+
+			<p>
+				Para que una función sea derivable en un punto <m>x=a</m> la función tiene que ser continua en ese punto.
+			</p>
+
+			<p>
+				Esta es la condición necesaria pero no suficiente para que una función sea derivable en un punto.
+			</p>
+
+			<p><ul>
+				<li>
+							<p>
+				<term>Si una función en un punto es continua entonces puede ser derivable o no ser derivable.</term>
+			</p>
+				</li>
+
+				<li>
+							<p>
+				<term>Si una función no es continua en un punto entonces no es derivable.</term>
+			</p>
+				</li>
+
+			</ul></p>
+
+			<p>
+				Estudiar la continuidad y derivabilidad de la función <m>f(x)=3x+|x+3|</m> en el punto <m>x=-3</m> Para calcular la continuidad y derivabilidad de esta función vamos a expresarla como una función definida a trozos.
+			</p>
+
+			<p>
+				<m>f(x)=3x+|x+3| = \begin{cases} 2x-3 &amp; x &lt; -3 \\ 4x+3 &amp; x \geq -3 \end{cases}</m>
+			</p>
+
+			<p>
+				Estudiamos la continuidad:
+			</p>
+
+			<p>
+				<me>f(-3)= 4\cdot(-3) +3 = -9</me>
+			</p>
+
+			<p>
+				<me>\displaystyle \left. \begin{array}{l} \displaystyle \lim_{x \rightarrow 3^-} (2x-3) = -9 \\ \displaystyle \lim_{x \rightarrow 3^+} (4x+3) = -9 \end{array} \right\rbrace \Rightarrow \lim_{x \rightarrow 3} f(x) = -9</me>
+			</p>
+
+			<p>
+				Como vemos existe la función y el límite en el punto y además son iguales, por lo tanto, la función es continua en el punto <m>x=-3</m>. Por lo tanto, la función puede ser derivable en dicho punto.
+			</p>
+
+			<p>
+				A continuación, estudiamos su derivabilidad:
+			</p>
+
+			<p>
+				<me>\displaystyle \left. \begin{array}{l}\displaystyle  f'(-3^-) = \lim_{ h \rightarrow 0^-} \dfrac{(2(-3+h)-3)-(-9)}{h} = \lim_{ h \rightarrow 0^-} \dfrac{2\cancel{h}}{\cancel{h}}= 2 \\ \displaystyle f'(-3^+)= \lim_{ h \rightarrow 0^+} \dfrac{(4(-3+h)+3)-(-9)}{h} = \lim_{ h \rightarrow 0^+} \dfrac{4\cancel{h}}{\cancel{h}}= 4 \end{array} \right\rbrace \Rightarrow \nexists f'(-3)</me>
+			</p>
+
+			<p>
+				La función no es derivable, ya que las derivadas laterales son distintas.
+			</p>
+
+			<p>
+				Sea <m>f(x)=\dfrac{|x|}{x^2+1}</m>. Estudiar la continuidad y derivabilidad de <m>f(x)</m>.
+			</p>
+
+			<p>
+				•
+			</p>
+
+			<p>
+				Calcula el valor de <m>a</m> y de <m>b</m> para que la función <m>f(x)=\left\{\begin{array}{cc} {x^{3} -x} &amp; {x\le 0} \\ {ax+b} &amp; {x&gt;0} \end{array}\right.</m>sea continua y derivable. Hacer la representación gráfica.
+			</p>
+
+			<p>
+				<m>\begin{cases} a=-1\\ b=0 \end{cases} \rightarrow f(x)=\left\{\begin{cases} {x^{3} -x} &amp; {x\le 0} \\ {-x} &amp; {x&gt;0} \end{cases}\right.</m>
+			</p>
+
+		</subsection>
+	</section>
+
+	<section xml:id="funcion-derivada">
+		<title>Función derivada</title>
+
+		<p>
+			La función derivada de una función <m>f(x)</m> es una nueva función, <m>f'(x)</m>, que asocia a cada punto <m>x</m> la derivada de esa función en ese punto. <me>f'(x)=\lim_{h \to 0} \dfrac{f(x+h)-f(x)}{h}</me>
+		</p>
+
+<!-- div attr= xml:id="tab:tabla-derivadas"-->
+		<table>
+			<caption>[tab:tabla-derivadas]Derivadas de las funciones elementales.</caption>
+			<tabular>
+			<row header="yes">
+				<cell halign="left"><term>Función</term></cell>
+				<cell halign="left"><term>Derivada</term></cell>
+			</row>
+			<row class="odd">
+				<cell halign="left"><m>f(x)=k</m></cell>
+				<cell halign="left"><m>f'(x)=0</m></cell>
+			</row>
+			<row class="even">
+				<cell halign="left"><m>f(x)=x</m></cell>
+				<cell halign="left"><m>f'(x)=1</m></cell>
+			</row>
+			<row class="odd">
+				<cell halign="left"><m>f(x)=x^n</m></cell>
+				<cell halign="left"><m>f'(x)=n x^{n-1}</m></cell>
+			</row>
+			<row class="even">
+				<cell halign="left"><m>f(x)= e^x</m></cell>
+				<cell halign="left"><m>f'(x)= e^x</m></cell>
+			</row>
+			<row class="odd">
+				<cell halign="left"><m>f(x)= a^x</m></cell>
+				<cell halign="left"><m>f'(x)= a^x \cdot \ln a</m></cell>
+			</row>
+			<row class="even">
+				<cell halign="left"><m>f(x)= \ln x</m></cell>
+				<cell halign="left"><m>f'(x)=\dfrac{1}{x}</m></cell>
+			</row>
+			<row class="odd">
+				<cell halign="left"><m>f(x)= \log_ a x</m></cell>
+				<cell halign="left"><m>f'(x)= \dfrac{1}{x \cdot \ln a}</m></cell>
+			</row>
+			<row class="even">
+				<cell halign="left"><m>f(x)= \sin x</m></cell>
+				<cell halign="left"><m>f'(x)= \cos x</m></cell>
+			</row>
+			<row class="odd">
+				<cell halign="left"><m>f(x)= \cos x</m></cell>
+				<cell halign="left"><m>f'(x)= -\sin x</m></cell>
+			</row>
+			<row class="even">
+				<cell halign="left"><m>f(x)= \tan x</m></cell>
+				<cell halign="left"><m>f'(x)= 1+\tan^2 x = \dfrac{1}{\cos^2 x}</m></cell>
+			</row>
+			<row class="odd">
+				<cell halign="left"><m>f(x)= \arcsin x</m></cell>
+				<cell halign="left"><m>f'(x)= \dfrac{1}{\sqrt{1-x^2}}</m></cell>
+			</row>
+			<row class="even">
+				<cell halign="left"><m>f(x)= \arccos x</m></cell>
+				<cell halign="left"><m>f'(x)= \dfrac{-1}{\sqrt{1-x^2}}</m></cell>
+			</row>
+			<row class="odd">
+				<cell halign="left"><m>f(x)= \arctan x</m></cell>
+				<cell halign="left"><m>f'(x)= \dfrac{1}{1+x^2}</m></cell>
+			</row>
+			</tabular>
+		</table><!--</div attr= xml:id="tab:tabla-derivadas">-->
+
+
+		<subsection xml:id="algebra-de-derivadas">
+			<title>Algebra de derivadas</title>
+
+			<table>
+				<caption></caption>
+				<tabular>
+				<row class="odd">
+					<cell halign="left">Álgebra de derivadas</cell>
+				</row>
+				<row class="even">
+					<cell halign="left"><m>\left( f(x)+g(x) \right)' =f'(x) + g'(x)</m></cell>
+				</row>
+				<row class="odd">
+					<cell halign="left"><m>\left( f(x)-g(x) \right)' =f'(x) - g'(x)</m></cell>
+				</row>
+				<row class="even">
+					<cell halign="left"><m>\left( k\cdot f(x) \right)' =k\cdot f'(x)</m></cell>
+				</row>
+				<row class="odd">
+					<cell halign="left"><m>\left( f(x) \cdot g(x) \right)' =f'(x)\cdot g(x)  + f(x) \cdot g'(x)</m></cell>
+				</row>
+				<row class="even">
+					<cell halign="left"><m>\left( \dfrac{f(x)}{g(x)} \right)' =\dfrac {f'(x)\cdot g(x)-f(x)\cdot  g'(x)}{g^2(x)}</m></cell>
+				</row>
+				<row class="odd">
+					<cell halign="left"><m>\left[ f\left(g(x) \right)\right]' =f'\left(g(x) \right) \cdot  g'(x)</m></cell>
+				</row>
+				</tabular>
+			</table>
+
+			<p>
+				Calcular las siguientes derivadas:
+			</p>
+
+			<p>
+				(2) <m>f(x)=5x^4-3x^3+4x-2</m> <m>f(x)= 5x^3-\sqrt[4]{x}</m> <m>f(x)= x^2 \cdot \sen x</m> <m>f(x)=\dfrac{3+2x}{x^2}</m>
+			</p>
+
+			<p><ol>
+				<li>
+							<p>
+				Hallamos la derivada: <m>f'(x)=20x^3-9x^2+4</m>
+			</p>
+				</li>
+
+				<li>
+							<p>
+				Reescribimos la función poniendo la raiz como potencia y luego hallamos la derivada.
+			</p>
+
+			<p>
+				<m>f(x)=5x^3 -x^{\frac{1}{4}} \rightarrow f'(x)=15x^2-\frac{1}{4}x^{\frac{-3}{4}}= 15x^2 - \dfrac{1}{4\sqrt[4]{x^3}}</m>
+			</p>
+				</li>
+
+				<li>
+							<p>
+				Utilizamos la fórmula del producto de funciones.
+			</p>
+
+			<p>
+				<m>f'(x)= 2x\cdot \sen x +x^2 \cdot \cos x</m>
+			</p>
+				</li>
+
+				<li>
+							<p>
+				Utilizamos la fórmula del cociente.
+			</p>
+
+			<p>
+				<m>f'(x)=\dfrac{2\cdot x^2- (3+2x)\cdot 2x}{x^4}= \dfrac{-2x^2-6x}{x^4}</m>
+			</p>
+				</li>
+
+			</ol></p>
+
+			<p>
+				Calcular las siguientes derivadas:
+			</p>
+
+			<p>
+				(2) <m>f(x)= (x^3+3x-2)^7</m> <m>f(x)= e^{x^2+3}</m> <m>f(x)= \ln (1-3x)</m> <m>f(x)= \cos (x^3+2x-3)</m>
+			</p>
+
+			<p>
+				En todos estos casos hay que aplicar la regla de la cadena.
+			</p>
+
+			<p><ol>
+				<li>
+							<p>
+				<m>f'(x)=7(x^3+3x-2)^6 (3x^2+3)</m>
+			</p>
+				</li>
+
+				<li>
+							<p>
+				<m>f'(x)=e^{x^2+3} 2x=2xe^{x^2+3}</m>
+			</p>
+				</li>
+
+				<li>
+							<p>
+				<m>f'(x)=\dfrac{1}{1-3x}\cdot (-3x) = \dfrac{-3x}{1-3x}</m>
+			</p>
+				</li>
+
+				<li>
+							<p>
+				<m>f'(x)=-\sen (x^3+2x-3) (3x^2+2)=-(3x^2+2)\sen (x^3+2x-3)</m>
+			</p>
+				</li>
+
+			</ol></p>
+
+			<p>
+				Calcular las derivadas de las siguientes funciones
+			</p>
+
+			<p>
+				(2)[label=)]
+			</p>
+
+			<p>
+				<m>y=3</m> <m>y=\frac{1}{2}</m> <m>y=3+5</m> <m>y=\left(\frac{1}{2} +5\right)^{2}</m> <m>y=3x^{2} +5x+7</m> <m>y=\frac{3}{4} x^{2} +x^{-2} +\frac{1}{x^{3} }</m> <m>y=\sqrt{x} +\sqrt[{3}]{x} +\sqrt[{5}]{x^{4} }</m> <m>y=\frac{x+2x^{2} }{x}</m> <m>y=\frac{x}{3}</m> <m>y=\frac{x^{4}}{5}</m> <m>y=\frac{\sqrt{x^{5}}}{\sqrt[{4}]{x^{3} } }</m> <m>y=\frac{x+4\sqrt{x^{3} } -x^{-2} }{x^{2} }</m> <m>y=2^{x}</m> <m>y=e^{x}</m> <m>y=x^{e}</m> <m>y=\left(x+2\right)^{3}</m> <m>y=\left(x^{3} +\frac{1}{x} \right)^{3}</m> <m>y=2^{3x^{2} +2x+1}</m> <m>y=e^{2x+x^{3} }</m> <m>y=\ln (x^{2} -2)</m> <m>y=\ln \sqrt{x^{3} -x^{2} }</m> <m>y=x(x^{2} +3x)</m> <m>y=x\ln x</m> <m>y=xe^{x} \ln x</m>
+			</p>
+
+			<p>
+				Están simplificadas
+			</p>
+
+			<p>
+				(2)[label=)]
+			</p>
+
+			<p>
+				<m>y'=0</m> <m>y'=0</m> <m>y'=0</m> <m>y'=0</m> <m>y'=6x+5</m> <m>y'=\dfrac{3x}{2}-\dfrac{2}{x^3}-\dfrac{3}{x^4}</m> <m>y'= \dfrac{1}{2 \sqrt{x}}-\dfrac{1}{3 \sqrt[{4}]{x^3}} +\dfrac{4}{5 \sqrt[{5}]{x^4} }</m> <m>y'=2</m> <m>y'=\frac{1}{3}</m> <m>y'=\frac{4x^{3}}{5}</m> <m>y'=\frac{7}{4} \sqrt[4]{x^{3} }</m> <m>y'=\dfrac{1}{x}- \dfrac{4}{3 \sqrt[3]{x^4}}+\dfrac{4}{x^3}</m> <m>y'=2^{x} \ln x</m> <m>y'=e^{x}</m> <m>y'=ex^{e-1}</m> <m>y'=3 \left(x+2\right)^{2}</m> <m>y'=3 \left(x^{3} +\frac{1}{x} \right)^{2} \left(3x^2- \dfrac{1}{x^2} \right)</m> <m>y'=2^{3x^{2} +2x+1}\left(6x+2\right) \ln x</m> <m>y'=e^{2x+x^{3} }\left(2+3x^2\right)</m> <m>y'=\dfrac{2x}{x^2-2}</m> <m>y'=\dfrac{1}{2} \dfrac{3x^2-2x}{x^3-x^2}</m> <m>y'=3x^{2} +6x</m> <m>y'=\ln x+1</m> <m>y'=xe^{x}\left(\ln x+x \ln x \right)</m>
+			</p>
+
+			<p>
+				Calcular las siguientes derivadas:
+			</p>
+
+			<p>
+				(2)[label=)] <m>f(x)=x^2\cdot e^x</m> <m>g(x)=\sqrt{x}\cdot e^x</m> <m>h(x)=(x^3-3x^2+1)(x^2-3x)</m> <m>m(x)=(1+2\sqrt{x})(x^3-3x^2+2)</m> <m>n(x)=(x^3-x^2-2)(x^{-2}+2x^{-1})</m> <m>t(x)=e^x(x^4-3x^2-2x+1)</m>
+			</p>
+
+			<p>
+				(2)[label=)] <m>f(x)=(x^2+2x)\cdot e^x</m> <m>g(x)=\dfrac{e^x(2x+1)}{2\sqrt{x}}</m> <m>h(x)=5x^4-24x^3+27x^2+2x-3</m> <m>m(x)=\dfrac{7x^3-15x^2+3x^2\sqrt{x}-6x\sqrt{x}+2}{\sqrt{x}}</m> <m>n(x)=\dfrac{4x^4-x^3+4x+4}{x^3}</m> <m>t(x)=e^x(x^4+4x^3-3x^2-8x-1)</m>
+			</p>
+
+			<p>
+				Calcular las siguientes derivadas:
+			</p>
+
+			<p>
+				(2)[label=)] <m>f(x)=\dfrac{x^2-3x+1}{x^2-1}</m> <m>g(x)=\dfrac{2}{x^3-2x+1}</m> <m>h(x)=\dfrac{\sqrt{x}-1}{x^2-2}</m> <m>m(x)=\dfrac{1-\sqrt{x}}{\sqrt{x}+2}</m> <m>n(x)=\dfrac{e^x+1}{e^x-2}</m> <m>t(x)=\dfrac{x+e^x}{\sqrt{x}-1}</m>
+			</p>
+
+			<p>
+				(2)[label=)] <m>f(x)=\dfrac{3x^2-4x+1}{(x^2-1)^2}</m> <m>g(x)=\dfrac{-6x^2+4}{(x^3-2x+1)^2}</m> <m>h(x)=\dfrac{-3x^2+4x\sqrt{x}-2}{2\sqrt{x}(x^2-2)^2}</m> <m>m(x)=\dfrac{-3}{2\sqrt{x}(\sqrt{x}+2)^2}</m> <m>n(x)=\dfrac{-3e^x}{(e^x-2)^2}</m> <m>t(x)=\dfrac{e^x(2x-2\sqrt{x}-1)+x-2\sqrt{x}}{2\sqrt{x}(\sqrt{x}-1)^2}</m>
+			</p>
+
+		</subsection>
+	</section>
+
+	<section xml:id="tecnicas-de-derivacion">
+		<title>Técnicas de derivación</title>
+
+
+		<subsection xml:id="derivada-de-la-funcion-implicita">
+			<title>Derivada de la función implícita</title>
+
+			<p>
+				Una función es una función implícita cuando no esta despejada en términos de la variable independiente. Por ejemplo la función <m>y=x^2+1</m> es una función explicita ya que esta despejada, pero <m>x^2+y^2=5</m> es una función implícita ya que no esta despejada en términos de <m>x</m>.
+			</p>
+
+			<p>
+				Para derivar estas funciones hay que tener en cuenta que <m>y</m> es una función de <m>x</m> y cuando derivemos tenemos que aplicar al regla de la cadena y aparecerá siempre <m>y'</m>.
+			</p>
+
+			<p>
+				Hallar la derivada de la función <m>x^2+y^2= 2x+2y-6</m> Derivamos ambos miembros teniendo en cuenta que <m>y</m> es una función de <m>x</m>.
+			</p>
+
+			<p>
+				<m>2x+2yy'=2+2y' \Rightarrow 2yy'-2y'=2-2x \Rightarrow (2y-2)y'=2-2x \Rightarrow y'=\dfrac{2-2x}{2y-2}=\dfrac{1-x}{y-1}</m>
+			</p>
+
+		</subsection>
+
+		<subsection xml:id="derivacion-logaritmica">
+			<title>Derivación logarítmica</title>
+
+			<p>
+				Cuando queremos calcular la derivada de una función elevada a otra función, tenemos que tomar logaritmos en los dos miembros y luego derivar.
+			</p>
+
+			<p>
+				<m>f(x)=g(x)^{h(x)}</m>
+			</p>
+
+			<p>
+				<m>\ln f(x)= \ln g(x)^{h(x)} = h(x) \cdot \ln g(x)</m>
+			</p>
+
+			<p>
+				<m>\dfrac{1}{f(x)}\cdot f'(x)= h'(x) \cdot \ln g(x)+ h(x) \cdot \dfrac{1}{g(x)}\cdot g'(x)</m>
+			</p>
+
+			<p>
+				Hallar las derivadas de la siguientes funciones
+			</p>
+
+			<p>
+				(2) <m>\ln f(x)= \ln x^x = x \cdot \ln x</m> <m>f(x)=\left( x-\sen x \right)^{x}</m>
+			</p>
+
+			<p>
+				En ambos casos tomaremos logaritmos y derivaremos.
+			</p>
+
+			<p><ol>
+				<li>
+							<p>
+				<m>\ln f(x)=\ln \left( x^x \right)= x \cdot \ln x</m>
+			</p>
+
+			<p>
+				<m>\dfrac{1}{f(x)}\cdot f'(x)= 1\cdot \ln x + x \dfrac{1}{x}= 1+\ln x</m>
+			</p>
+
+			<p>
+				<m>f'(x) = (1+\ln x) \cdot f(x)</m>
+			</p>
+
+			<p>
+				<m>f'(x)=(1+\ln x)\cdot  x^x</m>
+			</p>
+				</li>
+
+				<li>
+							<p>
+				<m>\ln f(x)=\ln \left( x-\sen x \right)^x =  x \cdot \ln (x-\sen x)</m>
+			</p>
+
+			<p>
+				<m>\dfrac{1}{f(x)}\cdot f'(x)= 1\cdot \ln (x - \sen x) + x \dfrac{1}{x-\sen x}\cdot (1-\cos x)= \ln (x-\sen x)+\dfrac{x(1-\cos x)}{x-\sen x}</m>
+			</p>
+
+			<p>
+				<m>f'(x) = \left( \ln (x-\sen x)+\dfrac{x(1-\cos x)}{x-\sen x} \right) \cdot f(x)</m>
+			</p>
+
+			<p>
+				<m>f'(x)=\left( \ln (x-\sen x)+\dfrac{x(1-\cos x)}{x-\sen x} \right) \cdot (x-\sen x)^x</m>
+			</p>
+				</li>
+
+			</ol></p>
+
+		</subsection>
+
+		<subsection xml:id="derivada-de-la-función-inversa">
+			<title>Derivada de la función inversa</title>
+
+			<p>
+				Si <m>f^{-1}(x)</m> es la función inversa de <m>f(x)</m> entonces se cumple <m>f\left[f^{-1}(x) \right] = x</m>.
+			</p>
+
+			<p>
+				Si derivamos esta expresión obtenemos:
+			</p>
+
+			<p>
+				<m>f'\left[f^{-1}(x) \right] (f^{-1})'(x) = 1 \Rightarrow (f^{-1})'(x) = \dfrac{1}{f'\left[f^{-1}(x) \right] }</m>
+			</p>
+
+			<p>
+				Esto es, tenemos que calcular la derivada de <m>f(x)</m> pero evaluarla en <m>f^{-1} (x)</m>.
+			</p>
+
+			<p>
+				A partir de la derivada de <m>f(x)=x^3</m>, calcular la derivada de su función inversa <m>f^{-1}(x)=\sqrt[3]{x}</m>. Hallamos <m>f'(x)=3x^2</m> y la aplicamos en <m>f^{-1}(x)</m>.
+			</p>
+
+			<p>
+				<m>f^{-1}(x)=\dfrac{1}{f'(\sqrt[3]{x})}= \dfrac{1}{3(\sqrt[3]{x})^2}</m>
+			</p>
+
+		</subsection>
+	</section>
+
+	<section xml:id="recta-tangente">
+		<title>Recta tangente</title>
+
+		<p>
+			Como hemos dicho anteriormente la derivada de una función en un punto coincide con la pendiente de la recta tangente a la gráfica de la función en dicho punto.
+		</p>
+
+		<p>
+			Teniendo en cuenta esto y que la función pasa por el punto <m>(a,f(a))</m>, podemos hallar la recta tangente utilizando la ecuación punto-pendiente de una recta.
+		</p>
+
+		<p>
+			La ecuación de la recta tangente a la gráfica de la función <m>f(x)</m> en el punto <m>x=a</m> es:
+		</p>
+
+		<p>
+			<me>y-f(a) = f'(a)(x-a) \Rightarrow y=f(a)+f'(a)(x-a)</me>
+		</p>
+
+		<p>
+			Calcula la recta tangente a la curva <m>y=x^{2} \sqrt{1-3x}</m> en el punto <m>x=-1</m>. La recta tangente a una curva en un punto <m>x=a</m> es: <m>y-y(a)=y'(a)(x-a)</m> Calculamos el valor de la función en el punto.
+		</p>
+
+		<p>
+			<m>y=x^{2} \sqrt{1-3x} \rightarrow y(-1)=2</m><!-- linebreak -->Hallamos la derivada de la función en dicho punto.
+		</p>
+
+		<p>
+			<m>y=x^{2} \sqrt{1-3x} \rightarrow y'= \dfrac{-15x^2+4x}{2 \sqrt{1-3x}}\rightarrow y'(-1)= - \dfrac{19}{4}</m><!-- linebreak -->Calculamos la recta tangente.
+		</p>
+
+		<p>
+			Recta tangente <m>\rightarrow y-2=- \dfrac{19}{4}(x-1) \Rightarrow y=-\dfrac{19}{4}x+\dfrac{27}{4}</m><!-- linebreak -->
+		</p>
+
+		<p>
+			Determinar en qué puntos de la gráfica de la función <m>f(x)=x^3-3x^2+x+1</m>, la recta tangente a la misma es paralela a la recta <m>y=x+7</m> Si dos rectas son paralelas su pendiente es la misma, por lo tanto la pendiente de la recta buscada es <m>1</m>.
+		</p>
+
+		<p>
+			Sabemos que la pendiente de la recta tangente a la gráfica de una función en un punto es igual a la derivada de la función en ese punto, por lo tanto, vamos a hallar la derivada de la función y la igualamos a la pendiente y de esta forma hallaremos los puntos.
+		</p>
+
+		<p>
+			<m>f'(x)=3x^2-6x+1</m>
+		</p>
+
+		<p>
+			<m>3x^2-6x+1=1 \Rightarrow 3x^2-6x=0 \Rightarrow \begin{cases} x=0 \\ x=2 \end{cases}</m>
+		</p>
+
+		<p>
+			Dada la función <m>f(x)=\dfrac{x}{1-x^2}</m>, hallar:
+		</p>
+
+		<p><ol>
+			<li>
+					<p>
+			El punto o los puntos de la gráfica de <m>f(x)</m> en los que la pendiente de la recta tangente sea 1.
+		</p>
+			</li>
+
+			<li>
+					<p>
+			Hallar la ecuación de la recta tangente a la gráfica de <m>f(x)</m> en el punto <m>x=0</m>
+		</p>
+			</li>
+
+		</ol></p>
+
+		<p><ol>
+			<li>
+					<p>
+			<m>x=0 \qquad x= \sqrt{3} \qquad x=-\sqrt{3}</m>
+		</p>
+			</li>
+
+			<li>
+					<p>
+			<m>y=x</m>
+		</p>
+			</li>
+
+		</ol></p>
+
+	</section>
+
+	<section xml:id="ejercicios">
+		<title>Ejercicios</title>
+
+		<p>
+			Calcular el valor de los parámetros para que la función: <me>f(x)=\left\{\begin{array}{cc} {ax+b} &amp; {x&lt;0} \\ {x^{2} -3x+2} &amp; {x\ge 0} \end{array}\right.</me> Sea continua y derivable. Hacer la representación gráfica.
+		</p>
+
+		<p>
+			<m>\begin{cases} a=-3\\ b= 2\end{cases} \rightarrow f(x)=\left\{\begin{array}{cc} {-3x+2} &amp; {x\le 0} \\ {x^2-3x+2} &amp; {x&gt;0} \end{array}\right.</m>
+		</p>
+
+		<p>
+			Hallar los valores de <m>a</m> y <m>b</m> para que la función: <me>f(x)=\begin{cases} ax+b &amp;  x\leq 1 \\ \\ \dfrac{4x}{1+x}  &amp; x &gt; 1 \end{cases}</me> sea continua y derivable en el punto <m>x=1</m>
+		</p>
+
+		<p>
+			Calcular, para los valores de <m>a</m> y <m>b</m> calculados anteriormente, <m>\limite{-\infty}{f(x)}</m> y <m>\limite{\infty}{f(x)}</m>.
+		</p>
+
+		<p>
+			Hacer una gráfica de la función que refleje los datos anteriores.
+		</p>
+
+		<p>
+			<m>a=1</m>, <m>b=1</m>
+		</p>
+
+		<p>
+			<m>-\infty</m>, <m>4</m>
+		</p>
+
+		<p>
+			Dada la función <m>f(x)=\dfrac{x}{1-x^2}</m>, hallar:
+		</p>
+
+		<p>
+			Calcular la recta tangente a la curva <m>y=x^{2} +4</m> en el punto <m>x=3</m> y calcular los puntos de la curva <m>y=x^{3} -6x+1</m> en los que la recta tangente es paralela a la calculada.
+		</p>
+
+		<table>
+			<caption></caption>
+			<tabular>
+			<row class="odd">
+				<cell halign="center"><m>y=x^{2} +4 \rightarrow y(3)=13</m></cell>
+			</row>
+			<row class="even">
+				<cell halign="center"><m>y'=2x \rightarrow y'(3)=6</m></cell>
+			</row>
+			</tabular>
+		</table>
+
+		<p>
+			<m>\rightarrow y-13=6(x-3)</m><!-- linebreak -->
+		</p>
+
+		<table>
+			<caption></caption>
+			<tabular>
+			<row class="odd">
+				<cell halign="center"><m>y=x^{3}-6x+1 \rightarrow y'=3x^2-6</m></cell>
+			</row>
+			<row class="even">
+				<cell halign="center"><m>y'=6</m></cell>
+			</row>
+			</tabular>
+		</table>
+
+		<p>
+			<m>\rightarrow 3x^2-6=6\rightarrow x=0</m>
+		</p>
+
+		<p>
+			Una lámina metálica se dilata uniformemente por calentamiento, aumentando su base y su altura 0.2 mm por minuto. Averiguar la velocidad de crecimiento de la diagonal de dicha lámina cuando su base y su altura miden, respectivamente, 8 y 6 cm.
+		</p>
+
+		<p>
+			•
+		</p>
+
+		<p>
+			Calcular el valor de los parámetros para que la función: <me>f(x)=\left\{\begin{array}{cc} {ax^{2} +3x} &amp; {x\le 2} \\ {x^{2} -bx-4} &amp; {x&gt;2} \end{array}\right.</me> sea derivable. Hacer la representación gráfica.
+		</p>
+
+		<p>
+			<m>\begin{cases} a=2\\ b=-7 \end{cases} \rightarrow f(x)=\left\{\begin{array}{cc} {2x^{2} +3x} &amp; {x\le 2} \\ {x^{2} +7x-4} &amp; {x&gt;2} \end{array}\right.</m>
+		</p>
+
+		<p><ol>
+			<li>
+					<p>
+			Dada la función <m>f(x)=\dfrac{x}{1-x^2}</m>, hallar el punto o los puntos de la gráfica de <m>f(x)</m> en los que la pendiente de la recta tangente sea 1.
+		</p>
+			</li>
+
+			<li>
+					<p>
+			Hallar la ecuación de la recta tangente a la gráfica de <m>f(x)</m> en el punto <m>x=0</m>
+		</p>
+			</li>
+
+		</ol></p>
+
+		<p>
+			•
+		</p>
+	</section>

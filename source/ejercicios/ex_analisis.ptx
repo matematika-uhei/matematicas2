@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercises xml:id="ex_analisis" xmlns:xi="http://www.w3.org/2001/XInclude">
+	<exercise>
+		<statement>
+			<p>
+				Considera la función <m>f : \R \rightarrow \R</m> definida por <m>f(x)=\dfrac{1}{e^x+e^{-x}}</m>.
+			</p>
+			<p>
+				<ol marker="a)">
+					<li>
+						<p>
+							Estudia y halla los máximos y mínimos absolutos de <m>f</m> (abscisas donde se obtienen y valores que se alcanzan)
+						</p>
+					</li>
+					<li>
+						<p>
+							Calcula <m>\limite{+\infty}{\left( x^2 f(x) \right)}</m>
+						</p>
+					</li>
+				</ol>
+			</p>
+		</statement>
+		<answer>
+			<p>
+				<ol marker="a)">
+					<li>
+						<p>
+							Máximo absoluto: <m>\left( 0, \dfrac{1}{2} \right)</m>. No hay mínimo absoluto.
+						</p>
+					</li>
+					<li>
+						<p>
+							<m>0</m>
+						</p>
+					</li>
+				</ol>
+			</p>
+		</answer>
+	</exercise>
+	
+	<exercise>
+		<statement>
+			<p>
+				Sea la función <m>f : \left[ -2,2 \right] </m> definida por <m>f(x)=x^3-2x+5</m>.
+			</p>
+			<p>
+				<ol marker="a)">
+					<li>
+						<p>
+							Determina las abscisas de los puntos, si existen, en los que la pendiente de la recta tangente coincide con la pendiente de la recta que pasa por los puntos <m>\left( -2,f(-2) \right)</m> y <m>\left( 2,f(2) \right)</m>
+						</p>
+					</li>
+					<li>
+						<p>
+							Determina la ecuación de la recta tangente y la ecuación de la recta normal a la gráfica de <m>f</m> en el punto de inflexión.
+						</p>
+					</li>
+				</ol>
+			</p>
+		</statement>
+		<answer>
+			<p>
+				<ol marker="a)">
+					<li>
+						<p>
+							 <m>x= \pm \sqrt{\dfrac{4}{3}}</m>.
+						</p>
+					</li>
+					<li>
+						<p>
+							Recta tangente: <m>y=-2x+5</m>
+						</p>
+						<p>
+							Recta normal: <m> y=\dfrac{1}{2}x+5</m>
+						</p>
+					</li>
+				</ol>
+			</p>
+		</answer>
+	</exercise>
+	
+	<exercise>
+		<statement>
+			<p>
+				Considera la función <m>f : \R \rightarrow \R</m> definida por <m>f(x)=x|x-1|</m>. Calcula el área del recinto limitado por la gráfica de dicha función y su recta tangente en el punto de abscisa <m>x=0</m>.
+			</p>
+		</statement>
+		<answer>
+			<p>
+				Área = <m>1 \, \text{u}^2</m>
+			</p>
+		</answer>
+	</exercise>
+	<exercise>
+		<statement>
+			<p>
+				Considera la función <m>F: \R \to \R</m> definida por <m>F(x)= \intdef{0}{x}{\sen\left( t^2 \right) \, dx}</m>. Calcula <m>\limite{0}{\dfrac{xF(x)}{\sen \left( x^2 \right)}} \</m>.
+			</p>
+		</statement>
+		<answer>
+			<p>
+				<m>0</m>
+			</p>
+		</answer>
+		
+	</exercise>
+</exercises>

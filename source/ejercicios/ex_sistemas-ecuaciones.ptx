@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercises xml:id="ex_vectores" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <!-- You can ommit the title and just get the default "Exercises" -->
+  <title>Ejercicios</title>
+  
+		<exercise>
+			<statement>
+				<p>
+					En un comercio de bricolaje se venden listones de madera de tres longitudes: 0,90m, 1,50m y 2,40m, cuyos precios respectivos son 4 euros, 6 euros y 10 euros. Un cliente ha comprado 19 listones, con una longitud total de 30m, que le han costado 126 euros en total.
+				</p>
+			
+				<p>
+					Plantee y resuelva el sistema de ecuaciones necesario para determinar cuántos listones de cada longitud ha comprado ese cliente.
+				</p>
+			</statement>
+			<answer>
+				
+			</answer>
+			<solution>
+				<p>
+      Las incógnitas serán: <me>\left\lbrace 
+  \begin{array}{ccc} 
+    x&amp;=&amp;\text{Listones de 0,90m} \\ 
+    y&amp;=&amp;\text{Listones de 1,50m} \\
+    z&amp;=&amp;\text{Listones de 2,40m}
+  \end{array}
+  \right.</me>
+    </p>
+  
+    <p>
+      Según las condiciones del problema: <me>\left\lbrace
+  \begin{array}{ccc}
+  \text{Cantidad total de listones = 19}&amp; \rightarrow  &amp; x+y+z=19 \\
+  \text{Longitud total de los listones = 30m} &amp;  \rightarrow &amp; 0,90x+1,50y+2,40z= 30 \\
+  \text{Precio total de los listones = 126 euros} &amp; \rightarrow &amp; 4x+6y+10z=126 
+  \end{array}
+  \right.</me>
+    </p>
+  
+    <p>
+      El sistema resultante es:
+    </p>
+  
+    <p>
+      <me>\begin{sistematres}
+  x&amp;+&amp;y&amp;+&amp;z&amp;=&amp;19 \\
+  0,9x&amp;+&amp;1,5y&amp;+&amp;2,4z&amp;=&amp; 30 \\
+  4x&amp;+&amp;6y&amp;+&amp;10z&amp;=&amp;126
+  \end{sistematres}</me>
+    </p>
+  
+    <p>
+      que es un sistema lineal donde:
+    </p>
+  
+    <p>
+      <me>A=\begin{pmatrix}
+  1 &amp; 1 &amp; 1 \\
+  0,9 &amp; 1,5 &amp; 2,4 \\
+  4&amp;6&amp;10 
+  \end{pmatrix} \Rightarrow 
+  |A| = \begin{vmatrix}
+  1 &amp; 1 &amp; 1 \\
+  0,9 &amp; 1,5 &amp; 2,4 \\
+  4&amp;6&amp;10 
+  \end{vmatrix} = 15+9,6+5,4-6-14,4-9=0,6</me>
+    </p>
+  
+    <p>
+      Luego el sistema es compatible determinado.
+    </p>
+  
+    <p>
+      La solución, por la regla de Cramer, es:
+    </p>
+  
+    <p>
+      <me>x=\dfrac{1}{0,6} \begin{vmatrix}
+  19&amp; 1&amp;1 \\
+  30 &amp; 1,5 &amp; 2,4 \\
+  126 &amp; 6 &amp; 10
+  \end{vmatrix}= \dfrac{4,8}{0,6}= 8</me> <me>y=\dfrac{1}{0,6} \begin{vmatrix}
+  1&amp; 19&amp;1 \\
+  0,9 &amp; 30 &amp; 2,4 \\
+  4 &amp; 126 &amp; 10
+  \end{vmatrix}= \dfrac{2,4}{0,6}= 6</me> <me>z=\dfrac{1}{0,6} \begin{vmatrix}
+  1&amp; 1&amp;19 \\
+  0,9 &amp; 1,5 &amp; 30 \\
+  4 &amp; 6 &amp; 126
+  \end{vmatrix}= \dfrac{4,2}{0,6}= 7</me>
+    </p>
+  
+    <p>
+      Ha comprado 8 listones de 0,9m, 6 listones de 1,5m y 7 listones de 2,4m.
+    </p>
+  
+			</solution>
+		</exercise>
+    
+  
+   <exercise>
+		 <statement>
+			 <p>
+      Dado el siguiente sistema de ecuaciones: <me>\left\lbrace \begin{array}{ccc}
+  x+y+az &amp; = &amp; 1 \\
+  x+ay+z &amp; = &amp; a \\
+  ax+y+z &amp; = &amp; 1
+  \end{array}
+  \right.</me>
+    </p>
+  
+    <p><ol>
+      <li>
+          <p>
+      Discutir el sistema en función del parámetro <m>a</m>.
+    </p>
+      </li>
+  
+      <li>
+          <p>
+      Si es posible, resolverlo para el valor de <m>a= -2</m>.
+    </p>
+      </li>
+  
+    </ol></p>
+		 </statement>
+		 <answer>
+			<p><ol>
+      <li>
+          <p>
+      <m>\begin{array}{l}
+  a \in \R -\{-2,1\} \\ \text{S. Compatible Determinado} \\
+  a=1 \\ \text{S. Compatible Indeterminado} \\
+  a=-2 \\ \text{S. Compatible Indeterminado} \\
+  \end{array}</m>
+    </p>
+      </li>
+  
+      <li>
+          <p>
+      <m>x=\lambda</m>, <m>y=1+\lambda</m>, <m>z=\lambda</m>
+    </p>
+      </li>
+  
+    </ol></p>
+		 </answer>
+   </exercise>
+    
+  
+  
+    
+  
+    
+  <exercise>
+		<statement>
+			<p><ol>
+      <li>
+          <p>
+      Discute el siguiente sistema de ecuaciones en función del parámetro <m>a</m> <me>\begin{sistematres} 
+  \filasistematres x + y + {az}  1  \\
+  \filasistematres{x}{+}{ay}{+}{z}{a} \\
+  \filasistematres{ax}{+}{y}{+}{z}{1}
+  \end{sistematres}</me>
+    </p>
+      </li>
+  
+      <li>
+          <p>
+      Si es posible, resuélvalo para el valor de <m>a=-2</m>
+    </p>
+      </li>
+  
+    </ol></p>
+		</statement>
+	</exercise>
+    
+  <exercise>
+		<statement>
+			<p>
+      Dado el sistema: <me>\begin{sistematres} 
+  \filasistematres{(a+1)x}{+}{y}{+}{z}{a+1} \\
+  \filasistematres{x}{+}{(a+1)y}{+}{z}{a+3} \\
+  \filasistematres{x}{+}{y}{+}{(a+1)z}{-2a-4}
+  \end{sistematres}</me>
+    </p>
+  
+    <p><ol>
+      <li>
+          <p>
+      Estudie su compatibilidad según los distintos valores del número real <m>a</m>
+    </p>
+      </li>
+  
+      <li>
+          <p>
+      Resuélvalo, si es posible, en el caso <m>a=3</m>
+    </p>
+      </li>
+  
+    </ol></p>
+		</statement>
+  </exercise>
+    
+  
+    
+  
+   <exercise>
+		 <statement>
+			<p>
+      Dado el sistema: <me>\begin{sistematres} 
+  \filasistematres{x}{+}{(a-1)y}{+}{z}{1} \\
+  \filasistematres{ax}{+}{(2a-2)y}{+}{2z}{0} \\
+  \filasistematres{(a+1)x}{+}{(3a-3)y}{+}{(a+3)z}{0}
+  \end{sistematres}</me>
+    </p>
+  
+    <p><ol>
+      <li>
+          <p>
+      Estudie su compatibilidad según los distintos valores del número real <m>a</m>
+    </p>
+      </li>
+  
+      <li>
+          <p>
+      Resuélvalo, si es posible, en el caso <m>a=1</m>
+    </p>
+      </li>
+  
+    </ol></p>
+  
+		 </statement>
+   </exercise>
+  
+    
+    <exercise>
+			<statement>
+				<p>
+      Dado el sistema: <me>\begin{sistematres} 
+  \filasistematres{ax}{-}{ay}{+}{3z}{a} \\
+  \filasistematres{-2x}{+}{3y}{-}{2z}{-1} \\
+  \filasistematres{2x}{-}{y}{+}{z}{a}
+  \end{sistematres}</me>
+    </p>
+  
+  
+    <p><ol>
+      <li>
+          <p>
+      Estudie su compatibilidad según los distintos valores del número real <m>a</m>
+    </p>
+      </li>
+  
+      <li>
+          <p>
+      Resuélvalo, si es posible, en el caso <m>a=1</m>
+    </p>
+      </li>
+  
+    </ol></p>
+  
+			</statement>
+    </exercise>
+  
+    
+    
+    
+    <exercise>
+			<statement>
+				<p>
+					Una marca de vehículos ha vendido este mes coches de tres colores: blancos, negros y rojos. El 60%
+					de los coches blancos más el 50% de los coches negros representan el 30% de los coches vendidos.
+					El 20% de los coches blancos junto con el 60% de los coches negros y el 60% de los coches rojos
+					representan la mitad de los coches vendidos. Se han vendido 100 coches negros más que blancos.
+					Determina el número de coches vendidos de cada colo
+				</p>
+			</statement>
+			<answer>
+				Se han vendido 500 coches blancos, 600 negros y 900 rojos.
+			</answer>
+    </exercise>
+
+  
+</exercises>

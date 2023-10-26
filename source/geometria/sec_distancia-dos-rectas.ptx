@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<section xml:id="sec_distancia-dos-rectas">
+	<title>Distancia entre dos rectas</title>
+	<assemblage>
+		<p>
+			La distancia entre dos rectas es la mínima distancia entre ellas.
+		</p>
+	</assemblage>
+	<p>
+		La distancia entre <term>dos rectas secantes</term> es <m>0</m>, <m>d(r,s)=0</m>.
+	</p>
+	<p>
+		La distancia entre <term>dos rectas coincidentes</term> es <m>0</m>, <m>d(r,s)=0</m>
+	</p>
+	<p>
+		Vamos a ver como calcular la distancia entre dos rectas paralelas y dos rectas que se cruzan.
+	</p>
+
+	<subsection xml:id="distancia-entre-dos-rectas-paralelas">
+		<title>Distancia entre dos rectas paralelas</title>
+		<assemblage>
+			<p>
+				La distancia entre dos rectas paralelas es igual a la distancia de un punto de una de las rectas a la otra recta.
+			</p>
+		</assemblage>
+
+		<p>
+			<me>d(r,s)=d(A,s)=d(B,r) \qquad A \in r,  \, B \in s</me>
+		</p>
+
+		<example>
+			<statement>
+				<p>
+					Hallar la distancia entre las rectas <m>r \equiv \dfrac{x-1}{2}=\dfrac{y+1}{-1}= \dfrac{z}{1}</m> y <m>s \equiv \begin{cases} x= 1+4\lambda \\ y = -2\lambda \\ z= -1+2\lambda \end{cases}</m> Lo primero es comprobar la posición relativa de ambas rectas. Para ello hallamos un punto y un vector director de cada recta.
+				</p>
+			</statement>
+			<solution>
+				<p>
+					<me>r : \begin{cases} A(1,-1,0) \\ \vector{v_r}=(2,-1,1) \end{cases} \qquad s: \begin{cases} B(1,0,-1) \\ \vector{v_s}=(4,-2,2) \end{cases}</me>
+				</p>
+
+				<p>
+					Comprobamos si los vectores son paralelos:
+				</p>
+
+				<p>
+					<m>\dfrac{2}{4}=\dfrac{-1}{-2}=\dfrac{1}{2} \Rightarrow</m> los vectores son paralelos, por lo tanto, las rectas son coincidentes o paralelas.
+				</p>
+
+				<p>
+					Comprobamos si son coincidentes comprobando si el punto <m>B \in s</m> pertenece a <m>r</m> o no.
+				</p>
+
+				<p>
+					<m>\dfrac{1-1}{2} \neq \dfrac{0+1}{-1}</m>, por lo tanto las rectas son paralelas.
+				</p>
+
+				<p>
+					Ahora hallamos su distancia. La distancia entre las rectas va a ser la distancia de un punto de una de las rectas a la otra. Calcularemos la distancia del punto <m>B \in s</m> a la recta <m>r</m>.
+				</p>
+
+				<p>
+					<ul>
+						<li>
+							<p>
+								<m>\vector{AB}= (0,1,-1)</m>.
+							</p>
+						</li>
+
+						<li>
+							<p>
+								<m>\vector{AB} \times \vector{v_r} =  \begin{vmatrix}
+									\vec{i} &amp; \vec{j} &amp; \vec{k} \\
+									0 &amp; 1 &amp; -1 \\
+									2 &amp; -1 &amp; 1
+									\end{vmatrix}= -2\vec{j}+2\vec{k} \Rightarrow |\vector{AB} \times \vector{v_r}| = \sqrt{0^2+(-2)^2+2^2}= \sqrt{8}</m>
+							</p>
+						</li>
+
+						<li>
+							<p>
+								<m>|\vector{v_r}|=\sqrt{2^2+(-1)^2+1^2}=\sqrt{6}</m>
+							</p>
+						</li>
+					</ul>
+				</p>
+
+				<p>
+					<m>d(r,s)=d(B,r)=\dfrac{\sqrt{8}}{\sqrt{6}}= \dfrac{2\sqrt{3}}{3}</m> u.
+				</p>
+
+			</solution>
+		</example>
+			
+	</subsection>
+
+	<subsection xml:id="distancia-dos-rectas-cruzan">
+		<title>Distancia entre dos rectas que se cruzan</title>
+
+		<p>
+			Sean dos rectas <m>r</m>, que pasa por el punto <m>A</m> y tiene vector director <m>\vector{v}</m> y <m>s</m>, que pasa por <m>B</m> y tiene vector director <m>\vector{w}</m> y que se cruzan en el espacio. Para hallar su distancia existen varios métodos
+		</p>
+
+		<p>
+			<ol>
+				<li>
+					<p>
+						Tomamos dos puntos génericos uno de cada recta <m>R\in r</m> y <m>S \in s</m>. El vector <m>\vector{RS}</m> es perpendicular a ambas rectas, por lo tanto: 
+						<me>\vector{RS} \perp \vector{v} \Rightarrow \vector{RS} \cdot \vector{v}=0</me> 
+						<me>\vector{RS} \perp \vector{w} \Rightarrow \vector{RS} \cdot \vector{w}=0</me> 
+						De aqui hallamos <m>R</m> y <m>S</m> y la distancia entre las dos rectas es la misma que entre estos dos puntos: 
+						<me>\text{d}(r,s)=\text{d}(R,S)</me>
+					</p>
+				</li>
+
+				<li>
+					<p>
+						Hallamos el plano que contiene a la recta <m>r</m> y es paralelo a la recta <m>s</m>. La distancia entre las dos rectas es la misma que entre la recta <m>s</m> y el plano hallado, o lo que es lo mismo, entre cualquier punto de la recta <m>s</m> y el plano hallado.
+					</p>
+				</li>
+
+				<li>
+					<p>
+						Mediante la fórmula :
+						<me>\text{d}(r,s)=\dfrac{\left| \left[\vector{AB},\vector{v},\vector{w} \right] \right|}{\left| \vector{v} \times \vector{w} \right|}</me>
+					</p>
+				</li>
+			</ol>
+		</p>
+
+		<example>
+			<statement>
+				<p>
+					Hallar la distancia entre las rectas 
+					<me>r: \dfrac{x-2}{1}=\dfrac{y+3}{2}=\dfrac{z}{1}</me> 
+					<me>s:\begin{cases} x=\lambda \\ y=\lambda \\ z=\lambda \end{cases}</me>
+				</p>
+			</statement>
+			<solution>
+				<p>
+					Utilizaremos los tres métodos para calcular la distancia:
+				</p>
+
+				<p>
+					<ol>
+						<li>
+							<p>
+								Ponemos las dos rectas en forma paramétrica y calculamos un punto genérico de cada recta: 
+								<me>r: \begin{cases} x=2+\mu \\ y=-3+2\mu \\ z=\mu \end{cases}</me> 
+								<me>s: \begin{cases} x=\lambda \\ y=\lambda \\ z=\lambda \end{cases}</me> 
+								<me>R(2+\mu,-3+2\mu,\mu) \qquad S(\lambda,\lambda,\lambda)</me> 
+								Hallamos el vector <m>\vector{RS}</m> y hacemos que sea perpendicular a <m>\vector{v}</m> y <m>\vector{w}</m> 
+								<me>\vector{RS}=(\lambda-\mu-2,\lambda-2\mu+3,\lambda-\mu)</me> 
+								<me>\vector{v}=(1,2,1)</me> 
+								<me>\vector{w}=(1,1,1)</me> 
+								<me>\vector{RS} \perp \vector{v} \Rightarrow \vector{RS} \cdot \vector{v}=0 \Rightarrow \lambda-\mu-2+2\lambda-4\mu+6+\lambda-\mu =0 \Rightarrow 4\lambda-6\mu=-4</me> 
+								<me>\vector{RS} \perp \vector{w} \Rightarrow \vector{RS} \cdot \vector{w}=0 \Rightarrow \lambda-\mu-2+\lambda-2\mu+3+\lambda-\mu =0 \Rightarrow 3\lambda-4\mu=-1</me> 
+								Resolvemos el sistema: 
+								<me>\left. \begin{array}{l}
+								4\lambda-6\mu=-4 \\ 
+								3\lambda-4\mu=-1
+								\end{array} \right\rbrace \Rightarrow \begin{array}{l}
+								\lambda= 5\\
+								\mu= 4
+								\end{array}</me> 
+								Luego <m>R(6,5,4) \qquad S(5,5,5)</m>. 
+								<me>\text{d}(r,s)=\text{d}(R,S)=\sqrt{(5-6)^2+(5-5)^2+(5-4)^2}=\sqrt{2}</me>
+							</p>
+						</li>
+
+						<li>
+							<p>
+								Hallamos un punto y un vector de cada recta. Con estos valores calculamos el plano que contiene a <m>r</m> y es paralelo a <m>s</m>. 
+								<me>r:\begin{cases} A(2,-3,0) \\ \vector{v}=(1,2,1) \end{cases} \qquad s:\begin{cases} B(0,0,0) \\ \vector{w}=(1,1,1) \end{cases}</me> 
+								<me>\pi: \begin{vmatrix}
+								x-2 &amp; 1 &amp; 1 \\
+								y+3 &amp; 2 &amp; 1 \\
+								z &amp; 1 &amp; 1
+								\end{vmatrix}= 0 \Rightarrow \pi: x-z-2=0</me> 
+								La distancia entre las dos rectas es la misma que entre la recta <m>s</m> y el plano <m>\pi</m> que se calcula hallando la distancia de cualquier punto de <m>s</m> a <m>\pi</m> 
+								<me>\text{d}(r,s)=\text{d}(s,\pi)=\text{d}(B,\pi)=\dfrac{|0-0-2|}{\sqrt{1^2+0^2+(-1)^2}}=\dfrac{2}{\sqrt{2}}=\sqrt{2}</me>							
+							</p>
+						</li>
+
+						<li>
+							<p>
+								Hallamos un punto y un vector de cada recta y aplicamos la fórmula: <me>\text{d}(r,s)=\dfrac{\left| \left[\vector{AB},\vector{v},\vector{w} \right] \right|}{\left| \vector{v} \times \vector{w} \right|}</me> <me>r:\begin{cases} A(2,-3,0) \\ \vector{v}=(1,2,1) \end{cases} \qquad s:\begin{cases} B(0,0,0) \\ \vector{w}=(1,1,1) \end{cases}</me> Hallamos <m>\vector{AB}=(-2,3,0)</m> Calculamos <me>\left[\vector{AB},\vector{v},\vector{w} \right] = \begin{vmatrix}
+								-2 &amp; 1 &amp; 1 \\
+								3 &amp; 2 &amp; 1 \\
+								0 &amp; 1 &amp; 1
+								\end{vmatrix}=-2</me> <me>\vector{v} \times \vector{w} =\begin{vmatrix}
+								\vec{i} &amp; \vec{j} &amp; \vec{k} \\
+								1 &amp; 2 &amp; 1 \\
+								1 &amp; 1 &amp; 1
+								\end{vmatrix}=\vec{i}-\vec{k}</me> <me>| \vector{v} \times \vector{w} |=\sqrt{1^2+0^2+(-1)^2}=\sqrt{2}</me> La distancia
+								es: <me>\text{d}(r,s)=\dfrac{2}{\sqrt{2}}=\sqrt{2 }</me>
+							</p>
+						</li>
+					</ol>
+				</p>
+			</solution>
+		</example>
+	</subsection>
+
+</section>
+
+
+

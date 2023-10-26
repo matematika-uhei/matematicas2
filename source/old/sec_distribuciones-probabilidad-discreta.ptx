@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="distribuciones-probabilidad-discreta">
+    <title>Distribuciones de probabilidad discreta</title>
+
+    <introducion>
+
+    
+		<p>
+			Función de probabilidad
+		</p>
+
+<!-- div attr= class="alertblock"-->
+		<p>
+			Función de probabilidad discreta
+		</p>
+
+		<p>
+			La función de probabilidad es la que asigna a cada uno de los valores de la variable aleatoria discreta su probabilidad.
+		</p>
+
+		<p>
+			<me>f(x_i)=P(X=x_i)=p_i</me>
+		</p><!--</div attr= class="alertblock">-->
+
+		<p>
+			<term>Propiedades de la función de probabilidad</term>
+		</p>
+
+		<p><ul>
+			<li>
+					<p>
+			<m>0 \leq p_i \leq 1</m>
+		</p>
+			</li>
+
+			<li>
+					<p>
+			<m>\displaystyle \sum_{i=1}^{n} p_i =1</m>
+		</p>
+			</li>
+
+			<li>
+					<p>
+			<m>P(a \leq x \leq b)=P(x=a)+P(x=a+1)+\cdots+P(x=b-1)+P(x=b)</m>
+		</p>
+			</li>
+
+			<li>
+					<p>
+			<m>P(x\leq b) = 1-P(x&gt;b)</m>
+		</p>
+			</li>
+
+		</ul></p>

@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec_posicion-dos-planos" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Posiciones dos planos</title>
+  <introduction>
+    <p>
+      Dados dos planos <m> \begin{cases} \pi_1 : A_1 x + B_1 y + C_1 z + D_1 = 0 \\ \pi_2 : A_2 x + B_2 y + C_2 z + D_2 = 0 \end{cases}</m>
+    </p>
+    </introduction>
+    <sidebyside widths="33% 33% 33%" valigns="top top top">
+		<stack>
+			<p>
+				<me> \dfrac{A_1}{A_2}=\dfrac{B_1}{B_2}=\dfrac{C_1}{C_2}=\dfrac{D_1}{D_2}</me>
+			</p>
+			<p>
+				Coincidentes
+			</p>
+		</stack>
+		<stack>
+			<p>
+				<me> \dfrac{A_1}{A_2}=\dfrac{B_1}{B_2}=\dfrac{C_1}{C_2} \neq \dfrac{D_1}{D_2}</me>
+			</p>
+			<p>
+				Paralelos
+			</p>
+		</stack>
+		<stack>
+			<p>
+				<me> \dfrac{A_1}{A_2}\neq \dfrac{B_1}{B_2} \, \text{o} \, \dfrac{A_1}{A_2} \neq \dfrac{C_1}{C_2}</me>
+			</p>
+			<p>
+				Secantes
+			</p>
+		</stack>
+	</sidebyside>
+	<sidebyside widths="33% 33% 33%" valigns="middle middle middle">
+		<figure xml:id="figure-dos-planos-coincidentes" >
+			<caption>Planos Coinidentes</caption>
+		<image xml:id="dos-planos-coincidentes" width="50%">
+			<asymptote>
+				settings.prc = false;
+				settings.render = 16;
+				import three;
+				import bsp;
+				texpreamble("\usepackage{euler,beton}");
+				size(5cm, 0);
+				currentprojection=orthographic((5,4,3));
+
+				path3 pl =plane((0,-2,0),(-2,0,0),(0,1,0));
+				path3 pl2=plane((0,-1.5,0),(-1.5,0,0),(0,0.75,0));
+				
+				draw (pl);
+				draw (pl2);
+
+				surface s1=surface(pl);
+				draw(s1,red+opacity(.6),light=nolight);
+				
+				surface s3=surface(pl2);
+				draw(s3,green+opacity(.6),light=nolight);
+				
+			</asymptote>
+		</image>
+		</figure>
+		<figure xml:id="figure-dos-planos-paralelos" >
+			<caption>Planos paralelos</caption>
+		<image xml:id="dos-planos-paralelos" width="50%">
+		  <asymptote>
+			settings.prc = true;
+			settings.render = 16;
+			import three;
+			import bsp;
+			texpreamble("\usepackage{euler,beton}");
+			size(5cm, 0);
+			currentprojection=orthographic((5,4,3));
+
+			path3 pl =plane((0,-2,0),(-2,0,0),(0,1,0));
+			path3 pl1=shift(0.6*normal(pl))*pl;
+			
+			draw (pl);
+			draw (pl1);
+			
+			surface s1=surface(pl);
+			draw(s1,red+opacity(.6),light=nolight);
+			surface s2=surface(pl1);
+			draw(s2,blue+opacity(.6),light=nolight);
+		  </asymptote>
+		</image>
+		</figure>
+		<figure xml:id="figure-dos-planos-secantes" >
+			<caption>Planos Secantes</caption>
+		<image xml:id="dos-planos-secantes" width="50%">
+		  <asymptote>
+			settings.prc = false;
+			settings.render = 16;
+			import three;
+			import bsp;
+			import palette;
+			texpreamble("\usepackage{euler,beton}");
+			texpreamble("\usepackage{xcolor}");
+			size(5cm, 0);
+			currentprojection=orthographic((5,4,3));
+
+			path3 pl =plane((0,-2,0),(-2,0,0),(0,1,0));
+			path3 pl2=rotate(-60,X)*pl;
+
+			draw (pl);
+			draw (pl2);
+
+			triple[] asf=intersectionpoints(pl,pl2);
+			triple C=asf[1];
+			triple D=asf[0];
+
+			surface s1=surface(pl);
+			draw(s1,red+opacity(.6),light=nolight);
+			surface s3=surface(pl2);
+			draw(s3,green+opacity(.6),light=nolight);
+
+			draw((C--D),blue);
+		  </asymptote>
+		</image>
+		</figure>
+	</sidebyside>
+	
+	<sidebyside widths="50% 50%" valigns="middle middle middle">
+		<stack>
+		<p>
+			<term>Coincidentes</term>
+		</p>	
+		<p>
+			<m> \dfrac{A_1}{A_2}=\dfrac{B_1}{B_2}=\dfrac{C_1}{C_2}=\dfrac{D_1}{D_2}</m>
+		</p>
+		
+		<p>
+			Las dos ecuaciones representan el mismo plano.
+		</p>
+		</stack>
+				
+		<p>
+			<image xml:id="dos-planos-coincidentes-dos" width="80%">
+						<asymptote>
+							settings.prc = false;
+							settings.render = 16;
+							import three;
+							import bsp;
+							texpreamble("\usepackage{euler,beton}");
+							size(5cm, 0);
+							currentprojection=orthographic((5,4,3));
+
+							path3 pl =plane((0,-2,0),(-2,0,0),(0,1,0));
+							path3 pl2=plane((0,-1.9,0),(-1.9,0,0),(0,0.95,0));
+							
+							draw (pl);
+							draw (pl2);
+
+							surface s1=surface(pl);
+							draw(s1,red+opacity(.6),light=nolight);
+							
+							surface s3=surface(pl2);
+							draw(s3,green+opacity(.6),light=nolight);
+							
+						</asymptote>
+					</image>
+				</p>
+	</sidebyside>
+	
+	<table>
+		<tabular bottom="medium" top="medium" left="medium" right="medium" halign="center">
+			<row halign="center">
+				<cell><m> \dfrac{A_1}{A_2}=\dfrac{B_1}{B_2}=\dfrac{C_1}{C_2}=\dfrac{D_1}{D_2} \Rightarrow </m></cell>
+				<cell><me> \dfrac{A_1}{A_2}=\dfrac{B_1}{B_2}=\dfrac{C_1}{C_2} \neq \dfrac{D_1}{D_2} \Rightarrow </me></cell>
+				<cell><me> \dfrac{A_1}{A_2}\neq \dfrac{B_1}{B_2} \, \text{o} \, \dfrac{A_1}{A_2} \neq \dfrac{C_1}{C_2} \Rightarrow </me></cell>
+			</row>
+			<row halign="center">
+				<cell halign="center">Coincidentes</cell>
+				<cell halign="center"><term>Paralelos</term></cell>
+				<cell><em>Secantes</em></cell>
+			</row>
+			<row>
+				<cell>
+					<image xml:id="dos-planos-coincidentes-tres" width="80%">
+						<asymptote>
+							settings.prc = false;
+							settings.render = 16;
+							import three;
+							import bsp;
+							texpreamble("\usepackage{euler,beton}");
+							size(5cm, 0);
+							currentprojection=orthographic((5,4,3));
+
+							path3 pl =plane((0,-2,0),(-2,0,0),(0,1,0));
+							path3 pl2=plane((0,-1.5,0),(-1.5,0,0),(0,0.75,0));
+							
+							draw (pl2);
+							draw (pl);
+
+							surface s1=surface(pl2);
+							draw(s1,red+opacity(.6),light=nolight);
+							
+							surface s3=surface(pl);
+							draw(s3,green+opacity(.6),light=nolight);
+							
+						</asymptote>
+					</image>
+				</cell>
+				<cell>
+					<image xml:id="dos-planos-paralelos-dos" width="100%">
+						<asymptote>
+							settings.prc = true;
+						settings.render = 16;
+						import three;
+						import bsp;
+						texpreamble("\usepackage{euler,beton}");
+						size(5cm, 0);
+						currentprojection=orthographic((5,4,3));
+
+						path3 pl =plane((0,-2,0),(-2,0,0),(0,1,0));
+						path3 pl1=shift(0.6*normal(pl))*pl;
+						
+						draw (pl);
+						draw (pl1);
+						
+						surface s1=surface(pl);
+						draw(s1,red+opacity(.6),light=nolight);
+						surface s2=surface(pl1);
+						draw(s2,blue+opacity(.6),light=nolight);
+						</asymptote>
+					</image>
+				</cell>
+				<cell halign="center">
+					<image xml:id="dos-planos-secantes-2" width="100%">
+					  <asymptote>
+						settings.prc = false;
+						settings.render = 16;
+						import three;
+						import bsp;
+						import palette;
+						texpreamble("\usepackage{euler,beton}");
+						texpreamble("\usepackage{xcolor}");
+						size(5cm, 0);
+						currentprojection=orthographic((5,4,3));
+
+						path3 pl =plane((0,-2,0),(-2,0,0),(0,1,0));
+						path3 pl2=rotate(-60,X)*pl;
+
+						draw (pl);
+						draw (pl2);
+
+						triple[] asf=intersectionpoints(pl,pl2);
+						triple C=asf[1];
+						triple D=asf[0];
+
+						surface s1=surface(pl);
+						draw(s1,red+opacity(.6),light=nolight);
+						surface s3=surface(pl2);
+						draw(s3,green+opacity(.6),light=nolight);
+
+						draw((C--D),blue);
+					  </asymptote>
+					</image>
+				</cell>
+			</row>
+		</tabular>
+	
+	</table>
+	<example>
+		<statement>
+			<p>
+				Hallar la posición relativa de las siguientes parejas de planos:
+			</p>
+			<p>
+				<ol label="a)">
+					<li>
+						<p>
+							<m> \begin{cases} 2x+4y-z+2=0 \\ -3x+y-z= 1 \end{cases}</m>
+						</p>
+					</li>
+				</ol>
+			</p>
+		</statement>
+	</example>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

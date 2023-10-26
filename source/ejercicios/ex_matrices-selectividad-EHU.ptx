@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercises xml:id="ex_matrices-selectividad-EHU" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <!-- You can ommit the title and just get the default "Exercises" -->
+	<title>Ejercicios Selectividad EHU-UPV</title>
+	
+	<exercise>
+		<statement>
+			<p>
+				<term>Junio 2017 - Ejercicio B1</term>
+			</p>
+			<p>
+				Dada la matriz <m>A=\begin{pmatrix}  m &amp; -2 &amp; 0 \\  0 &amp; -2 &amp; 0 \\  0 &amp; 1 &amp; m  \end{pmatrix}</m>
+			</p>
+
+			<p>
+				<ol>
+					<li>
+						<p>
+							¿Para qué valores de <m>m</m> la matriz A posee inversa? Estudiar el rango de la matriz en función del parámetro <m>m</m>.
+						</p>
+					</li>
+
+					<li>
+						<p>
+							Hallar el valor <m>m</m> para que se cumpla la igualdad <m>A^2 = 4 \begin{pmatrix}  1 &amp; 0 &amp; 0 \\  0 &amp; 1 &amp; 0 \\  0 &amp; 0 &amp; 1  \end{pmatrix}</m>
+						</p>
+					</li>
+				</ol>
+			</p>
+		</statement>
+		<answer>
+			<p>
+				<ol>
+					<li>
+						<p>
+							Existe inversa para <m>m \neq 0</m>
+						</p>
+						<p>
+							<m>\begin{cases} m \neq 0 \rightarrow \text{Rango}(A)= 3 \\  m = 0 \rightarrow \text{Rango}(A)= 1  \end{cases}</m>
+						</p>
+					</li>
+
+					<li>
+						<p>
+							<m>m = 2</m>
+						</p>
+					</li>
+
+				</ol>
+			</p>
+		</answer>
+	</exercise>
+
+	<exercise>
+		<statement>
+			<p>
+				<term>Julio 2017 - Ejercicio B1</term>
+			</p>
+			<p>
+				<ol>
+					<li>
+						<p>
+							Calcula para qué valor, o valores, de <m>x</m> admite inversa la siguiente matriz <me>A= \begin{pmatrix}  1 &amp; 1 &amp; x \\  x &amp; 0 &amp; -1 \\  -6 &amp; -1 &amp; 0 \\ \end{pmatrix}</me>
+						</p>
+					</li>
+
+					<li>
+						<p>
+							En caso de existir, calcula la inversa de <m>A</m> para <m>x = −3</m>.
+						</p>
+					</li>
+
+				</ol>
+			</p>
+		</statement>
+		<answer>
+			<p>
+				<ol>
+					<li>
+						<p>
+							<m>m \neq \pm \sqrt{5}</m>
+						</p>
+					</li>
+
+					<li>
+						<p>
+							<m>A^{-1} = \dfrac{1}{4} \begin{pmatrix}  1 &amp; 3 &amp; 1 \\  -6 &amp; -18 &amp; -10 \\  3 &amp; 5 &amp; 3  \end{pmatrix}</m>
+						</p>
+					</li>
+				</ol>
+			</p>
+		</answer>
+	</exercise>
+
+	<exercise>
+		<statement>
+			<p>
+				<term>Junio 2018 - Ejercicio A1</term>
+			</p>
+
+			<p>
+				Calcula el rango de la siguiente matriz según el valor de <m>a</m>: <me>A=\begin{pmatrix}  1 &amp; 0 &amp; 4 &amp; 2 \\  0 &amp; a &amp; 4 &amp; 0 \\  -1 &amp; 3 &amp; a &amp; -2  \end{pmatrix}</me> 
+			</p>
+
+		</statement>
+		<answer>
+			<p>
+				<m>\begin{cases} a \in \R -\{-6,2\} \rightarrow \text{Rango}(A)= 3 \\  a = -6  \rightarrow \text{Rango}(A)= 2  \\ a = 2  \rightarrow \text{Rango}(A)= 2 \\ \end{cases}</m> 
+		</p>
+		</answer>
+	</exercise>
+	
+	<exercise>
+		<statement>
+			<p>
+			<term>Julio 2018 - Ejercicio A1</term>
+		</p>
+
+		<p>
+			Calcula el rango de la siguiente matriz según el valor de <m>a</m>: 
+			<me>A=\begin{pmatrix}  1 &amp; 1 &amp; a+1 &amp; 1 \\  a &amp; 0 &amp; 0 &amp; 2 \\  0 &amp; a &amp; 2 &amp; 0  \end{pmatrix}</me> 
+		</p>
+
+		
+		</statement>
+					
+		<answer>
+			<p>
+				El rango siempre es <m>3</m> 
+		</p>
+		</answer>
+	</exercise>
+	
+	<exercise>
+		<statement>
+			<p>
+				<term>Junio 2019 - Ejercicio B1</term>
+			</p>
+
+			<p>
+				Dada la matriz: <me>A(a)=\begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 1 &amp; a &amp; 0 \\ 1 &amp; 1 &amp; 1  \end{pmatrix}</me> calcular, razonadamente, el valor de <m>a</m> para que el determinante de <m>\left[ A(a) \right]^2</m> valga <m>4</m>. &lt;/exercise&gt;
+			</p>
+		</statement>
+					
+		<answer>
+			<p>
+				<m>a = \pm 2</m> 
+			</p>
+		</answer>
+	</exercise>
+	
+	<exercise>
+		<statement>
+			<p>
+				<term>Julio 2019 - Ejercicio B1</term>
+			</p>
+
+		<p>
+			Dada una matriz de tamaño <m>3 \times 3</m> cuyo determinante es igual a <m>5</m>, se realizan sucesivamente las siguientes operaciones:
+		</p>
+
+		<p>
+			<ol marker="a) ">
+				<li>
+					<p>
+						se cambian entre sí la primera y segunda fila,
+					</p>
+				</li>
+
+				<li>
+					<p>
+						se multiplica a la tercera columna por –2,
+					</p>
+				</li>
+
+				<li>
+					<p>
+						se multiplica a toda la matriz por 2 y
+					</p>
+				</li>
+
+				<li>
+					<p>
+						se traspone la matriz.
+					</p>
+				</li>
+
+			</ol>
+		</p>
+
+		<p>
+			Calcular de forma razonada el valor del determinante de la matriz obtenida.
+		</p>
+		</statement>
+					
+		<answer>
+			<p>
+				<m>80</m> 
+			</p>
+		</answer>
+	</exercise>
+	
+	<exercise>
+		<statement>
+	
+			<p>
+				 <term>Junio 2020 - Ejercicio B1</term>
+			</p>
+
+			<p>
+				Sea <m>M(\alpha)</m> la matriz dada por <m>M(\alpha)= \begin{pmatrix} 1 &amp; \alpha &amp; 1 \\ \alpha &amp; 1 &amp; \alpha \\ 0 &amp; \alpha &amp; 1 \\ \end{pmatrix}</m>
+			</p>
+
+			<p>
+				<ol>
+					<li>
+						<p>
+							Determinar para qué valores de <m>\alpha</m> la matriz no tiene inversa.
+						</p>
+					</li>
+
+					<li>
+						<p>
+							Calcular, si es posible, la matriz inversa para <m>\alpha = 0</m> , y en caso de que no sea posible razonar por qué no es posible.
+						</p>
+					</li>
+
+				</ol>
+			</p>
+		</statement>
+					
+		<answer>
+			<p>
+				<ol>
+					<li>
+						<p>
+							<m>\alpha = \pm 1</m>
+						</p>
+					</li>
+
+					<li>
+						<p>
+							<m>\left[M(0)\right]^{-1} = \begin{pmatrix} 1 &amp; 0 &amp; -1 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \\ \end{pmatrix}</m>
+						</p>
+					</li>
+
+				</ol>
+			</p>
+		</answer>
+	</exercise>
+	
+	<exercise>
+		<statement>
+			<p>
+				<term>Julio 2020 - Ejercicio B1</term>
+			</p>
+
+			<p>
+				Dada la matriz <m>M=\begin{pmatrix} 1 &amp; 0 \\ 1 &amp; 1 \\ \end{pmatrix}</m>, calcular razonadamente <m>M^{2020}</m>
+			</p>
+		</statement>
+					
+		<answer>
+			<p>
+				<m>M^{2020}= \begin{pmatrix} 1 &amp; 0 \\ 2020 &amp; 1 \\ \end{pmatrix}</m>
+			</p>
+		</answer>
+	</exercise>
+	
+	<exercise>
+		<statement>
+			<p>
+			 <term>Junio 2021 - Ejercicio B1</term>
+			</p>
+
+			<p>
+				Dada la matriz <me>A= \begin{pmatrix} 2 &amp; 3 &amp; \alpha \\ 1 &amp; \alpha &amp; 1 \\ 0 &amp; \alpha &amp; -1 \\ \end{pmatrix}</me>
+			</p>
+
+			<p>
+				<ol marker="a) ">
+					<li>
+						<p>
+							Determinar para qué valores del parámetro <m>\alpha</m> la matriz <m>A</m> no tiene inversa.
+						</p>
+					</li>
+
+					<li>
+						<p>
+							Calcular, si es posible, la matriz inversa de <m>A</m> para <m>\alpha = 2</m> .
+						</p>
+					</li>
+
+				</ol>
+			</p>
+
+
+		
+		</statement>
+					
+		<answer>
+			<p>
+				<ol marker="a) ">
+					<li>
+						<p>
+							<m>\alpha = 1</m> o <m>\alpha=3</m>
+						</p>
+					</li>
+
+					<li>
+						<p>
+							<m>A^{-1}= \begin{pmatrix} 4 &amp; -7 &amp; 1 \\ -1 &amp; 2 &amp; 0 \\ -2 &amp; 4 &amp; -1 \\ \end{pmatrix}</m>
+						</p>
+					</li>
+
+				</ol>
+			</p>
+		</answer>
+	</exercise>
+	
+	<exercise>
+		<statement>
+			<p>
+			 <term>Julio 2021 - Ejercicio B1</term>
+			</p>
+
+			<p>
+				Sean <me>A= \begin{pmatrix} 1 &amp; 0 \\ -2 &amp; 1 \\ \end{pmatrix} \qquad B= \begin{pmatrix} 2 &amp; 0 \\ 2 &amp; 1 \\ \end{pmatrix} \qquad C= \begin{pmatrix} 2 &amp; 2 \\ 0 &amp; 1 \\ \end{pmatrix}</me> Calcular la matriz <m>X</m> de orden <m>2 \times 2</m> que verifica 
+				<me>A^2 \cdot X +B = C</me> 
+			</p>
+		</statement>
+					
+		<answer>
+			<p>
+				<m>X= \begin{pmatrix} 0 &amp; 2 \\ -2 &amp; 8 \\ \end{pmatrix}</m>
+			</p>
+		</answer>
+	</exercise>
+	
+	<exercise>
+		<statement>
+			<p>
+				<term>Junio 2022 - Ejercicio B1</term>
+			</p>
+
+			<p>
+				Dada la matriz <me>A= \begin{pmatrix} m &amp; m &amp; 2 \\ 1 &amp; m-2 &amp; 0 \\ 0 &amp; 2 &amp; 2 \\ \end{pmatrix}</me>
+			</p>
+
+			<p>
+				<ol>
+					<li>
+						<p>
+							Determinar para qué valores del parámetro <m>m</m> la matriz <m>A</m> no tiene inversa.
+						</p>
+					</li>
+
+					<li>
+						<p>
+							Calcular, si es posible, la matriz inversa de <m>A</m> para <m>m = 0</m> .
+						</p>
+					</li>
+
+				</ol>
+			</p>
+		</statement>
+					
+		<answer>
+			<p>
+				<ol>
+					<li>
+						<p>
+							<m>m = 1</m> o <m>m =2</m>
+						</p>
+					</li>
+
+					<li>
+						<p>
+							<m>A^{-1}= \begin{pmatrix} -1 &amp; 1 &amp; 1 \\ \sfrac{-1}{2} &amp; 0 &amp; \sfrac{1}{2} \\ \sfrac{1}{2} &amp; 0 &amp; 0  \end{pmatrix}</m>
+						</p>
+					</li>
+
+				</ol>
+			</p>
+		</answer>
+	</exercise>
+	
+	<exercise>
+		<statement>
+			<p>
+				<term>Julio 2022 - Ejercicio B1</term>
+			</p>
+
+			<p>
+				Calcula de manera razonada, aplicando las propiedades adecuadas, el valor del determinante <me>\begin{vmatrix}  a &amp; b &amp; c \\ p &amp;  q &amp; r \\ x &amp; y &amp; z  \end{vmatrix}</me> sabiendo que <me>\begin{vmatrix}  p+a &amp; q+b &amp; r+c \\   2x &amp; 2y &amp; 2z \\ p+x &amp;  q+y &amp; r+z  \end{vmatrix} = 6</me> 
+			</p>
+		</statement>
+					
+		<answer>
+			<p>
+				<m>-3</m> 
+			</p>
+		</answer>
+	</exercise>
+	
+	<exercise>
+		<statement>
+			<p>
+				<term>Junio 2023 - Ejercicio B1</term>
+			</p>
+			<p>
+				Sea la matriz:
+			</p>
+			<me>
+				A=\begin{pmatrix} 2 &amp; 3 &amp; \alpha \\ 1 &amp; \alpha &amp; 1  \\ 0 &amp; \alpha &amp; 1 \end{pmatrix}
+			</me>
+			<p>
+				<ol marker="a) ">
+					<li>
+						<p>
+							Determinar para que valores del parámetro <m>\alpha</m> la matriz <m>A</m> no tiene inversa.
+						</p>
+					</li>
+					
+					<li>
+						<p>
+							Calcular, si es posible, la matriz inversa de <m>A</m> para <m>\alpha = 2 </m>
+						</p>
+					</li>
+				</ol>
+			</p>
+		</statement>
+		<answer>
+			<p>
+				<ol marker="a) ">
+					<li>
+						<p>
+							<m>\alpha=1 </m> y <m>\alpha=3 </m>
+						</p>
+					</li>
+					
+					<li>
+						<p>
+							<m>
+								A^{-1}=\begin{pmatrix} 4 &amp; -7 &amp; 1 \\ -1 &amp; 2 &amp; 0  \\ -2 &amp; 4 &amp; -1 \end{pmatrix}
+							</m>
+						</p>
+					</li>
+				</ol>
+			</p>
+		</answer>
+	</exercise>
+</exercises>

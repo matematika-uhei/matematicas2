@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercises xml:id="ex_binomial-normal" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <!-- You can ommit the title and just get the default "Exercises" -->
+	<title>Ejercicios Binomial - Normal</title>
+
+	<exercise>
+		<statement>
+			<p>
+				Un juego de ruleta tiene 25 casillas numeradas del 1 al 25. Un jugador gana si sale 2 o múltiplo de 2.
+			</p>
+			<p>
+				<ol>
+					<li>
+						<p>
+							Si juega 100 veces, calcule la probabilidad de que gane exactamente 10 veces.
+						</p>
+					</li>
+					<li>
+						<p>
+              Si juega 200 veces, calcule la probabilidad de que gane entre 90 y 110 veces, ambos valores incluidos.
+						</p>
+					</li>
+				</ol>
+			</p>
+		</statement>
+		<answer>
+			<p>
+				<ol>
+					<li>
+						<p>
+							<m>0</m>
+						</p>
+					</li>
+					<li>
+						<p>
+              <m>0.801</m>
+						</p>
+					</li>
+				</ol>
+			</p>
+		</answer>
+		<solution>
+			<p>
+				<ol>
+					<li>
+						<p>
+							<m>X:B(100;0.48)</m>
+						</p>
+            <p>
+              <me>P(X=10)=\binom{100}{10}\cdot 0.48^{10} \cdot 0.52^{90} \approx 0</me>
+            </p>
+					</li>
+					<li>
+						<p>
+              Aproximaremos la binomial con la normal: <m>X:B(200;0.48) \rightarrow X':N(96;7.07)</m>
+						</p>
+            <p>
+							<me>
+								p(90 \leq X \leq 110) \rightarrow p(89.5 \leq X' \leq 110.5)
+							</me>
+              <md>
+                <mrow>
+                  p(89.5 \leq X' \leq 110.5) \amp = p \left( \dfrac{89.5-96}{7.07} \leq z \leq \dfrac{110.5-96}{7.07} \right) = p (-0.92 \leq z \leq 2.05)
+                </mrow>
+                <mrow>
+                  \amp = p(z \leq 2.05)-p(z \leq -0.92)=p(z \leq 2.05)-[1-p(z \leq 0.92)]
+                </mrow>
+                <mrow>
+                  \amp 0.9798-(1-0.8212) = 0.8010
+                </mrow>
+              </md>
+            </p>
+					</li>
+				</ol>
+			</p>
+		</solution>
+	</exercise>
+
+	<exercise>
+		<statement>
+			<p>
+				Los 5 defensas, 3 medios y 2 delanteros de un equipo de fútbol se entrenan lanzando penaltis a su portero. Los defensas marcan gol la mitad de las veces, los medios las 2/3 partes de las veces y los delanteros las 3/4 partes de las veces.
+			</p>
+			<p>
+				<ol>
+					<li>
+						<p>
+							Se elige un jugador al azar, ¿cuál es la probabilidad de que meta el penalti?
+						</p>
+					</li>
+					<li>
+						<p>
+							Se supone que la probabilidad del apartado anterior es del 60%. El equipo realiza en una semana 600 lanzamientos. En cada lanzamiento se elige un jugador al azar y regresa al grupo pudiendo ser elegido nuevamente. Calcula la probabilidad de que como mucho se metan 400 goles aproximando la distribución por una normal.
+						</p>
+					</li>
+				</ol>
+			</p>
+		</statement>
+		<answer>
+			<p>
+				<ol>
+					<li>
+						<p>
+							<m>0.6</m>
+						</p>
+					</li>
+					<li>
+						<p>
+							<m>0.9996</m>
+						</p>
+					</li>
+				</ol>
+			</p>
+		</answer>
+		<solution>
+			<p>
+				<ol>
+					<li>
+						<p>
+							<me>P(\text{Gol})= \dfrac{5}{10} \cdot \dfrac{1}{2} + \dfrac{3}{10} \cdot \dfrac{2}{3} + \dfrac{2}{10} \cdot \dfrac{3}{4} = \dfrac{5}{10} \cdot \dfrac{12}{20}=0.6</me>
+						</p>
+					</li>
+					<li>
+						<p>
+							Aproximaremos la binomial con la normal: <m>X:B(600;0.6) \rightarrow X':N(360;12)</m>
+						</p>
+						<p>
+							<me>
+								p(X \leq 400) \rightarrow p(X' \leq 400.5)
+							</me>
+              <md>
+                <mrow>
+                  p(X \leq 400) \amp =p(X' \leq 400.5) 
+                </mrow>
+                <mrow>
+                  \amp = p \left(z \leq \dfrac{400.5-360}{12} \right)
+                </mrow>
+                <mrow>
+                  \amp = p (z \leq 3.38) = 0.9996
+                </mrow>
+              </md>
+            </p>
+					</li>
+				</ol>
+			</p>
+		</solution>
+	</exercise>
+
+	<exercise>
+		<statement>
+			<p>
+				El 10% de la población de Canarias tiene alergia a la flor del olivo. Con esta información, responde a las siguientes preguntas:
+			</p>
+			<p>
+				<ol>
+					<li>
+						<p>
+							En una muestra de 100 individuos, ¿qué probabilidad hay de que más de 12 seleccionados tengan alergia a la flor del olivo?
+						</p>
+					</li>
+					<li>
+						<p>
+							Se toma una muestra de 400 individuos, ¿cuál es la probabilidad de que menos de 32 seleccionados tengan alergia a la flor del olivo?
+						</p>
+					</li>
+					<li>
+						<p>
+							En una muestra de 500 individuos, ¿cuál es el número esperado de individuos que no tendrán alergia a la flor del olivo?
+						</p>
+					</li>
+				</ol>
+			</p>
+		</statement>
+		<answer>
+			<p>
+				<ol>
+					<li>
+						<p>
+							<m>0.2033</m>
+						</p>
+					</li>
+					<li>
+						<p>
+							<m>0.0778</m>
+						</p>
+					</li>
+					<li>
+						<p>
+							<m>450</m>
+						</p>
+					</li>
+				</ol>
+			</p>
+		</answer>
+		<solution>
+			<p>
+				<ol>
+					<li>
+						<p>
+							<me>X:B(100;0.1) \rightarrow X:N(10;3)</me>
+						</p>
+						<p>
+							<md>
+								<mrow>
+									p(X \geq 12) \amp =p(X' \geq 12.5) 
+								</mrow>
+								<mrow>
+									\amp = p \left(z \geq \dfrac{12.5-10}{3} \right)
+								</mrow>
+								<mrow>
+									\amp = p (z \geq 0.83) = 1- p (z \leq 0.83)
+								</mrow>
+								<mrow>
+									\amp = 1-0.7967 = 0.2033
+								</mrow>
+							</md>
+						</p>
+					</li>
+					<li>
+						<p>
+							<me>X:B(400;0.1) \rightarrow X:N(40;6)</me>
+						</p>
+						<p>
+							<md>
+								<mrow>
+									p(X \leq 32) \amp =p(X' \leq 31.5) 
+								</mrow>
+								<mrow>
+									\amp = p \left(z \leq \dfrac{31.5-40}{6} \right)
+								</mrow>
+								<mrow>
+									\amp = p (z \leq -1.42) = 1- p (z \leq 1.42)
+								</mrow>
+								<mrow>
+									\amp = 1-0.9222 = 0.0778
+								</mrow>
+							</md>
+						</p>
+					</li>
+					<li>
+						<p>
+							<me>X:B(500;0.1)</me>
+						</p>
+						<p>
+							<me>
+								\mu = 500 \cdot 0.1 = 50
+							</me>  
+						</p>
+						<p>
+							No tendrán alergia: <m>500-50 = 450 </m>
+						</p>
+					</li>
+				</ol>
+			</p>
+		</solution>
+	</exercise>
+
+	<exercise>
+		<statement>
+			<p>
+				Se ha comprobado que, al aplicar un determinado medicamento, la probabilidad de que elimine el acné a un paciente es del 80 %. Suponiendo independencia de sucesos:
+			</p>
+			<p>
+				<ol>
+					<li>
+						<p>
+							Si se lo toman 100 pacientes, ¿cuál es la probabilidad de que el medicamento actúe con más de 75 pacientes?
+						</p>
+					</li>
+					<li>
+						<p>
+							Si se lo toman 225 pacientes, ¿cuál es la probabilidad de que el medicamento actúe entre 170 y 190 pacientes?
+						</p>
+					</li>
+					<li>
+						<p>
+							¿Cuál es el número esperado de pacientes sobre los que NO se eliminará el acné si se toman el medicamento 500 pacientes? 
+						</p>
+					</li>
+				</ol>
+			</p>
+			<answer>
+				<p>
+					<ol>
+						<li>
+							<p>
+								<m>0.8697</m>
+							</p>
+						</li>
+						<li>
+							<p>
+								<m>0.8858</m>
+							</p>
+						</li>
+						<li>
+							<p>
+								<m>100</m>
+							</p>
+						</li>
+					</ol>
+				</p>
+			</answer>
+			<solution>
+				<p>
+					<ol>
+						<li>
+							<p>
+								<me>X:B(100;0.8) \rightarrow X':N(80;4)</me>
+							</p>
+							<p>
+								<md>
+									<mrow>
+										p(X > 75)  \amp \rightarrow p(X' \geq 75.5)  = p \left( z \geq \dfrac{75.5-80}{4} \right)
+									</mrow>
+									<mrow>
+										\amp p(z \geq - 1.125) = p(z\leq 1.125) = 0.8697
+									</mrow>
+								</md>
+							</p>
+						</li>
+						<li>
+							<p>
+								<me>X:B(225;0.8) \rightarrow X':N(180;6)</me>
+							</p>
+							<p>
+								<md>
+									<mrow>
+										p(170 &lt; X &lt; 190) \amp \rightarrow p(170.5 \leq X' \leq 189.5)  
+									</mrow>
+									<mrow>
+										\amp = p \left(\dfrac{170.5-180}{6} \leq z \leq \dfrac{189.5-180}{6} \right)
+									</mrow>
+									<mrow>
+										\amp = p(-1.58 z \geq 1.58) = p(z \leq 1.58)-p(z \leq -1.58)
+									</mrow>
+									<mrow>
+										\amp = p(z \leq 1.58)-p(z \geq 1.58)
+									</mrow>
+									<mrow>
+										\amp = p(z \leq 1.58)-[1-p(z \leq 1.58)]
+									</mrow>
+									<mrow>
+										\amp =0.9429-(1-0.9429)=0.8858
+									</mrow>
+								</md>
+							</p>
+						</li>
+						<li>
+							<p>
+								Pacientes que NO se elimina el acné: <m>500-500 \cdot 0.8=100</m>
+							</p>
+						</li>
+					</ol>
+				</p>
+			</solution>  
+		</statement>
+	</exercise>
+</exercises>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<section xml:id="sec_continuidad-funcion-intervalo">
+	<title>Continuidad de una función en un intervalo</title>
+
+	<p>
+		Una función <m>f(x)</m> es continua en un intervalo <m>(a,b)</m> si es continua en todos los puntos de dicho intervalo.
+	</p>
+
+	<p>
+		<ul>
+			<li>
+				<p>
+					Las funciones polinómicas son continuas en todo <m>\R</m>.
+				</p>
+			</li>
+
+			<li>
+				<p>
+					Las funciones racionales no son continuas en los puntos donde se anula el denominador.
+				</p>
+			</li>
+
+			<li>
+					<p>
+						Las funciones racionales con indice par no son continuas en los puntos donde el radicando es negativo. Si el indice es impar, son continuas.
+					</p>
+			</li>
+
+			<li>
+				<p>
+					Las funciones logarítmicas no son continuas en los puntos donde el argumento es menor o igual a <m>0</m>.
+				</p>
+			</li>
+
+		</ul>
+	</p>
+
+	<example>
+		<statement>
+			<p>
+				Calcular los valores de los parámetros para que la función <m>f(x)=\left\{\begin{array}{cc} {2x+a} &amp; {x&lt;-1} \\ {ax+b} &amp; {-1\le x&lt;0} \\ {3x^{2} +2} &amp; {0\le x} \end{array}\right.</m> sea continua. Para esos valores hacer la representación gráfica.
+			</p>
+		</statement>
+		<solution>
+			<p>
+				<m>a=2,b=2 \Longrightarrow f(x)=\left\{\begin{array}{cc} {2x+2} &amp; {x&lt;0} \\ {3x^{2} +2} &amp; {0\le x} \end{array}\right.</m>
+			</p>
+		</solution>
+	</example>
+		
+
+		
+
+	</section>
+
+	

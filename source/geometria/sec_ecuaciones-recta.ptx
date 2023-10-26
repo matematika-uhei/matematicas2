@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec_ecuacion-recta" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Ecuaciones de la recta</title>
+  <introduction>
+    <p>
+      La ecuación de una recta es la condición que tiene que cumplir un punto para pertenecer a dicha recta. Es decir, la ecuación de una recta nos indica todos los puntos que pertenecen a dicha recta.
+    </p>
+  </introduction>
+    
+    
+    <sidebyside widths="40% 60%" margins="auto" valign="middle">
+      <image xml:id="img-recta" width="75%">
+      <description>Recta en el espacio.</description>
+        <latex-image>
+          \begin{tikzpicture}[x={(-0.385cm,-0.385cm)},y={(1cm,0cm)},z={(0cm,1cm)},
+          axis/.style={-latex,blue,thick},
+          vector/.style={-stealth,black,very thick},
+          posicion/.style={-stealth,black,dashed},
+          recta/.style={red,very thick}]
+
+          \coordinate (O) at (0,0,0);
+          \draw[axis] (O) -- (4,0,0) node[below] {x};
+          \draw[axis] (O) -- (0,3,0) node[below] {y};
+          \draw[axis] (O) -- (0,0,3) node[right] {z};
+
+          \draw[posicion] (0,0,0) -- (1,1,2)node[above]{A};
+          \draw[posicion] (0,0,0) -- (2,3,3)node[above]{P};
+          \draw[recta] (-0.5,-2,0.5) -- (2.5,4,3.5);
+          \draw[vector] (1,1,2) -- (1.5,2,2.5);
+          \draw (1.25,1.5,2.25) node[below]{$\vector{v}$};
+          \draw (O) node[below]{O};
+          \draw(O)[fill=black] circle(1.5pt);
+          \draw(1,1,2)[fill=black] circle(1.5pt);
+          \draw(2,3,3)[fill=black] circle(1.5pt);
+          \end{tikzpicture} 
+        </latex-image>
+      </image>
+      <stack>
+        <p>
+          Lo mismo que en el plano, para hallar la ecuación de una recta necesitamos conocer un punto de dicha recta y un vector director de ella, es decir, un vector que tiene la misma dirección de la recta.
+        </p>
+        <p>
+          En la imagen esta representada la recta <m>r</m> que pasa por el punto <m>A(x_1,y_1,z_1)</m> y tiene la dirección del vector <m>\vec{v}=(v_1,v_2,v_3)</m>. Esta recta la simbolizaremos por <m>r(A;\vec{v})</m>.
+        </p>
+      </stack>
+    </sidebyside>
+    <p>
+      Vamos a ver distintas formas de expresar esta recta.
+    </p>
+    <subsection>
+      <title>Ecuación vectorial de la recta</title>
+      <p>
+        Al observar la figura vemos que para cualquier punto <m>P</m> de la recta, los vectores <m>\vector{AP}</m> y <m>\vec{v}</m> son paralelos. Por lo tanto, <m>\vector{AP}= \lambda \vec{v}</m> siendo <m>\lambda \in \R</m>.
+      </p>
+      <p>
+        Por otro lado, se tiene que: <m>\vector{OP}=\vector{OA}+\vector{AP}</m>
+      </p>
+      <p>
+        Esta expresión se conoce como <term>ecuación vectorial</term> de la recta:
+      </p>
+      <p> 
+        Si utilizamos las componentes de cada vector, la expresión queda de la siguiente forma:
+      </p>
+      <me>
+        (x,y,z)=(x_1,y_1,z_1) + \lambda (v_1,v_2,v_3) \qquad \lambda \in \R 
+      </me>
+    </subsection>
+    <subsection>
+      <title>Ecuaciones paramétricas de la recta</title>
+      <p>
+        Separando esta expresión en componentes obtenemos:
+      </p>
+      <me>
+        \begin{cases} x= x_1 + \lambda v_1 \\
+                      y= y_1 + \lambda v_2 \\
+                      z= z_1 + \lambda v_3 
+        \end{cases}
+      </me>
+      <p>
+        Estas ecuaciones se llaman <term>ecuaciones paramétricas</term> de la recta.
+      </p>
+    </subsection>
+    <subsection>
+      <title>Ecuación continua de la recta</title>
+      <p>
+        Si en las ecuaciones paramétricas <m>v_1</m>, <m>v_2</m> y <m>v_3</m> son distintos de cero, podemos despejar el parámetro <m>\lambda</m> en las tres e igualar las expresiones, obteniendo:
+      </p>
+      
+      <me>
+        \dfrac{x-x_1}{v_1} = \dfrac{y-y_1}{v_2}= \dfrac{z-z_1}{v_3}
+      </me>
+      <p>
+        Estas ecuaciones se denominan <term>ecuación continua</term> de la recta.
+      </p>
+    </subsection>
+    <example xml:id="exa_ecuaciones-recta-1">
+      <statement>
+        <p>
+          Dada la recta <m>r(A;\vec{v})</m> siendo <m>A(2,-1,3)</m> y <m>\vec{v}=(-1,4,3)</m>, determinar:
+        </p>
+        <p>
+          <ol label="a)">
+            <li>
+              <p> 
+                Las distintas ecuaciones de la recta.
+              </p>
+            </li>
+            <li>
+              <p>
+                Si el punto <m>B(0,3,6)</m> pertenece a la recta.
+              </p>
+            </li>
+            <li>
+              <p>
+                Dos puntos distintos de <m>A</m> que pertenezcan a la recta.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <ol label="a)">
+            <li>
+              <p>
+                Ecuación vectorial: <m>(x,y,z)=(2,-1,3)+\lambda(-1,4,3) </m>
+              </p>
+              <p>
+                Ecuaciones paramétricas: <m> \begin{cases} x=2-\lambda \\ y = -1+4\lambda  \\ z=3+3\lambda \end{cases} </m>
+              </p>
+              <p>
+                Ecuación continua: <m> \dfrac{x-2}{-1}=\dfrac{y+1}{4}=\dfrac{z-3}{3}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                Para saber si el punto <m>B</m> pertenece a la recta tenemos que comprobar que sus componentes cumplen las ecuaciones de la recta. En este caso, utilizaremos las ecuaciones paramétricas de la recta para un valor de <m>\lambda</m>.
+              </p>
+              <p>
+                <me>
+                  \left. \begin{array}{l} 0 = 2-\lambda \\ 3 = -1+4 \lambda \\ 6 = 3+3\lambda \end{array} \right\rbrace \Rightarrow \begin{array}{l} \lambda = 2 \\ \lambda = 1 \\ \lambda = 1 \end{array} 
+                </me>
+              </p>
+              <p>
+                Los valores de <m> \lambda</m> son distintos, por lo tanto, el punto no pertenece a la recta.
+              </p>
+            </li>
+            <li>
+              <p>
+                Para hallar otros dos puntos de la recta vamos a utilizar la ecuación vectorial, dando valores a <m>\lambda</m> distintos de cero.
+              </p>
+              <p>
+                <me>
+                  \begin{array}{l}
+                  \lambda = 1 \Rightarrow (x,y,z)=(2,-1,3)+(-1,4,3)= (1,3,6) \\
+                  \lambda = 2 \Rightarrow (x,y,z)=(2,-1,3)+2(-1,4,3)= (0,7,9)
+                  \end{array}
+                </me>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </solution>
+    </example>
+    <example xml:id="exa_ecuaciones-recta-2">
+      <statement>
+        <p>
+          Dada la recta <m>r : \dfrac{x-2}{2}=-y=\dfrac{z+1}{-2}</m>, calcular:
+        </p>
+        <p>
+          <ol label="a)">
+            <li>
+              <p>
+                Las demás ecuaciones de la recta.
+              </p>
+            </li>
+            <li>
+              <p>
+                Un punto y un vector director de dicha recta.
+              </p>
+            </li>
+            <li>
+              <p>
+                Pertenece el punto <m>B(4,-1,-3)</m> a dicha recta.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <ol label="a)">
+            <li>
+              <p>
+                Para hallar las ecuaciones paramétricas de la recta igualaremos cada fracción a un paramétro  <m>\lambda</m>. A continuación hallaremos la ecuación vectorial basandonos en las ecuaciones paramétricas.
+              </p>
+              <p>
+                <me> 
+                  \begin{array}{l} \dfrac{x-2}{2}= \lambda \rightarrow x= 2+2\lambda \\ -y = \lambda \rightarrow y=-\lambda \\ \dfrac{z+1}{-2} \rightarrow z= -1 -2\lambda \end{array}
+                </me>
+              </p>
+              <p>
+                Ecuaciones paramétricas: <m> \begin{cases} x= 2+2\lambda \\  y=-\lambda \\ z= -1 -2\lambda \end{cases}</m>
+              </p>
+              <p>
+                Ecuación vectorial: <m> (x,y,z)=(2,0,-1)+\lambda(2,-1,-2)</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                Observando la ecuación vectorial un punto es <m>A(2,0,-1)</m> y un vector director <m>\vec{v}=(2,-1,-2)</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                Comprobamos si el punto <m>B</m> cumple la ecuación continua de la recta:
+              </p>
+              <p>
+                <me>
+                  \dfrac{4-2}{2}=-(-1)=\dfrac{-3+1}{-2} \rightarrow 1=1=1
+                </me>
+              </p>
+              <p>
+                Como vemos cumple la ecuación de la recta, por lo tanto, el punto <m>B</m> pertenece a la recta <m>r</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </solution>
+    </example>
+
+
+
+   <xi:include href="./ex_ecuaciones-recta.ptx"/>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<section xml:id="sec_angulos">
+	<title>Ángulos entre elementos del espacio</title>
+	
+	<subsection xml:id="sub_angulo-rectas" >
+		<title>Ángulo entres dos rectas</title>
+		<assemblage>
+				<p>
+					El ángulo entre las dos rectas es el más pequeño que forman sus vectores directores.
+				</p>
+		</assemblage>
+		<sidebyside widths="35% 60%" valigns="middle middle">
+			<stack>
+				<image xml:id="img_angulo-rectas">
+					<latex-image>
+						\begin{tikzpicture}[scale=.5]
+						\tkzDefPoints {0/3/A, 8/3/B, 2/0/C, 6/6/D, 4/3/E}
+						\tkzDrawSector[R with nodes,fill=blue!20](E,1 cm)(B,D)
+						\tkzDrawSector[R with nodes,fill=red!20](E,1 cm)(D,A)
+						%\tkzMarkAngles[size=0.7](B,E,D A,E,C)
+						%\tkzMarkAngles[size=0.9](D,E,A C,E,B)
+						\tkzLabelAngle[pos=1.3](B,E,D){$\alpha$}
+						\tkzLabelAngle[pos=-1.3](A,E,D){$\beta$}
+						\tkzDrawSegment[red](A,B)
+						\tkzLabelSegment[above,pos=0.9](A,B){$r$}
+						\tkzDrawSegment[blue](C,D)
+						\tkzLabelSegment[above,pos=0.9](C,D){$s$}
+						\end{tikzpicture}
+					</latex-image>
+				</image>
+			</stack>
+				
+			<stack>
+				<p>
+					Teniendo en cuenta que 
+					<me>\beta=180\g - \alpha \Rightarrow \cos (\beta)=-\cos (\alpha)</me>. 
+				</p>
+				<p>
+					Para calcular el ángulo utilizaremos el valor absoluto del producto escalar para que hallar siempre el ángulo <m>\alpha</m>.
+				</p>
+
+				<p>
+					<me>\alpha=\arccos \dfrac{|\vector{v} \cdot \vector{w} |}{\left| \vector{v} \right| \cdot \left| \vector{w} \right|}</me>
+				</p>
+			</stack>
+				
+		</sidebyside>
+			
+		<example>
+			<statement>
+				<p>
+					Calcular el ángulo que forman las rectas <m>r: \begin{cases} x=1+\lambda \\ y=-2+2\lambda \\ z=-2\lambda \end{cases}</m> y <m>s: \dfrac{x+1}{2}=\dfrac{y-1}{1}=\dfrac{z+2}{-1}</m>
+				</p>
+			</statement>
+			<solution>
+				<p>
+					Hallamos un vector director de cada recta:
+				</p>
+				<me>
+					\vector{v_r}=(1,2,-2) \qquad \vector{v_s}=(2,1,-1)
+				</me>
+				<p>
+					Hallamos el producto escalar de ambos vectores y sus módulos.
+				</p>
+				<me>
+					\vector{v_r} \cdot \vector{v_s} = (1,2,-2) \cdot (2,1,-1) = 6
+				</me>
+				<me>
+					|\vector{v_r}| =\sqrt{1^2+2^2+(-2)^2}= \sqrt{9} = 3
+				</me>
+				<me>
+					|\vector{v_s}|=\sqrt{2^2+1^2+(-1)^2}=\sqrt{6}
+				</me>
+				<p>
+					Aplicamos la fórmula y calculamos el ángulo que forman las dos rectas.
+				</p>
+				<me>
+					\alpha=\arccos \dfrac{|6|}{ 3 \cdot \sqrt{6}}= \arccos 0.8165 = 35.26\g
+				</me>
+			</solution>
+		</example>
+	</subsection>
+	
+	<subsection xml:id="sub_angulo-planos" >
+		<title>Ángulo entres dos planos</title>
+		<assemblage>
+				<p>
+					El ángulo entre las dos planos es el más pequeño que forman sus vectores directores.
+				</p>
+		</assemblage>
+		<sidebyside widths="35% 60%" valigns="middle middle">
+			<stack>
+				<image xml:id="img_angulo-planos">
+					<latex-image>
+						\begin{tikzpicture}[scale=0.40]
+						\filldraw[fill=red!50!white,draw=black,opacity=0.75] (0,4)--(8,4)--(10,6)--(2,6)--cycle ;
+						%\filldraw[fill=blue!50!white,draw=black,opacity=0.75] (3,0)--(0,3)--(7,3)--(10,0)--cycle ;
+						%\filldraw[fill=red!50!white,draw=black,opacity=0.75] (0,1)--(1,2)--(8,2)--(7,1)--cycle ;
+						\draw[black] (1,5) -- (9,5);
+
+						\filldraw[black,fill=green!50!white,opacity=0.75] (3,7) -- (5,9) -- (6,6) -- (4,4) -- cycle;
+						\filldraw[black,fill=green!50!white,opacity=0.75] (4,4) -- (5,1) -- (7,3) -- (20/3,4) -- cycle;
+						\draw[black] (4,4) -- (6,6);
+						\draw[black] (4,8) -- (6,2);
+						\draw[blue,->] (5,5) -- (5,7) node[above]{$\vector{n_1}$};
+						\draw[blue,->] (5,5) -- (7,17/3) node[above]{$\vector{n_2}$};
+						%\draw (3.7,4.9) -- (2,4);
+						\tkzDefPoints {3.7/4.9/A, 3/4/B, 5/5.5/C, 5.5/5.17/D, 4/4/E, 5/5/F}
+						\tkzDrawSector[R with nodes,fill=blue!20](E,1 cm)(A,B)
+						\tkzDrawSector[R with nodes,fill=red!20](F,1 cm)(D,C)
+						\tkzLabelAngle[pos=1.3](A,E,B){$\alpha$}
+						\tkzLabelAngle[pos=1.3](D,F,C){$\alpha$}
+						\end{tikzpicture}
+					</latex-image>
+				</image>
+			</stack>
+				
+			<stack>
+				<p>
+					Teniendo en cuenta que 
+					<me>\beta=180\g - \alpha \Rightarrow \cos (\beta)=-\cos (\alpha)</me>. 
+				</p>
+				<p>
+					Para calcular el ángulo utilizaremos el valor absoluto del producto escalar para que hallar siempre el ángulo <m>\alpha</m>.
+				</p>
+
+				<p>
+					<me>\alpha=\arccos \dfrac{|\vector{n_1} \cdot \vector{n_2} |}{\left| \vector{n_1} \right| \cdot \left| \vector{n_2} \right|}</me>
+				</p>
+			</stack>
+				
+		</sidebyside>
+			
+		<example>
+			<statement>
+				<p>
+					Hallar el ángulo que forman los planos <m>\pi_1 \equiv x+2y-z+2=0 </m> y <m>\pi_2 \equiv z-3=0</m>
+				</p>
+			</statement>
+			<solution>
+				<p>
+					Hallamos un vector normal de cada plano:
+				</p>
+				<me>
+					\vector{n_1}=(1,2,-1) \qquad \vector{n_2}=(0,0,1)
+				</me>
+				<p>
+					Hallamos el producto escalar de ambos vectores y sus módulos.
+				</p>
+				<me>
+					\vector{n_1} \cdot \vector{n_2} = (1,2,-1) \cdot (0,0,1) = -1
+				</me>
+				<me>
+					|\vector{n_1}| =\sqrt{1^2+2^2+(-1)^2}= \sqrt{6}
+				</me>
+				<me>
+					|\vector{n_2}|=\sqrt{0^2+0^2+1^2}=1
+				</me>
+				<p>
+					Aplicamos la fórmula y calculamos el ángulo que forman las dos rectas.
+				</p>
+				<me>
+					\alpha=\arccos \dfrac{|-1|}{  \sqrt{6} \cdot 1}= \arccos 0.4082 = 65.91\g
+				</me>
+			</solution>
+		</example>
+	</subsection>
+	
+	<subsection xml:id="sub_angulo-recta-plano" >
+		<title>Ángulo entres una recta y un plano</title>
+		<assemblage>
+				<p>
+					El ángulo entre una recta y un plano es el complementario del más pequeño que forman el vector director de la recta y el vector normal del plano.
+				</p>
+		</assemblage>
+		<sidebyside widths="35% 60%" valigns="middle middle">
+			<stack>
+				<image xml:id="img_angulo-recta-plano">
+					<latex-image>
+						\begin{tikzpicture}[scale=0.40]
+						\tkzDefPoints {0/2/P1, 2/8/P2, 12/8/P3, 10/2/P4}
+						\tkzDefPoints {4/10/R1, 7/4/R2, 8/2/R3, 9/0/R4}
+						\tkzDefPoints {5.5/7/V1, 7/7/V2, 2/4/A1, 10/4/A2, 1/3/N1}
+						\tkzDrawPolygon[fill=green!25!white,draw=green,opacity=0.75](P1,P2,P3,P4)
+						\tkzDrawSegment[red](R1,R2)
+						\tkzDrawSegment[dashed](R2,R3)
+						\tkzDrawSegment[red](R3,R4)
+						\tkzDrawSegment[-latex,blue](R2,V1)
+						\tkzDrawSegment[-latex,blue](R2,V2)
+						\tkzDrawSegment(A1,A2)
+						\tkzDrawSector[R with nodes,fill=blue!20](R2,1.5 cm)(V1,A1)
+						\tkzDrawSector[R with nodes,fill=red!20](R2,1.5 cm)(V2,V1)
+						\tkzLabelAngle[pos=1.9](V1,R2,A1){$\alpha$}
+						\tkzLabelAngle[pos=1.9](V2,R2,V1){$\beta$}
+						\tkzLabelPoint(N1){$\pi$}
+						\tkzLabelPoint[left,blue](V1){$\vec{v}$}
+						\tkzLabelPoint[right,blue](V2){$\vec{n}$}
+						\end{tikzpicture}
+					</latex-image>
+				</image>
+			</stack>
+				
+			<stack>
+				
+				<p>
+					Para calcular el ángulo <m>\beta</m> utilizaremos el valor absoluto del producto escalar para obtener siempre <m>\beta</m>.
+				</p>
+				<p>
+					Teniendo en cuenta que <m>\alpha</m> y <m>\beta</m> son complemetarios <m>\alpha + \beta = 90\g</m>
+				</p>
+				<p>
+		
+					<me>\alpha = 90\g - \beta</me>. 
+				</p>
+				
+			</stack>
+				
+		</sidebyside>
+			
+		<example>
+			<statement>
+				<p>
+					Hallar el ángulo que forma la recta <m>r \equiv \dfrac{x-1}{2}=\dfrac{y}{1}=\dfrac{z+1}{-3}</m> y el plano <m>\pi \equiv x-3y+3z-6=0</m>
+				</p>
+			</statement>
+			<solution>
+				<p>
+					Hallamos un vector director de la recta y el vector normal del plano:
+				</p>
+				<me>
+					\vector{v_r}=(2,1,-3) \qquad \vector{n}=(1,-3,3)
+				</me>
+				<p>
+					Hallamos el producto escalar de ambos vectores y sus módulos.
+				</p>
+				<me>
+					\vector{v_r} \cdot \vector{n} = (2,1,-3) \cdot (1,-3,3) = -10
+				</me>
+				<me>
+					|\vector{v_r}| =\sqrt{2^2+1^2+(-3)^2}= \sqrt{14}
+				</me>
+				<me>
+					|\vector{v_s}|=\sqrt{1^2+(-3)^2+3^2}=\sqrt{19}
+				</me>
+				<p>
+					Aplicamos la fórmula y calculamos el ángulo <m>\beta</m>.
+				</p>
+				<me>
+					\beta=\arccos \dfrac{|-10|}{ \sqrt{14} \cdot \sqrt{19}}= \arccos 0.6131 = 52.18\g
+				</me>
+				<p>
+					El ángulo que forman la recta y el plano es:
+				</p>
+				<me>
+					\alpha = 90\g-52.18\g = 37.82\g
+				</me>
+			</solution>
+		</example>
+	</subsection>
+</section>

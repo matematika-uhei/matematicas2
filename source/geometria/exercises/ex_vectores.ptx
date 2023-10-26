@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercises xml:id="ex_vectores" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <!-- You can ommit the title and just get the default "Exercises" -->
+  <title>Ejercicios</title>
+  
+  <exercise>
+    <statement>
+      <p>
+        Dados los puntos <m>A(1,1+\lambda ,-1)</m>, <m>B(2,\lambda ,0)</m> y <m>C(\lambda +2,0,1)</m>, ¿existe algún valor de <m>\lambda \in \R</m> para el que <m>A</m>, <m>B</m> y <m>C</m> estén alineados?.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        <m>\lambda = 1 </m>
+      </p>
+    </answer>
+    <solution>
+      <p>
+        Para que los tres puntos esten alineados los vectores que forman cualquier pareja de puntos tienen que ser paralelos.
+      </p>
+      <p>
+        Hallamos dos de estos vectores: 
+      </p>
+      <me>\vector{AB}=(1,-1,1) \qquad \vector{AC}=(\lambda+1,-1-\lambda,2)</me>
+      <p>
+        Para que sean paralelos se tiene que cumplir que sus componentes sean proporcionales:
+      </p>
+      <me> \dfrac{1}{\lambda +1}= \dfrac{-1}{-1-\lambda }=\dfrac{1}{2} </me>
+      <p>
+        las igualdades anteriores se cumplen para <m>\lambda = 1</m>
+      </p>
+    </solution>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Dados los vectores <m>\vec{u}=(-1,2,3)</m> y <m>\vec{v}=(2,3,-1)</m>, razona si son linealmente independientes los vectores <m>\vector{u+v}</m> y <m>\vector{u-v}</m>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        Son linealmente independientes.
+      </p>
+    </answer>
+    <solution>
+      <p>
+        Hallamos los vectores <m>\vector{u+v}</m> y <m>\vector{u-v}</m>
+      </p>
+      <p>
+        <m>\vector{u+v}=(1,5,2)</m>, <m>\vector{u-v}= (-3,-1,4)</m>
+      </p>
+      <p>
+        Estudiamos el rango de la matriz formada por estos dos vectores:
+      </p>
+      <p>
+        <m>\begin{pmatrix} 1 \amp 5 \amp 2 \\ -3 \amp -1 \amp 4 \end{pmatrix}</m>
+      </p>
+      <p>
+        <m>\begin{vmatrix} 1 \amp 5 \\ -3 \amp -1 \end{vmatrix}= 14 \Rightarrow \text{Rango }= 2 </m>
+      </p>
+      <p>
+        Por ser el rango de la matriz <m>2</m> los vectores son linealmente independientes.
+      </p>
+    </solution>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Calcula el área del paralelogramo que tiene tres vértices consecutivos en los puntos: <m>A(1,5,2)</m>, <m>O(0,0,0)</m> y <m>B(-3,-1,4)</m>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        <m>2\sqrt{195}\text{ u}^2</m>
+      </p>
+    </answer>
+
+    <solution>
+      <p>
+        El área del paralelogramo es igual al módulo del producto vectorial de los vectores <m>\vector{OA}</m> y <m>\vector{OB}</m>
+      </p>
+      <p>
+        Hallamos los vectores <m>\vector{OA}=(1,5,2)</m> y <m>\vector{OB}=(-3,-1,4)</m>
+      </p>
+      <p>
+        Hallamos el producto vectorial de dichos vectores:
+      </p>
+      <me>\vector{OA} \times \vector{OB}=\begin{vmatrix} \vec{i} \amp \vec{j} \amp \vec{k} \\ 1 \amp 5 \amp 2 \\ -3 \amp -1 \amp 4 \end{vmatrix} = 22 \vec{i} - 10 \vec{j} +14 \vec{k}</me>
+      <p>
+        Hallamos el módulo de dicho vector: <m> | \vector{OA} \times \vector{OB} | = \sqrt{22^2+(-10)^2+14^2}= 2 \sqrt{195} </m>
+      </p>
+      <p>
+        Por lo tanto, el área es <m>2\sqrt{195}\text{ u}^2 </m>
+      </p>
+
+    </solution>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Considera un paralelograma <m>ABCD</m> donde <m>A(1,0,-1)</m>, <m>B(3,2,1)</m> y <m>C(-7,1,5)</m>.
+      </p>
+      <p>
+        <ol label="a)">
+          <li>
+            <p>
+              Determina las coordenadas del vertice <m>D</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Calcula el área del paralelogramo.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+
+    <answer>
+      <p>
+        <ol label="a)">
+          <li>
+            <p>
+              <m>D(-9,-1,3)</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>2\sqrt{302} \text{u}^2</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise>
+    <statement>
+      Calcula el valor de <m>a</m> para que el producto vectorial de los vectores <m>\vec{u}=(a,-a,2)</m> y <m>\vec{v}=(2,a,1)</m> sea proporcional al vector <m>(1,1,0)</m>.
+    </statement>
+    <solution>
+      <p>
+        Calculamos el producto vectorial de ambos vectores:
+      </p>
+      <me>
+        \vec{u} \times \vec{v} = \begin{vmatrix} \vec{i} \amp \vec{j} \amp \vec{k} \\ a \amp -a \amp 2 \\ 2 \amp a \amp 1 \end{vmatrix} = -3a \vec{i} +(4-a)\vec{j}+(a^2+2a)\vec{k} = (-3a,4-a,a^2+2a)
+      </me>
+      <p>
+        Este vector tiene que ser proporcional al vector <m>(1,1,0)</m>, luego:
+      </p>
+      <me>
+        \dfrac{-3a}{1}=\dfrac{4-a}{1}=\dfrac{a^2+2a}{0} \rightarrow \left. \begin{array}{l} -3a=4-a \\ a^2+2a=0 \end{array} \right\rbrace \rightarrow a= -2 
+      </me>
+    </solution>
+  </exercise>
+</exercises>
+

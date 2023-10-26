@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec_distribuiciones-probabilidad" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Distribuciones de Probabilidad</title>
+  <introduction>
+    <p>
+			En este capítulo estudiaremos que son las distribuciones de probabilidad y en particular la distribución binomial y la normal,
+		</p>
+  </introduction>
+
+  <assemblage xml:id="ass_distribuciones-probabilidad">
+    <title>Distribuciones de probabilidad</title>  
+		<p>
+			Una distribución de probabilidad es una representación de todos los posibles resultados de algún experimento (con resultado numérico) y de la probabilidad asociada con cada uno.
+		</p>
+  </assemblage>
+
+		<p>
+			Una variable aleatoria es una función que a cada suceso elemental de un experimento aleatorio le asigna un número real.
+		</p>
+
+		<p>
+			Las variables aleatorias pueden ser:
+		</p>
+
+		<p>
+      <ul>
+        <li>
+            <p>
+        <term>Discretas:</term> cuando pueden tomar un número finito o infinito de valores aislados.
+      </p>
+        </li>
+
+        <li>
+            <p>
+        <term>Continua:</term> cuando pueden tomar cualquier valor en un intervalo.
+      </p>
+        </li>
+
+      </ul>
+    </p>
+    <example xml:id="exa_distribuciones">
+      <statement>
+        <p>
+          Ejemplo Clasifica e indica los valores posibles de las siguientes variables aleatorias:
+        </p>
+        <p>
+          <ol>
+            <li>
+              <p>
+                La suma de los resultados obtenidos al lanzar dos dados y sumar los puntos de sus caras.
+              </p>
+            </li>
+      
+            <li>
+              <p>
+                El tiempo máximo de espera al metros si pasa cada 5 minutos.
+              </p>
+            </li>
+      
+            <li>
+              <p>
+                El número de veces que hay que lanzar un dado hasta obtener un 5.
+              </p>
+            </li>
+      
+            <li>
+              <p>
+                El tiempo tarda una persona en recorrer 100 metros.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <ol>
+            <li>
+              <p>
+                Discreta. <m>\{2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12\}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+               Continua. Cualquier valor en el intervalo <m>[0,5]</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                Discreta. <m>\{1, 2, 3, 4 \cdots\}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                Continua. El intervalo del tiempo mínimo que tarda al máximo.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </solution>
+  </example>
+      
+</section>

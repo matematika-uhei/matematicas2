@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec_vectores-operaciones" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Definción y operaciones con vectores</title>
+  <introduction>
+    <p>
+      En esta sección introduciremos el concepto de vector, sus propiedades y operaremos con ellos en forma gráfica.
+    </p>
+    </introduction>
+    <assemblage xml:id="ass_vector-fijo">
+    <title>Vector fijo</title>
+      <p>
+        Un vector fijo es un segmento orientado de origen <m>A</m> y extremo <m>B</m>. Se representa por <m>\vector{AB}</m>
+      </p>
+    </assemblage>
+    <p>
+      <term>Características de un vector:</term>
+    </p>
+    <p>
+      <ul marker="disk">
+        <li>
+          <p>
+            <em>Módulo:</em> Es la longitud del segmento <m>AB</m>. Se representa por <m>|\vector{AB} |</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <em> Dirección:</em> Es la recta que pasa por <m>A</m> y <m>B</m> o cualquier recta paralela a ella.
+          </p>
+        </li>
+        <li>
+          <p>
+            <em>Sentido:</em> El que va de <m>A</m> a <m>B</m>.
+          </p>
+        </li>
+      </ul>
+    </p>
+    <p>
+      <term>Equipolencia de vectores:</term> Dos vectores son equipolentes si tienen la misma dirección, el mismo módulo y el mismo sentido.
+    </p>
+    <p>
+      <term>Vector libre:</term> Es el conjunto de vectores fijos equipolentes a uno dado.
+    </p>
+  <subsection xml:id="subsec_suma-vectores">
+    <title>Suma de vectores</title>
+    <p>
+      La suma de dos vectores se puede hacer de dos formas gráficamente:
+    </p>
+    <p>
+      Colocamos el origen del segundo vector en el extremo del otro vector y la suma es el vector con origen el del primero y extremo el del segundo.
+    </p>
+    <p>
+      Ponemos los vectores con un mismo origen y hacemos el paralelogramo formado por dichos vectores y la suma es la diagonal de dicho paralelogramo.
+    </p>
+    <figure>
+      <caption>Suma de vectores</caption>
+      <image xml:id="img-suma-vectores" width="100%">
+      <description>Suma de vectores en forma gráfica.</description>
+        <latex-image>
+          \begin{tikzpicture}
+          \tkzDefPoints{0/0/A, 2/3/B,3/2/C, 5/1/D, 6/0/E, 8/3/F, 10/2/G, 11/0/H, 13/3/I, 15/2/J, 13/-1/K}
+          \tkzDrawSegment[-latex](A,B)
+          \tkzDrawSegment[-latex](C,D)
+          \tkzDrawSegment[-latex](E,F)
+          \tkzDrawSegment[-latex](F,G)
+          \tkzDrawSegment[-latex,color=red](E,G)
+          \tkzLabelSegment[left](A,B){$\vec{v}$}
+          \tkzLabelSegment[above right](C,D){$\vec{w}$}
+          \tkzLabelSegment[left](E,F){$\vec{v}$}
+          \tkzLabelSegment[above right](F,G){$\vec{w}$}
+          \tkzLabelSegment[below right,color=red](E,G){$\vec{v}+\vec{w}$}
+          \tkzDrawSegment[-latex](H,I)
+          \tkzDrawSegment[dotted,-latex](I,J)
+          \tkzDrawSegment[dotted,-latex](K,J)
+          \tkzDrawSegment[-latex](H,K)
+          \tkzDrawSegment[-latex,color=red](H,J)
+          \tkzLabelSegment[left](H,I){$\vec{v}$}
+          \tkzLabelSegment[below left](H,K){$\vec{w}$}
+          \tkzLabelSegment[below right,color=red](H,J){$\vec{v}+\vec{w}$}
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+  </subsection>
+  
+  <subsection xml:id="subsec_producto-numero-vector">
+    <title>Producto de un número real por un vector</title>
+    <p>
+      El producto de un número real(<m>k</m>) por un vector (<m>\vec{v}</m> es otro vector(<m>k\vec{v}</m>) con las siguientes características:
+    </p>
+    <p>
+      <ul marker="disk">
+        <li>
+          <p>
+            <em>Dirección:</em> La misma que el vector <m>\vec{v}</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <em>Módulo:</em> El módulo del vector <m>\vec{v}</m> multiplicado por el valor absoluto del número real <m>k</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <em>Sentido:</em> El mismo del vector <m>\vec{v}</m> si <m>k</m> es positivo y sentido contrario si <m>k</m> es negativo.
+          </p>
+        </li>
+      </ul>
+    </p>
+    <figure>
+    <caption>Producto de un número real por un vector.</caption>
+      <image xml:id="img-producto-numero-vector" width="100%">
+      <description>Producto de un número real por un vector en forma gráfica.</description>
+        <latex-image>
+          \begin{tikzpicture}
+          \tkzDefPoints{0/0/A, 2/1/B, 6/0/C, 7/0.5/D, 2/0/E, 6/2/F, 4/0/G, 6/1/H, 13/3/I, 15/2/J, 13/-1/K}
+          \tkzDrawSegment[-latex](A,B)
+          \tkzDrawSegment[latex-](C,D)
+          \tkzDrawSegment[-latex](E,F)
+          \tkzDrawSegment[latex-](G,H)
+          \tkzLabelSegment[above left](A,B){$\vec{v}$}
+          \tkzLabelSegment[above left](C,D){$-\frac{1}{2}\vec{v}$}
+          \tkzLabelSegment[above left](E,F){$2\vec{v}$}
+          \tkzLabelSegment[above left](G,H){$-\vec{v}$}
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+  </subsection>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

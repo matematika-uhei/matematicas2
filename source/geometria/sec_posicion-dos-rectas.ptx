@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec_posicion-dos-rectas" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Posiciones dos rectas</title>
+  <introduction>
+    <p>
+      Las posiciones posibles de dos rectas en el espacio son  las siguientes:      
+    </p>
+    
+    <sidebyside widths="20% 20% 20% 20%" valigns="middle middle middle middle" align="center center center center">
+    
+			<stack>
+				<p>
+					<term>Coincidentes</term>
+				</p>
+				<p></p>
+				<image xml:id="dos-rectas-coincidentes" width="50%">
+					<asymptote>
+						settings.prc = false;
+						settings.render = 16;
+						import three;
+						import bsp;
+						import palette;
+
+						size(5cm, 0);
+						currentprojection=orthographic((5,4,3));
+
+						draw((-1,-1,0)--(1,-1,0),red);
+
+						draw((-0.9,-1,0)--(0.9,-1,0),blue);
+										
+					</asymptote>
+					</image>
+			</stack>
+			
+		
+		<stack>
+				<p>
+					<term>Paralelas</term>
+				</p>
+				<p></p>
+		<image xml:id="dos-rectas-paralelas" width="50%">
+			<asymptote>
+				settings.prc = false;
+				settings.render = 16;
+				import three;
+				import bsp;
+				import palette;
+
+				size(5cm, 0);
+				currentprojection=orthographic((5,4,3));
+
+				draw((-1,-1,0)--(1,-1,0),red);
+
+				draw((-1,-0.5,0)--(1,-0.5,0),blue);
+								
+			</asymptote>
+		</image>
+		</stack>
+		
+		<stack>
+				<p>
+					<term>Se cortan</term>
+				</p>
+				<p></p>
+		<image xml:id="dos-rectas-cortan" width="50%">
+			<asymptote>
+				settings.prc = false;
+				import three;
+				size(4cm,0);
+				draw((-2,0,0)--(2,0,0), blue); 
+				draw((0,-2,0)--(0,1,0), green);
+								
+			</asymptote>
+		</image>
+		</stack>
+		<stack>
+				<p>
+					<term>Se cruzan</term>
+				</p>
+				<p></p>
+		<image xml:id="dos-rectas-cruzan" width="80%">
+			<asymptote>
+				settings.prc = false;
+				import three;
+				size(4cm,0);
+				draw((-2,0,1)--(2,0,1), blue); 
+				draw((0,-2,0)--(0,2,0), green);
+								
+			</asymptote>
+		</image>
+		</stack>
+		</sidebyside>
+</introduction>
+    <p>
+			Cuando las rectas son coincidentes o paralelas sus vectores directores son paralelos, es decir, proporcionales. En el caso de que sean coincidentes cualquier punto de una de las rectas pertenece a la otra, mientras que si son paralelas cualquier punto de una de las rectas no pertenece a la otra.
+		</p>
+		<p>
+			Cuando se cortan o se cruzan sus vectores no son paralelos, Cuando se cortan las dos rectas están en el mismo plano, lo que significa que el vector que une dos puntos cualquiera, uno de cada recta, y los vectores directores son combinación lineal, lo que quiere decir que el determinante formado por estos tres vectores es igual a cero, mientras que si se cruzan, no están en el mismo plano y el determinante formado por estos tres vectores es distinto de cero.
+		</p>
+		<assemblage>
+			<p>
+				Dadas las rectas <m> r</m> y <m>s</m> definidas ambas por un punto y un vector director:
+				
+			</p>
+			<p>
+				<m>r : \begin{cases} A(x_0,y_0,z_0) \\ \vec{u}=(u_1,u_2,u_3) \end{cases} \qquad s : \begin{cases} B(x_1,y_1,z_1) \\ \vec{v}=(v_1,v_2,v_3) \end{cases}</m>
+			</p>
+				
+			<p>
+				Si <m> \vec{u} \parallel \vec{v} \Rightarrow \begin{cases} A \in s \Rightarrow \text{Coincidentes} \\ A \notin s \Rightarrow \text{Paralelas} \end{cases} </m> 
+			</p>
+			<p>
+				Si <m> \vec{u} \nparallel \vec{v} \Rightarrow \begin{cases} \begin{vmatrix} u_1 &amp; u_2 &amp; u_3 \\ v_1 &amp; v_2 &amp; v_3 \\ x_1-x_0  &amp; y_1 - y_0 &amp; z_1-z_0 \end{vmatrix} = 0 \Rightarrow \text{Se cortan} \\ \begin{vmatrix} u_1 &amp; u_2 &amp; u_3 \\ v_1 &amp; v_2 &amp; v_3 \\ x_1-x_0  &amp; y_1 - y_0 &amp; z_1-z_0 \end{vmatrix} \neq 0 \Rightarrow \text{Se cruzan} \end{cases} </m> 
+			</p>
+		</assemblage>
+		<example>
+			<statement>
+				<p>
+					Halla la posición relativa de las rectas:
+				</p>
+				<me> r \equiv \begin{cases} x=2t \\ y = 1-t \\ z= 3 \end{cases} \qquad s \equiv \dfrac{x-1}{-1}= \dfrac{y+2}{3}=\dfrac{z}{3}</me>
+			</statement>
+			<solution>
+				<p>
+					Calculamos un punto y un vector director de cada recta:
+				</p>
+				<me> 
+					r : \begin{cases} A(0,1,3) \\ \vec{u}=(2,-1,0)  \end{cases} \qquad s: \begin{cases} B(1,-2,0) \\ \vec{v}=(-1,3,3) \end{cases}
+				</me>
+				<p>
+					Estudiamos si los vectores son paralelos o no: 
+					<me>\dfrac{2}{-1} \neq \dfrac{-1}{3}</me>
+				</p>
+				<p>
+					Las rectas se cortan o se cruzan.
+				</p>
+				<p>
+					Estudiamos el valor del determinante formado por los vectores directores y el vector que une los dos puntos.
+				</p>
+				<me>
+					\begin{vmatrix} 2 &amp; -1 &amp; 0 \\ -1 &amp; 3 &amp; 3 \\ 1 &amp; -3 &amp; -3 \end{vmatrix} = 0 \Rightarrow \text{Se cortan} 
+				</me>
+			</solution>
+		</example>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

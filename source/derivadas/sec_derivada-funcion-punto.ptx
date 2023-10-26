@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+	<section xml:id="derivada-funcion-punto">
+		<title>Derivada de una función en un punto</title>
+
+		<p>
+			Si en la tasa de variación media acercamos el punto <m>b</m> al punto <m>a</m> infinitamente, es decir si <m>b-a \rightarrow 0</m>, esta se convertirá en la tasa de variación instantanea. Esto es lo que denominaremos derivada de una función en un punto.
+		</p>
+		
+		<assemblage>
+			<title>Derivada de una función en un punto</title>
+		
+			<p>
+				La derivada de una función en un punto <m>a</m> se llama <m>f'(a)</m> o <m>\dfrac{dy}{dx}</m> y es igual a:
+			</p>
+
+			<p>
+				<me>f'(a)=\lim_{x \rightarrow a} \dfrac{f(x)-f(a)}{x-a}</me>
+			</p>
+
+			<p>
+				si este límite existe y es finito.
+			</p>
+		</assemblage>
+		<p>
+			Si en la fórmula anterior hacemos que <m>x-a = h \Rightarrow \begin{cases} x=a+h \\ h \rightarrow 0 \end{cases}</m>
+		</p>
+
+		<p>
+			Y la fórmula anterior quedaría de la siguiente forma:
+		</p>
+
+		<p>
+			<me>f'(a)=\lim_{h \to 0} \dfrac{f(a+h)-f(a)}{h}</me>
+		</p>
+		<example>
+			<statement>
+				<p>
+					Hallar la derivada de la función <m>f(x)=x^2+2x-2</m> en el punto <m>x=1</m>
+				</p>
+			</statement>
+			<solution>
+				<p>
+					Vamos a calcular la derivada mediante las dos fórmulas anteriores para comprobar que el resultado es el mismo.
+				</p>
+
+				<p>
+					Aplicando la primera fórmula:
+				</p>
+
+				<p>
+					<me>f(1)= 1^2+2\cdot 1 -2 = 1</me>
+				</p>
+
+				<p>
+					y por lo tanto
+				</p>
+
+				<p>
+					<me>f'(1)=\lim_{x \rightarrow 1} \dfrac{(x^2+ 2x-2) -1 }{x-1}= \lim_{x \rightarrow 1} \dfrac{x^2+ 2x-3 }{x-1} = \lim_{x \rightarrow 1} \dfrac{\cancel{(x-1)}(x+3) }{\cancel{x-1}}= 4</me>
+				</p>
+
+				<p>
+					Aplicando la segunda expresión:
+				</p>
+
+				<p>
+					Calculamos <m>f(1)</m> y <m>f(1+h)</m>
+				</p>
+
+				<p>
+					<me>f(1)=1^2+2\cdot 1 -2 = 1</me>
+				</p>
+
+				<p>
+					<me>f(1+h)=(1+h)^2+2(1+h)-2= 1+2h+h^2+2+2h-2= h^2+4h+1</me>
+				</p>
+
+				<p>
+					Hallamos el límite:
+				</p>
+
+				<p>
+					<me>\displaystyle f'(1)=\lim_{h \to 0} {\dfrac{h^2+4h+1-1}{h}}= \lim_{h \to 0 } {\dfrac{h^2+4h}{h}}=\lim_{h \to 0} {\dfrac{\cancel{h}(h+4)}{\cancel{h}}}=\lim_{h \to 0} (h+4) = 4</me>
+				</p>
+
+				<p>
+					La derivada de <m>f(x)</m> en el punto <m>x=1</m> vale <m>4</m>.
+				</p>
+			</solution>
+		</example>
+		
+
+		
+
+
+		<subsection xml:id="interpretacion-geometrica-1">
+			<title>Interpretación geométrica</title>
+
+			<p>
+				La derivada de una función en un punto coincide con la pendiente de la recta tangente a la gráfica de la función en dicho punto. <m>f'(a)=</m> pendiente de la recta tangente.
+			</p>
+
+		</subsection>
+	</section>

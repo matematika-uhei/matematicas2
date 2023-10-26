@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec_sistema-referencia-vectores" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Sistema de referencia</title>
+    <introduction>
+        <p>
+            En esta sección introduciremos varios conceptos relacionados con los vectores.
+        </p>
+    </introduction>
+
+    <assemblage xml:id="ass_combinacion-lineal-vectores">
+        <title>Combinación lineal de vectores</title>
+        <p>
+        Un vector  <m>\vec{v}</m>  es combinación lineal de los vectores  <m>\vec{u_1}</m> ,  <m>\vec{u_2}</m> ,  <m>\cdots</m> , <m>\vec{u_n}</m>  cuando se puede escribir de la siguiente forma: 
+        </p>
+        <p>
+            <me>\vec{v}=\lambda_1 \cdot \vec{u_1}+\lambda_2 \cdot \vec{u_2}+\cdots+\lambda_n \cdot \vec{u_n}</me>
+        </p>
+    </assemblage>
+
+    <assemblage xml:id="ass_vectores-linealmente-dependientes">
+        <title>Vectores linealmente independientes y dependientes</title>
+        <p>
+            Un conjunto de vectores  <m>\vec{u_1}</m> ,  <m>\vec{u_2}</m> ,  <m>\cdots</m> , <m>\vec{u_n}</m>  son <em>linealmente independientes</em> cuando ninguno de ellos es combinación lineal del resto. En caso contrario son <em>linealmente dependientes.</em>
+        </p>
+    </assemblage>
+
+    <assemblage xml:id="ass_base-vectores">
+        <title>Base de vectores</title>
+        <p>
+            Se llama <em>base</em> de  <m>\R^3</m>  a cualquier trío de vectores linealmente independientes. 
+        </p>
+        <p>
+            Si  <m>\left\lbrace \vec{u_1},\vec{u_2},\vec{u_3}\right\rbrace </m>  forman una base , cualquier otro vector  <m>\vec{v}</m>  se puede poner de manera única como combinación lineal de los elementos de la base:
+        </p>
+        <p>
+            <me>\vec{v}=  a\vec{u_1}+b\vec{u_2}+c\vec{u_3}</me>
+        </p>
+        <p>
+             <m>(a,b,c)</m>  son las coordenadas de  <m>\vec{v}</m>  respecto de esa base.
+        </p>
+    </assemblage>
+
+        <assemblage xml:id="ass_sistema-referencia">
+        <title>Sistema de referencia</title>
+        <p>
+            Un sistema de referencia en el espacio  <m>\left\{ O,\{\vec{u},\vec{v},\vec{w}\}\right\}</m>  esta formado por tres vectores que forman una base, es decir, son linealmente independientes y un punto fijo.
+        </p>
+    </assemblage>
+    <p>
+        <em>El sistema de referencia canónico</em> en el espacio es  <m>\left\{ O,\{\vec{i},\vec{j},\vec{k}\}\right\}</m>  donde:
+    </p>
+    <p>
+        <ul marker="disk">
+            <li>
+                <p>
+                    El punto fijo  <m>O</m>  es el origen de coordenadas  <m>O(0,0,0)</m> .
+                </p>
+            </li>
+            <li>
+                <p>
+                    Los vectores de la base  <m>\{\vec{i},\vec{j},\vec{k}\}</m>  son perpendiculares entre si y de módulo  <m>1</m> 
+                </p>
+            </li>
+        </ul>
+    </p>
+    <figure>
+    <caption>Sistema de referencia canónico.</caption>
+      <image xml:id="img-sistema-referencia-canonico" width="50%">
+      <description>Sistema de referencia canónico.</description>
+        <latex-image>
+            \begin{tikzpicture}[x={(-0.5cm,-0.5cm)},y={(1cm,0cm)},z={(0cm,1cm)},
+                axis/.style={-latex,blue,thick},
+                vector/.style={-stealth,red,very thick},
+                posicion/.style={-stealth,black,dashed},
+                recta/.style={red,very thick}]
+
+                \coordinate (O) at (0,0,0);
+                \draw[axis] (O) -- (4,0,0) node[below] {x};
+                \draw[axis] (O) -- (0,3,0) node[below] {y};
+                \draw[axis] (O) -- (0,0,3) node[right] {z};
+
+                \draw[vector] (0,0,0) -- (0,0,1)node[left]{$\vec{k}$};
+                \draw[vector] (0,0,0) -- (0,1,0)node[above]{$\vec{j}$};;
+                \draw[vector] (0,0,0) -- (1,0,0)node[left]{$\vec{i}$};;
+                \draw (O) node[below right]{$O$};
+                \draw(O)[fill=black] circle(1.5pt);
+            \end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+	
+	<p>
+        Cualquier vector en el espacio se puede poner como <m>\vec{v}=\lambda_ 1 \cdot \vec{i}+\lambda_2 \cdot \vec{j}+\lambda_3 \cdot \vec{k}</m> siendo las componentes de este vector <m>\left( \lambda_1, \lambda_2,\lambda_3 \right)</m>
+    </p>
+    <p>
+        A partir de este momento toda la geometría estará referida a este sistema de referencia.
+    </p>
+    <p>
+        Cuando expresamos los vectores con coordenadas es fácil ver si un conjunto de vectores son linealmente dependientes o independientes. Para ello escribimos los vectores en forma de matriz siendo cada fila de esta matriz un vector. Si el rango de esta matriz coincide con el número de filas los vectores son linealmente independientes, en caso de que sea menor son linealmente dependientes.
+    </p>
+    <p>
+    En el caso de vectores en el espacio la matriz tendrá tres columnas, por lo tanto el rango de esta matriz será como máximo 3, esto quiere decir que en el espacio habrá como máximo 3 vectores linealmente independientes.
+    </p>
+    <p>
+        Veamos ahora como podemos saber si un conjunto de vectores en el espacio son linealmente dependientes o independientes. Tomemos 3 vectores en el espacio, <m>\vec{u}=(u_1,u_2,u_3)</m>, <m>\vec{v}=(v_1,v_2,v_3)</m> y <m>\vec{w}=(w_1,w_2,w_3)</m>.
+    </p>
+    
+    <p>
+        <ul marker="disk">
+            <li>
+                <p>
+                    Los vectores <m>\vec{u}</m> y <m>\vec{v}</m> son dependientes.
+                </p>
+                <p>    
+                    <m>\vec{u}</m> y <m>\vec{v}</m> tienen la misma dirección <m>\Rightarrow \text{rango } \begin{pmatrix} u_1 \amp u_2 \amp u_3 \\ v_1 \amp v_2 \amp v_3 \end{pmatrix} = 1</m>
+                </p>
+            </li>
+            <li>
+                <p>
+                    Los vectores <m>\vec{u}</m> y <m>\vec{v}</m> son independientes. 
+                </p>
+                <p>
+                    <m>\vec{u}</m> y <m>\vec{v}</m> no tienen la misma dirección <m>\Rightarrow \text{rango } \begin{pmatrix} u_1 \amp u_2 \amp u_3 \\ v_1 \amp v_2 \amp v_3 \end{pmatrix} = 2</m>
+                </p>
+            </li>
+            <li>
+                <p>
+                    Los vectores <m>\vec{u}</m>, <m>\vec{v}</m> y <m>\vec{w}</m> son dependientes.
+                </p>
+                <p>
+                    <m>\vec{u}</m>, <m>\vec{v}</m> y <m>\vec{w}</m> son coplanarios <m>\Rightarrow \text{rango } \begin{pmatrix} u_1 \amp u_2 \amp u_3 \\ v_1 \amp v_2 \amp v_3 \\ w_1 \amp w_2 \amp w_3 \end{pmatrix} \lt 3 </m>
+                </p>
+            </li>
+            <li>
+                <p>
+                    Los vectores <m>\vec{u}</m>, <m>\vec{v}</m> y <m>\vec{w}</m> son independientes.
+                </p>
+                <p>
+                    <m>\vec{u}</m>, <m>\vec{v}</m> y <m>\vec{w}</m> no son coplanarios <m>\Rightarrow \text{rango } \begin{pmatrix} u_1 \amp u_2 \amp u_3 \\ v_1 \amp v_2 \amp v_3 \\ w_1 \amp w_2 \amp w_3 \end{pmatrix} = 3</m>
+                </p>
+            </li>
+        </ul>
+    </p>
+    <example xml:id="exa_base-vectores">
+		<statement>
+			<p>
+				Probar que los vectores <m>\left\lbrace  (1,1,1), (1,1,0), (1,0,0) \right\rbrace </m> forman una base en  <m>\R^3</m>  y dar las coordenadas del vector <m>(1,-2,0)</m> en la base anterior.
+			</p>
+		</statement>
+        <solution>
+            <p>
+                Para probar que los tres vectores forman una base tenemos que probar solamente que los tres vectores son linealmente independientes, esto es, que su determinante es distinto de cero.
+            </p>
+            <p>
+                <m>\begin{vmatrix}
+                1 \amp 1 \amp 1 \\
+                1 \amp 1 \amp 0 \\
+                1 \amp 0 \amp 0 \\
+                \end{vmatrix}= -1 \neq 0 \Longrightarrow </m> son linealmente independientes, luego forman una base de <m>\R^3</m>
+            </p>
+            <p>
+                Ahora expresamos el vector <m>(1,-2,0)</m> en esta base.
+            </p>
+            <p>
+                <m>(1,-2,0)=x(1,1,1)+y(1,1,0)+z(1,0,0)</m>
+            </p>
+            <p>
+                Operando e igualando componente a componente nos queda el sistema:
+
+            </p>
+            <p>
+                <m>\begin{cases}
+                 1=x+y+z \\
+                 -1=x+y \\
+                 0=x \\
+                \end{cases}</m>
+            </p>
+            <p>
+                La solución del sistema es <m>x=0</m>, <m>y=-1</m> y <m>z=2</m>.
+            </p>
+            <p>
+                Las coordenadas del vector en la nueva base son: <m>(0,-1,2)</m>
+            </p>
+        </solution>
+    </example>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+

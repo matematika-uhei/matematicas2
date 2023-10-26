@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec_posicion-tres-planos" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Posiciones tres planos</title>
+  <introduction>
+    <p>
+			Dados tres planos:
+		</p>
+		<me>
+			\begin{cases} \pi_1 \equiv A_1 x +B_1 y +C_1 z + D_1 = 0 \\ \pi_2 \equiv A_2 x +B_2 y +C_2 z + D_2 = 0  \\ 
+		\pi_3 \equiv	A_3 x +B_2 y +C_2 z + D_3 = 0  \end{cases}
+		</me>
+		<p>
+      Para hallar la posición relativa de tres planos estudiaremos el tipo de sistema formado por los tres planos.
+    </p>
+    <me>
+			\begin{cases} A_1 x +B_1 y +C_1 z = -D_1  \\ A_2 x +B_2 y +C_2 z = -D_2   \\ A_3 x +B_2 y +C_2 z = -D_3   \end{cases}
+		</me>
+		<p>
+			siendo:
+		</p>
+		<me>
+			A = \begin{pmatrix} A_1 &amp; B_1  &amp; C_1 \\ A_2 &amp; B_2  &amp; C_2 \\ A_3 &amp; B_3  &amp; C_3 \end{pmatrix} \qquad A^* = \begin{pmatrix} A_1 &amp; B_1  &amp; C_1 &amp; -D_1 \\ A_2 &amp; B_2  &amp; C_2 &amp; -D_2 \\ A_3 &amp; B_3  &amp; C_3 &amp; -D_3 \end{pmatrix}
+ 		</me>
+    </introduction>
+    <sidebyside widths="60% 35%" valigns="middle middle">
+		<stack>
+			<p>
+			<m>\text{Rango}(A)=3 \quad \text{Rango}(A^*)=3</m>
+    </p>
+    <p>
+			Sistema Compatible Determinado
+    </p>
+    <p>
+			<term>Se cortan en un punto</term>
+    </p>
+    </stack>
+    <stack>
+		<image xml:id="img_planos-cortan-punto" width="25%">
+			<asymptote>
+				settings.prc = false;
+				settings.render = 16;
+				import three;
+				import bsp;
+				texpreamble("\usepackage{euler,beton}");
+				size(5cm, 0);
+				currentprojection=orthographic((5,4,3));
+
+				path3 pl =plane((5,-0,0),(0,5,0),(-2.50,-2.5,0));
+				path3 pl1=rotate(90,X)*rotate(90,Y)*pl;
+				path3 pl2=rotate(90,Z)*rotate(90,Y)*pl;
+
+				draw (pl);
+				draw (pl1);
+				draw (pl2);
+
+				surface s1=surface(pl);
+				draw(s1,red+opacity(.5),light=nolight);
+				surface s2=surface(pl1);
+				draw(s2,blue+opacity(.5),light=nolight);
+				surface s3=surface(pl2);
+				draw(s3,green+opacity(.5),light=nolight);
+
+				triple[] asf=intersectionpoints(pl2,s1);
+				triple C=asf[1];
+				triple D=asf[0];
+
+				triple A=(C+D)/2;
+				dot(A,red);	
+			</asymptote>
+		</image>
+    </stack>
+			
+    </sidebyside>
+    
+    <sidebyside widths="60% 35%" valigns="middle middle">
+		<stack>
+			<p>
+				<m>\text{Rango}(A)=2 \quad \text{Rango}(A^*)=3</m>
+			</p>
+			<p>
+				Sistema Incompatible 
+			</p>
+			<p>
+				Dos filas proporcionales en la matriz <m>A</m>
+			</p>
+			<p>
+			<term>Dos planos paralelos y el tercero los corta.</term>
+			</p>
+		</stack>
+		<stack>
+			<image xml:id="img_planos-dos-paralelos-tercero-corta" width="25%">
+				<asymptote>
+					settings.prc = false;
+					settings.render = 16;
+					import three;
+					import bsp;
+					texpreamble("\usepackage{euler,beton}");
+					size(5cm, 0);
+					currentprojection=orthographic((5,4,3));
+
+					path3 pl =plane((5,-0,0),(0,5,0),(-2.50,-2.5,0));
+					path3 pl1=shift(-1*normal(pl))*rotate(-60,X)*pl;
+					path3 pl2=shift(1*normal(pl1))*pl1;
+					path3 pl3=shift(-1*normal(pl))*pl;
+
+					draw (pl1);
+					draw (pl2);
+					draw (pl3);
+
+					surface s2=surface(pl1);
+					draw(s2,blue+opacity(.5),light=nolight);
+					surface s3=surface(pl2);
+					draw(s3,green+opacity(.5),light=nolight);
+					surface s4=surface(pl3);
+					draw(s4,yellow+opacity(.6),light=nolight);
+				</asymptote>
+			</image>
+		</stack>
+	</sidebyside>
+    
+    <sidebyside widths="60% 35%" valigns="middle middle">
+		<stack>
+			<p>
+				<m>\text{Rango}(A)=2 \quad \text{Rango}(A^*)=3</m>
+			</p>
+			<p>
+				Sistema Incompatible 
+			</p>
+			<p>
+				No hay filas proporcionales en la matriz <m>A</m>
+			</p>
+			<p>
+			<term>Los planos se cortan dos a dos</term>
+			</p>
+		</stack>
+		<stack>
+			<image xml:id="img_planos-cortan-dos-dos" width="25%">
+				<asymptote>
+					settings.prc = false;
+					settings.render = 16;
+					import three;
+					import bsp;
+					texpreamble("\usepackage{euler,beton}");
+					size(5cm, 0);
+					currentprojection=orthographic((5,4,3));
+
+					path3 pl =plane((5,-0,0),(0,5,0),(-2.50,-2.5,0));
+					path3 pl1=shift(-2*normal(pl))*rotate(60,X)*pl;
+					path3 pl2=shift(-2*normal(pl))*rotate(-60,X)*pl;
+					
+					draw (pl);
+					draw (pl1);
+					draw (pl2);
+					
+					surface s1=surface(pl);
+					draw(s1,red+opacity(.5),light=nolight);
+					surface s2=surface(pl1);
+					draw(s2,blue+opacity(.5),light=nolight);
+					surface s3=surface(pl2);
+					draw(s3,green+opacity(.5),light=nolight);
+				</asymptote>
+			</image>
+		</stack>
+	</sidebyside>
+    
+    <sidebyside widths="60% 35%" valigns="middle middle">
+		<stack>
+			<p>
+			<m>\text{Rango}(A)=2 \quad \text{Rango}(A^*)=2</m>
+    </p>
+    <p>
+			Sistema Compatible Indeterminado
+    </p>
+    <p>
+		Si hay ecuaciones proporcionales.
+    </p>
+    <p>
+			<term>Dos planos coincidentes y el tercero los corta.</term>
+    </p>
+    </stack>
+    <stack>
+		<image xml:id="img_planos-paralelos-cortan-recta" width="25%">
+			<asymptote>
+				settings.prc = false;
+				settings.render = 16;
+				import three;
+				import bsp;
+				texpreamble("\usepackage{euler,beton}");
+				size(5cm, 0);
+				currentprojection=orthographic((5,4,3));
+
+				path3 pl =plane((0,-2,0),(-2,0,0),(0,1,0));
+				path3 pl1=plane((0,-1.5,0),(-1.5,0,0),(0,0.75,0));
+				path3 pl2=rotate(-60,X)*pl;
+
+				draw (pl);
+				draw (pl1);
+				draw (pl2);
+				
+				triple[] asf=intersectionpoints(pl,pl2);
+				triple C=asf[1];
+				triple D=asf[0];
+
+				surface s1=surface(pl);
+				draw(s1,red+opacity(.5),light=nolight);
+				surface s2=surface(pl1);
+				draw(s2,blue+opacity(.5),light=nolight);
+				surface s3=surface(pl2);
+				draw(s3,green+opacity(.5),light=nolight);
+
+				draw((C--D),yellow);
+			</asymptote>
+		</image>
+    </stack>
+			
+    </sidebyside>
+    
+    <sidebyside widths="60% 35%" valigns="middle middle">
+		<stack>
+			<p>
+				<m>\text{Rango}(A)=2 \quad \text{Rango}(A^*)=2</m>
+			</p>
+			<p>
+				Sistema Compatible Indeterminado 
+			</p>
+			<p>
+				No hay ecucaciones proporcionales
+			</p>
+			<p>
+			<term>Los tres planos se cortan en una recta.</term>
+			</p>
+		</stack>
+		<stack>
+			<image xml:id="img_planos-cortan-recta" width="25%">
+				<asymptote>
+					settings.prc = false;
+					settings.render = 16;
+					import three;
+					import bsp;
+					texpreamble("\usepackage{euler,beton}");
+					size(5cm, 0);
+					currentprojection=orthographic((5,4,3));
+
+					path3 pl =plane((0,-2,0),(-2,0,0),(0,1,0));
+					path3 pl1=rotate(-30,X)*pl;
+					path3 pl2=rotate(-60,X)*pl;
+
+					draw (pl);
+					draw (pl1);
+					draw (pl2);
+					
+					triple[] asf=intersectionpoints(pl,pl2);
+					triple C=asf[1];
+					triple D=asf[0];
+					
+					surface s1=surface(pl);
+					draw(s1,blue+opacity(.5),light=nolight);
+					surface s2=surface(pl1);
+					draw(s2,green+opacity(.5),light=nolight);
+					surface s3=surface(pl2);
+					draw(s3,yellow+opacity(.6),light=nolight);
+				</asymptote>
+			</image>
+		</stack>
+	</sidebyside>
+    
+    <sidebyside widths="60% 35%" valigns="middle middle">
+		<stack>
+			<p>
+				<m>\text{Rango}(A)=1 \quad \text{Rango}(A^*)=2</m>
+			</p>
+			<p>
+				Sistema Incompatible 
+			</p>
+			<p>
+				Dos ecuaciones proporcionales y la otra no.
+			</p>
+			<p>
+			<term>Dos planos coincidentes y el tercero paralelo.</term>
+			</p>
+		</stack>
+		<stack>
+			<image xml:id="img_planos-dos-coincidentes-paralelo" width="25%">
+				<asymptote>
+					settings.prc = false;
+					settings.render = 16;
+					import three;
+					import bsp;
+					texpreamble("\usepackage{euler,beton}");
+					size(5cm, 0);
+					currentprojection=orthographic((5,4,3));
+
+					path3 pl =plane((0,-2,0),(-2,0,0),(0,1,0));
+					path3 pl1=plane((0,-1.75,0),(-1.75,0,0),(0,0.875,0));
+					path3 pl2=shift(0.6*normal(pl))*pl;
+					
+					draw (pl);
+					draw (pl1);
+					draw (pl2);
+					
+					surface s1=surface(pl);
+					draw(s1,red+opacity(.5),light=nolight);
+					surface s2=surface(pl1);
+					draw(s2,blue+opacity(.5),light=nolight);
+					surface s3=surface(pl2);
+					draw(s3,green+opacity(.5),light=nolight);
+				</asymptote>
+			</image>
+		</stack>
+	</sidebyside>
+	
+	<sidebyside widths="60% 35%" valigns="middle middle">
+		<stack>
+			<p>
+			<m>\text{Rango}(A)=1 \quad \text{Rango}(A^*)=2</m>
+    </p>
+    <p>
+			Sistema Incompatible 
+    </p>
+    <p>
+		No hay ecuaciones proporcionales
+    </p>
+    <p>
+			<term>SLos tres planos son paralelos</term>
+    </p>
+    </stack>
+    <stack>
+		<image xml:id="img_planos-tres-paralelos" width="25%">
+			<asymptote>
+				settings.prc = false;
+				settings.render = 16;
+				import three;
+				import bsp;
+				texpreamble("\usepackage{euler,beton}");
+				size(5cm, 0);
+				currentprojection=orthographic((5,4,3));
+
+				path3 pl =plane((0,-2,0),(-2,0,0),(0,1,0));
+				path3 pl1=shift(0.6*normal(pl))*pl;
+				path3 pl2=rotate(-60,X)*pl;
+				path3 pl3=shift(-0.3*normal(pl1))*pl1;;
+
+				draw (pl);
+				draw (pl1);
+				draw (pl3);
+
+				surface s1=surface(pl);
+				draw(s1,red+opacity(.5),light=nolight);
+				surface s2=surface(pl1);
+				draw(s2,blue+opacity(.5),light=nolight);
+				surface s4=surface(pl3);
+				draw(s4,green+opacity(.5),light=nolight);
+			</asymptote>
+		</image>
+    </stack>
+			
+    </sidebyside>
+    
+    <sidebyside widths="60% 35%" valigns="middle middle">
+		<stack>
+			<p>
+				<m>\text{Rango}(A)=1 \quad \text{Rango}(A^*)=1</m>
+			</p>
+			<p>
+				Sistema Compatible Indeterminado
+			</p>
+			<p>
+			<term>Los tres planos son coincidentes.</term>
+			</p>
+		</stack>
+		<stack>
+			<image xml:id="img_planos-coincidentes" width="25%">
+				<asymptote>
+					settings.prc = false;
+					settings.render = 16;
+					import three;
+					import bsp;
+					texpreamble("\usepackage{euler,beton}");
+					size(5cm, 0);
+					currentprojection=orthographic((5,4,3));
+
+					path3 pl =plane((0,-2,0),(-2,0,0),(0,1,0));
+					path3 pl1=plane((0,-1.75,0),(-1.75,0,0),(0,0.875,0));
+					path3 pl2=plane((0,-1.5,0),(-1.5,0,0),(0,0.75,0));
+
+					draw (pl);
+					draw (pl1);
+					draw (pl2);
+
+					surface s1=surface(pl);
+					draw(s1,blue+opacity(.5),light=nolight);
+					surface s2=surface(pl1);
+					draw(s2,green+opacity(.5),light=nolight);
+					surface s3=surface(pl2);
+					draw(s3,yellow+opacity(.6),light=nolight);
+				</asymptote>
+			</image>
+		</stack>
+	</sidebyside>
+    
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

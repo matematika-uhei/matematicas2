@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercises xml:id="ex_vectores" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <!-- You can ommit the title and just get the default "Exercises" -->
+  <title>Ejercicios</title>
+  
+  <exercise>
+    <statement>
+      <p>
+        Dados los puntos <m>A(1,1+\lambda ,-1)</m>, <m>B(2,\lambda ,0)</m> y <m>C(\lambda +2,0,1)</m>, ¿existe algún valor de <m>\lambda \in \R</m> para el que <m>A</m>, <m>B</m> y <m>C</m> estén alineados?.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        <m>\lambda = 1 </m>
+      </p>
+    </answer>
+    <solution>
+      <p>
+        Para que los tres puntos esten alineados los vectores que forman cualquier pareja de puntos tienen que ser paralelos.
+      </p>
+      <p>
+        Hallamos dos de estos vectores: 
+      </p>
+      <me>\vector{AB}=(1,-1,1) \qquad \vector{AC}=(\lambda+1,-1-\lambda,2)</me>
+      <p>
+        Para que sean paralelos se tiene que cumplir que sus componentes sean proporcionales:
+      </p>
+      <me> \dfrac{1}{\lambda +1}= \dfrac{-1}{-1-\lambda }=\dfrac{1}{2} </me>
+      <p>
+        las igualdades anteriores se cumplen para <m>\lambda = 1</m>
+      </p>
+    </solution>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Dados los vectores <m>\vec{u}=(-1,2,3)</m> y <m>\vec{v}=(2,3,-1)</m>, razona si son linealmente independientes los vectores <m>\vector{u+v}</m> y <m>\vector{u-v}</m>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        Son linealmente independientes.
+      </p>
+    </answer>
+    <solution>
+      <p>
+        Hallamos los vectores <m>\vector{u+v}</m> y <m>\vector{u-v}</m>
+      </p>
+      <p>
+        <m>\vector{u+v}=(1,5,2)</m>, <m>\vector{u-v}= (-3,-1,4)</m>
+      </p>
+      <p>
+        Estudiamos el rango de la matriz formada por estos dos vectores:
+      </p>
+      <p>
+        <m>\begin{pmatrix} 1 \amp 5 \amp 2 \\ -3 \amp -1 \amp 4 \end{pmatrix}</m>
+      </p>
+      <p>
+        <m>\begin{vmatrix} 1 \amp 5 \\ -3 \amp -1 \end{vmatrix}= 14 \Rightarrow \text{Rango }= 2 </m>
+      </p>
+      <p>
+        Por ser el rango de la matriz <m>2</m> los vectores son linealmente independientes.
+      </p>
+    </solution>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+
+      </p>
+    </statement>
+  </exercise>
+
+</exercises>
+

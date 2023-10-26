@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+<section xml:id="sec_sistemas-de-ecuaciones">
+	<title>Sistemas de ecuaciones</title>
+	<assemblage>
+		<title>Sistemas de ecuaciones lineales</title>
+		<p>
+			Un sistema de <m> m</m> ecuaciones lineales con <m>n</m> incógnitas es un conjunto de <m>m</m> ecuaciones lineales con las mismas <m>n</m> incógnitas en cada una de ellas.
+		</p>
+
+		<p>
+			<me>\left\lbrace \begin{array}{ccccccccc}
+				a_{11} x_1 &amp; + &amp; a_{12}x_2 &amp; + &amp; \cdots &amp; + &amp; a_{1n}x_n &amp; = &amp; b_1 \\
+				a_{21} x_1 &amp; + &amp; a_{22}x_2 &amp;+ &amp; \cdots &amp; + &amp; a_{2n} x_n&amp; = &amp; b_2 \\
+				\cdots &amp; &amp; \cdots &amp; &amp;  \cdots &amp; &amp; \cdots &amp; &amp; \cdots \\
+				a_{m1} x_1 &amp; + &amp; a_{m2}x_2 &amp; +&amp; \cdots &amp; + &amp; a_{mn} x_n&amp; = &amp; b_m \\
+				\end{array} \right.
+			</me>
+		</p>
+	</assemblage>
+	<p>
+		Siendo:
+	</p>
+
+	<p>
+		<ul>
+			<li>
+				<p>
+					Los <term>coeficientes del sistema</term> los números reales <m>a_{ij}</m>
+				</p>
+			</li>
+
+			<li>
+				<p>
+					Los <term>términos independientes</term> los números reales <m>b_i</m>
+				</p>
+			</li>
+
+			<li>
+				<p>
+					Las <term>incógnitas</term> los términos <m>x_j</m>
+				</p>
+			</li>
+
+		</ul>
+	</p>
+
+	<p>
+		La solución o soluciones del sistema son los valores de las incógnitas para los que se cumplen todas las ecuaciones.
+	</p>
+
+	<p>
+		Resolver un sistema de ecuaciones es hallar las soluciones.
+	</p>
+
+	<p>
+		Según la solución del sistema clasificamos el sistema de la siguiente forma:
+	</p>
+
+	<p>
+		<ul>
+			<li>
+				<p>
+					<term>Compatibles:</term> si tiene solución. Estos pueden ser:
+				</p>
+				<p>
+					<ul>
+						<li>
+							<p>
+								<term>Determinado:</term> si tiene una única solución.
+							</p>
+						</li>
+
+						<li>
+							<p>
+								<term>Indeterminados:</term> si tiene infinitas soluciones.
+							</p>
+						</li>
+					</ul>
+				</p>
+			</li>
+			<li>
+				<p>
+					<term>Incompatibles:</term> si no tiene solución.
+				</p>
+			</li>
+		</ul>
+	</p>
+
+	<p>
+		Dos sistemas son equivalentes cuando tienen las mismas soluciones.
+	</p>
+	<subsection xml:id="sub_expresion-matricial-sistema">
+		<title>Expresión matricial de un sistema de ecuaciones</title>
+		<p>
+			Dado un sistema de <m>m</m> ecuaciones lineales con <m>n</m> incógnitas:
+		</p>
+		<me>\left\lbrace \begin{array}{ccccccccc}
+				a_{11} x_1 &amp; + &amp; a_{12}x_2 &amp; + &amp; \cdots &amp; + &amp; a_{1n}x_n &amp; = &amp; b_1 \\
+				a_{21} x_1 &amp; + &amp; a_{22}x_2 &amp;+ &amp; \cdots &amp; + &amp; a_{2n} x_n&amp; = &amp; b_2 \\
+				\cdots &amp; &amp; \cdots &amp; &amp;  \cdots &amp; &amp; \cdots &amp; &amp; \cdots \\
+				a_{m1} x_1 &amp; + &amp; a_{m2}x_2 &amp; +&amp; \cdots &amp; + &amp; a_{mn} x_n&amp; = &amp; b_m \\
+				\end{array} \right.
+			</me>
+			<assemblage>
+				<title>Expresión matricial de un sistema de ecuaciones</title>
+				<p>
+					El sistema se puede expresar matricialmente de la siguiente forma:
+				</p>
+				<p>
+					<me>
+						\begin{pmatrix}
+						a_{11}  &amp; a_{12}  &amp; \cdots  &amp; a_{1n} \\
+						a_{21}  &amp; a_{22} &amp; \cdots  &amp; a_{2n}  \\
+						\cdots &amp; \cdots  &amp;  \cdots &amp; \cdots  \\
+						a_{m1}  &amp; a_{m2} &amp; \cdots &amp; a_{mn}  \end{pmatrix}
+						\cdot \begin{pmatrix}  x_1  \\ x_2 \\ \cdots \\ x_n  \end{pmatrix} = 
+						\begin{pmatrix}  b_1 \\ b_2 \\ \cdots \\ b_m  \end{pmatrix}
+					</me>
+				</p>
+			</assemblage>
+			<p>
+				En la práctica es muy util la <term>matriz ampliada </term>, <m>A^*</m>, cuyos elementos son los coeficientes de las incógnitas y los términos independientes.
+			</p>
+			<p>
+				<me>
+					A^* = \begin{pmatrix}
+						a_{11}  &amp; a_{12}  &amp; \cdots  &amp; a_{1n} \amp b_1 \\
+						a_{21}  &amp; a_{22} &amp; \cdots  &amp; a_{2n} \amp b_2 \\
+						\cdots &amp; \cdots  &amp;  \cdots &amp; \cdots  \amp \cdots \\
+						a_{m1}  &amp; a_{m2} &amp; \cdots &amp; a_{mn}  \amp b_m \end{pmatrix}
+				</me>
+			</p>
+			<example>
+				<statement>
+					<p>
+						Escribir el siguiente sistema de ecuaciones en forma matricial y escribir también su matriz ampliada:
+					</p>
+					<p>
+						<me>
+							\begin{cases} 3x+y-z = 1 \\ 2x-y+2z=0 \\ x+5y= 1 \\ y -2z = 9 \end{cases}
+						</me>
+					</p>
+				</statement>
+				<solution>
+					<p>
+						El sistema en forma matricial sería:
+					</p>
+					<p>
+						<me>
+							\begin{pmatrix} 3 \amp 1 \amp -1 \\ 2 \amp -1 \amp 2 \\ 1 \amp 5 \amp 0 \\ 0 \amp 1 \amp -2 \end{pmatrix} \cdot \begin{pmatrix} x \\ y \\ z \end{pmatrix} = \begin{pmatrix} 1 \\ 0 \\ 1 \\ 9 \end{pmatrix}
+						</me>
+					</p>
+					<p>
+						<me>
+							A^* = \begin{pmatrix} 3 \amp 1 \amp -1 \amp 1 \\ 2 \amp -1 \amp 2 \amp 0 \\ 1 \amp 5 \amp 0 \amp 1 \\ 0 \amp 1 \amp -2 \amp 9 \end{pmatrix}
+						</me>
+					</p>
+				</solution>
+			</example>
+	</subsection>
+</section>

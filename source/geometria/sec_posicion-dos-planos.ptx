@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec_posicion-dos-planos" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Posiciones dos planos</title>
+  <introduction>
+    <p>
+      Las posibles posiciones de dos planos en el espacio son:
+    </p>
+  </introduction>
+  <sbsgroup widths="30% 30% 30%" margins="2% 3% 3% 2%" valign="middle middle middle">
+    <sidebyside>
+      <p>
+	<blockquote><term>Coincidentes</term></blockquote>
+      </p>
+      <p>
+	<blockquote><term>Paralelos</term></blockquote>
+      </p>
+      <p>
+	<blockquote><term>Secantes</term></blockquote>
+      </p>
+    </sidebyside>
+    <sidebyside>
+	<image xml:id="dos-planos-coincidentes" width="50%">
+	  <latex-image>
+	  
+			\begin{tikzpicture}[scale=0.5]
+			\filldraw[fill=red!50!white,draw=black] (0,0)--(2,3)--(9,3)--(7,0)--cycle ;
+			\filldraw[fill=blue!50!white,draw=black,opacity=0.75] (0.8,0.5) -- (2.5,3) --(9,3)--(7.33,0.5)--cycle;
+			\end{tikzpicture}
+		</latex-image>
+	</image>
+	<image xml:id="dos-planos-paralelos" width="50%">
+	 <latex-image>
+	  
+			\begin{tikzpicture}[scale=0.5]
+			\filldraw[fill=red!50!white,draw=black] (0,0)--(2,2)--(9,2)--(7,0)--cycle ;
+			\filldraw[fill=blue!50!white,draw=black,opacity=0.75] (0,1)--(2,3)--(9,3)--(7,1)--cycle ;
+			\end{tikzpicture}
+		</latex-image>
+	</image>
+   
+	<image xml:id="dos-planos-secantes" width="50%">
+	 <latex-image>
+	  
+			\begin{tikzpicture}[scale=0.40]
+			\filldraw[fill=red!50!white,draw=black,opacity=0.75] (0,1)--(3,4)--(10,4)--(7,1)--cycle ;
+			\filldraw[fill=blue!50!white,draw=black,opacity=0.75] (3,0)--(0,3)--(7,3)--(10,0)--cycle ;
+			\filldraw[fill=red!50!white,draw=black,opacity=0.75] (0,1)--(1,2)--(8,2)--(7,1)--cycle ;
+			\draw[black] (1,2) -- (8,2); 
+			\end{tikzpicture}
+		</latex-image>
+	</image>
+      
+    </sidebyside>
+    
+  </sbsgroup>
+  <p>
+		Dados dos planos: 
+		<me>\begin{cases} \pi_1 \equiv A_1 x + B_1 y +C_1 z +D_1 =0 \\  \pi_2 \equiv A_2 x + B_2 y +C_2 z +D_2 =0 \end{cases}</me>
+  </p>
+  <p>
+		para estudiar su posición relativa estudiamos el conjunto de puntos que verifican las dos ecuaciones, es decir, hallamos las soluciones del sistema:
+  </p>
+	<me>\begin{cases} \pi_1 \equiv A_1 x + B_1 y +C_1 z = -D_1  \\  \pi_2 \equiv A_2 x + B_2 y +C_2 z = -D_2  \end{cases}</me>
+	<p>
+		El sistema puede ser compatible indeterminado, ya que tiene más incógnitas que ecuaciones, o incompatible. Para saber de que tipo es utilizamos el teorema de Rouché-Fröbenius.
+	</p>
+	<p>
+		Las matrices del sistema son:
+	</p>
+	<me>
+		A=\begin{pmatrix} A_1 &amp;  B_1 &amp; C_1  \\   A_2 &amp; B_2 &amp; C_2 \end{pmatrix} \qquad  A^*=\begin{pmatrix} A_1 &amp;  B_1 &amp; C_1 &amp; -D_1  \\   A_2 &amp; B_2 &amp; C_2 &amp; -D_2 \end{pmatrix} 
+	</me>
+	<p>
+		Si rango(<m>A</m>)=rango(<m>A^*</m>) =1 <m>\Rightarrow </m> S.C.I. <m>\Rightarrow </m> <term>Planos Coincidentes</term>
+	</p>
+	
+	<p>
+		Si rango(<m>A</m>)=1 \neq rango(<m>A^*</m>) =2 <m>\Rightarrow </m> S.I. <m>\Rightarrow </m> <term>Planos Paralelos</term>
+	</p>
+	
+	<p>
+		Si rango(<m>A</m>)=rango(<m>A^*</m>) =2 <m>\Rightarrow </m> S.C.I. <m>\Rightarrow </m> <term>Planos Secantes</term>
+	</p>
+	<p>
+		En este caso el rango de las matrices depende de la proporcionalidad o no de las filas de la matriz. Teniendo en cuenta esto, podemos estudiar la posición relativa de los planos estudiando la proporcionalidad de las filas de las matrices:
+	</p>
+	<p>
+		Si  <m>\dfrac{A_1}{A_2} = \dfrac{B_1}{B_2} = \dfrac{C_1}{C_2} = \dfrac{D_1}{D_2} \Rightarrow </m> S.C.I. <m>\Rightarrow </m> <term>Planos Coincidentes</term>
+	</p>
+	
+	<p>
+		Si <m>\dfrac{A_1}{A_2} = \dfrac{B_1}{B_2} = \dfrac{C_1}{C_2} \neq  \dfrac{D_1}{D_2} \Rightarrow </m> S.I. <m>\Rightarrow </m> <term>Planos Paralelos</term>
+	</p>
+	
+	<p>
+		Si r<m>\dfrac{A_1}{A_2} \neq  \dfrac{B_1}{B_2} \, \text{ o } \, \dfrac{A_1}{A_2} \neq \dfrac{C_1}{C_2}  \Rightarrow </m> S.C.I. <m>\Rightarrow </m> <term>Planos Secantes</term>
+	</p>s
+  <example>
+    <statement>
+      <p>
+	Hallar la posición relativa de las siguientes parejas de planos:
+      </p>
+      <p>
+	<ol label="a)">
+	  <li>
+	    <p>
+	      <m> \begin{cases} 2x+4y-z+2=0 \\ -3x+y-z= 1 \end{cases}</m>
+	    </p>
+	  </li>
+	</ol>
+      </p>
+    </statement>
+    <solution>
+			<p>
+				Escribimos las matrices del sistema:
+			</p>
+			<me>
+				A=\begin{pmatrix} 2 &amp; 4 &amp; -1 \\ -3 &amp; 1 &amp; -1 \end{pmatrix} \qquad A^*=\begin{pmatrix} 2 &amp; 4 &amp; -1 &amp; -2 \\ -3 &amp; 1 &amp; -1 &amp; 1 \end{pmatrix} 
+			</me>
+			<p>
+				Tomamos un determinate de orden 2 en la matriz <m>A</m>
+			</p>
+			<me>
+				\begin{vmatrix} 2 &amp; 4 \\ -3 &amp; 1 \end{vmatrix} = 14 \neq 0 \Rightarrow \begin{cases} \text{ rango}(A)=2  \\ \text{ rango}(A^*)=2 \end{cases}
+			</me>
+			<p>
+				Por lo tanto, el sistema es compatible indeterminado, cuyas soluciones dependen de un parámetro. Los planos son <term>secantes</term>.
+			</p>
+			
+			<p>
+				Otra forma de hallar la posición relativa de ambos planos es estudiar la proporcionalidad de las filas de las matrices:
+			</p>
+			<me> 
+				\dfrac{2}{-3} \neq \dfrac{4}{-1} 
+			</me>
+			<p>
+				Los planos son <term>secantes</term>
+			</p>
+    </solution>
+  </example>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

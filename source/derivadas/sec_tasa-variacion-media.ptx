@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+	<section xml:id="tasa-de-variacion-media">
+		<title>Tasa de variación media</title>
+		<assemblage>
+			<p>
+				La <term>tasa de variación media</term> de una función <m>f(x)</m> en un intervalo <m>[a,b]</m> es igual al incremento de la función <m>f(x)</m> entre el incremento de la variable independiente <m>x</m>: <me>\text{T.V.M.}[a,b] = \dfrac{f(b)-f(a)}{b-a}</me>
+			</p>
+		</assemblage>
+		
+
+		<p>
+			La tasa de variación media de una función en un punto mide el aumento o la disminución de la función en dicho intervalo.
+		</p>
+		
+		<example>
+			<statement>
+				<p>
+					Hallar la tasa de variación media de la función <m>f(x)=3t^2-2t+1</m>, en los intervalos <m>[0,2]</m> y <m>[2,6]</m> 
+				</p>
+			</statement>
+			<solution>
+				<p>
+					<m>\text{T.V.M.}[0,2] = \dfrac{f(2)-f(0)}{2-0}= \dfrac{9-1}{2-0}=4</m>
+				</p>
+				<p>
+					<m>\text{T.V.M.}[2,6] = \dfrac{f(6)-f(2)}{6-2}= \dfrac{97-9}{6-2}=22</m>
+				</p>
+			</solution>
+		</example>
+		
+
+		
+
+
+		<subsection xml:id="interpretacion-geometrica">
+			<title>Interpretación geométrica</title>
+
+		</subsection>
+	</section>

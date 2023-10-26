@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<section xml:id="sec_proyecciones-punto.">
+  <title>Proyecciones ortogonales.</title>
+
+
+  <subsection xml:id="sub_proyeccion-ortogonal-punto-recta">
+    <title>Proyección ortogonal de un punto sobre una recta</title>
+
+    <assemblage>
+      <title>Proyeccion ortogonal de un punto sobre una recta</title>
+      <p>
+	La proyección ortogonal de un punto sobre una recta es el punto más cercano de la recta a dicho punto.
+      </p>
+    </assemblage>
+
+    <p>
+      Para calcular la proyección de un punto sobre una recta podemos utilizar dos métodos:
+    </p>
+
+    <p>
+      <ul>
+	<li>
+	  <p>
+	    <term>Método 1:</term>
+	  </p>
+
+	  <p>
+	    <ul>
+	      <li>
+		<p>
+		  Hallamos el plano perpendicular a la recta que contiene al punto <m>A</m>.
+		</p>
+	      </li>
+
+	      <li>
+		<p>
+		  Hallamos el punto de corte de la recta con el plano, Este punto es la proyección del punto sobre la recta.
+		</p>
+	      </li>
+
+	    </ul>
+	  </p>
+	</li>
+
+	<li>
+	  <p>
+	    <term>Método 2:</term>
+	  </p>
+
+	  <p>
+	    <ul>
+	      <li>
+		<p>
+		  Tomamos un punto genérico de la recta y hallamos el vector que une este punto con el punto dado.
+		</p>
+	      </li>
+
+	      <li>
+		<p>
+		  El vector anterior y el vector director de la recta son perpendiculares, por lo tanto, su producto escalar es cero.
+		</p>
+	      </li>
+
+	      <li>
+		<p>
+		  Con la condición anterior calculamos el punto buscado.
+		</p>
+	      </li>
+
+	    </ul>
+	  </p>
+	</li>
+
+      </ul>
+    </p>
+
+  </subsection>
+
+  <subsection xml:id="sub_proyeccion-ortogonal-punto-plano">
+    <title>Proyección ortogonal de un punto sobre un plano</title>
+
+    <assemblage>
+       <title>Proyección ortogonal de un punto sobre un plano</title>
+      <p>
+	La proyección de un punto sobre un plano es el punto más cercano del plano a dicho punto.
+      </p>
+    </assemblage>
+
+    <p>
+      Para calcular la proyección de un punto sobre un plano podemos utilizar dos métodos:
+    </p>
+
+    <p>
+      <ul>
+	<li>
+	  <p>
+	    <term>Método 1:</term>
+	  </p>
+
+	  <p>
+	    <ul>
+	      <li>
+		<p>
+		  Hallamos la recta perpendicular al plano que pasa por el punto <m>A</m>.
+		</p>
+	      </li>
+
+	      <li>
+		<p>
+		  Hallamos el punto de corte de la recta con el plano, Este punto es la proyección del punto sobre la recta.
+		</p>
+	      </li>
+
+	    </ul>
+	  </p>
+	</li>
+
+	<li>
+	  <p>
+	    <term>Método 2:</term>
+	  </p>
+
+	  <p>
+	    <ul>
+	      <li>
+		<p>
+		  Tomamos un punto genérico del plano y hallamos el vector que une este punto con el punto dado.
+		</p>
+	      </li>
+
+	      <li>
+		<p>
+		  El vector anterior y el vector normal del plano son paralelos, por lo tanto, son proporcionales.
+		</p>
+	      </li>
+
+	      <li>
+		<p>
+		  Con la condición anterior calculamos el punto buscado.
+		</p>
+	      </li>
+
+	    </ul>
+	  </p>
+	</li>
+
+      </ul>
+    </p>
+
+    <example>
+      <statement>
+	<p>
+	  Hallar la proyección del punto <m>A(1,1,-2)</m> en el plano <m>\pi : x+2y+3z-11=0</m>
+	</p>
+      </statement>
+      <solution>
+	<p>
+	  <ul>
+	    <li>
+	      <p>
+		<term>Método 1:</term>
+	      </p>
+
+	      <p>
+		Hallamos la recta perpendicular al plano que contiene al punto <m>A</m>. Si la recta es perpendicular al plano el vector normal del plano es vector director de la recta.
+	      </p>
+
+	      <p>
+		<m>\vec{v}=(1,2,3)</m>
+	      </p>
+
+	      <p>
+		La recta pedida es:
+	      </p>
+
+	      <p>
+		<m>r: \begin{cases} x=1+\lambda \\ y=1+2\lambda \\ z=-2+3\lambda \end{cases}</m>
+	      </p>
+
+	      <p>
+		Hallamos el punto de corte de la recta y el plano:
+	      </p>
+
+	      <p>
+		<m>(1+\lambda)+2(1+2\lambda)+3(-2+3\lambda)-11=0 \Rightarrow 1+\lambda+2+4\lambda-6+9\lambda-11=0 \Rightarrow 14\lambda=14 \Rightarrow \lambda=1</m>
+	      </p>
+
+	      <p>
+		Luego el punto pedido es <m>(1+1,1+2,-2+3)=(2,3,1)</m>
+	      </p>
+	    </li>
+
+	    <li>
+	      <p>
+		<term>Método 2</term>
+	      </p>
+
+	      <p>
+		Escribimos un punto cualquiera <m>P(x,y,z)</m>
+	      </p>
+
+	      <p>
+		Hallamos el vector <m>AP=(x-1,y-1,z+2)</m>
+	      </p>
+
+	      <p>
+		Planteamos un sistema de ecuaciones con las condiciones que se tienen que cumplir:
+	      </p>
+
+	      <p>
+		<m>P \in \pi \Rightarrow x+2y+3z=11</m>
+	      </p>
+
+	      <p>
+		<m>\vector{AP} || \vector{v} \Rightarrow \dfrac{x-1}{1}=\dfrac{y-1}{2}=\dfrac{z+2}{3}</m>
+	      </p>
+
+	      <p>
+		El sistema de ecuaciones queda:
+	      </p>
+
+	      <p>
+		<m>\left\lbrace \begin{array}{l}
+		x+2y+3z=11 \\
+		2x-2=y-1 \\
+		3x-3=z+2
+		\end{array} \right.</m>
+	      </p>
+
+	      <p>
+		Resolviendo hallamos el punto <m>P(2,3,1)</m>
+	      </p>
+	    </li>
+
+	  </ul>
+	</p>
+      </solution>
+    </example>
+
+  </subsection>
+
+  <subsection xml:id="sub_proyeccion-ortogonal-recta-plano">
+    <title>Proyección ortogonal de una recta sobre un plano</title>
+
+    <assemblage>
+      <title>Proyeccion ortogonal de una recta sobre un plano</title>
+      <p>
+	La proyección ortogonal de  una recta <m>r</m> sobre un plano es la recta formada por la proyección de todos los puntos de la recta <m>r</m> sobre el plano.
+      </p>
+    </assemblage>
+
+    <p>
+      Para calcular la proyección de  una recta sobre un plano podemos utilizar dos métodos:
+    </p>
+
+    <p>
+      <ul>
+	<li>
+	  <p>
+	    <term>Método 1:</term>
+	  </p>
+
+	  <p>
+	    <ul>
+	      <li>
+		<p>
+		  Hallamos el plano perpendicular al plano y que contiene a la recta <m>r</m>.
+		</p>
+	      </li>
+
+	      <li>
+		<p>
+		  La proyección de la recta <m>r</m> sobre el plano es la recta definida por la intersección de estos dos planos.
+		</p>
+	      </li>
+
+	    </ul>
+	  </p>
+	</li>
+
+	<li>
+	  <p>
+	    <term>Método 2:</term>
+	  </p>
+
+	  <p>
+	    <ul>
+	      <li>
+		<p>
+		  Hallamos la proyección de dos puntos cualquiera de la recta <m>r</m> sobre el plano.
+		</p>
+	      </li>
+
+	      <li>
+		<p>
+		  La proyección de la recta sobre el plano es la recta que pasa por estos dos puntos.
+		</p>
+	      </li>
+
+	    </ul>
+	  </p>
+	</li>
+
+      </ul>
+    </p>
+
+  </subsection>
+</section>
+
+
+
+
+
+

@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+<section xml:id="sec_grafos-matrices" >
+
+  <title>Grafos y matrices.</title>
+  <assemblage>
+    <title>Grafos</title>
+    <p>
+      Un grafo es un conjunto de puntos, <m>V_1</m>,  <m>V_1</m> <m>\cdots </m>  <m>V_1</m> llamados vértices, junto con una colección de aristas que pueden estar orientados o no, cada uno de las cuales une dos de los vértices, no necesariamente distintos.
+    </p>
+  </assemblage>
+
+  <sidebyside widths="40% 40%" valigns="middle middle " align="center center ">
+    
+    <stack>
+      <p>
+        <term>Grafo dirigido</term>
+      </p>
+      <p></p>
+      <image source="images/img_grafo-dirigido" width="50%">
+        
+        </image>
+    </stack>
+    
+    <stack>
+      <p>
+        <term>Grafo no dirigido</term>
+      </p>
+      <p></p>
+      <image source="images/img_grafo-no-dirigido" width="50%">
+        
+        </image>
+    </stack>
+    
+  </sidebyside>
+  <p>
+    Las matrices y los grafos están muy relacionados, siendo las matrices una de las herramientas más utiles en la Teoría de Grafos. Las matrices nos permiten establecer de forma numérica y ordenada las conexiones entre los distintos vértices de un grafo y su manejo nos permite resolver problemas muy interesantes.
+  </p>
+  <assemblage>
+    <title>Matriz de adyacencia de un grafo</title>  
+    <p>
+      Un grafo se puede representar por una matriz <m>G=\left( a_{ij} \right)</m>cuadrada de orden <m>n</m>de forma que cada elemento <m>g_{ij}</m>es el número de aristas orientados o no que unen el vértice <m>V_i</m>con el vértice <m>V_j</m>
+    </p>
+  </assemblage>
+
+  Vamos a ver distintas matrices de adyacencia con algunos ejemplos.
+
+  <example>
+    <statement>
+      <p>
+        Dado el siguiente grafo escribir su matriz de adyacencia.
+      </p>
+      <p>
+        <image source="images/img_grafo-ejemplo-no-dirigido" width="50%"></image>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        El grafo tiene 5 vértices, por lo tanto, la matriz de adyacencia será una matriz cuadrada de orden 5.
+      </p>
+      <p>
+        El grafo es un grafo no dirigido, por lo tanto, en general la matriz será una matriz cuyos elementos serán 0 y 1 y además será simétrica.
+      </p>
+      <p>
+        Para calcular cada elemento de la matriz miramos si los vértices están unidos, si es así, ponemos un 1 y en caso de no estar unidos un 0.
+      </p>
+      <p>
+        La matriz quedaría de la siguiente forma:
+      </p>
+      
+      <p>
+        <m>
+          A= \begin{matrix} &amp; \begin{matrix} A &amp; B &amp; C &amp; D &amp; E \end{matrix} \\ 
+          \begin{matrix} A \\ B \\ C \\ D \\ E \end{matrix} &amp;  
+          \begin{pmatrix} 
+          0 &amp; 0 &amp; 1 &amp; 1 &amp; 0 \\
+          0 &amp; 0 &amp; 1 &amp; 1 &amp; 0 \\
+          1 &amp; 1 &amp; 0 &amp; 0 &amp; 1 \\
+          1 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\ 
+          0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 \end{pmatrix} 
+          \end{matrix}
+        </m>
+      </p>
+      
+    </solution>
+  </example>
+
+  <example>
+    <statement>
+      <p>
+        Dado el siguiente grafo escribir su matriz de adyacencia.
+      </p>
+      <p>
+        <image source="images/img_grafo-ejemplo-dirigido" width="50%"></image>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        El grafo tiene 4 vértices, por lo tanto, la matriz de adyacencia será una matriz cuadrada de orden 4.
+      </p>
+      <p>
+        El grafo es un grafo  dirigido, por lo tanto, en general la matriz será una matriz cuyos elementos serán 0 y 1.
+      </p>
+      <p>
+        Para calcular cada elemento de la matriz miramos si los vértices están unidos, si es así, ponemos un 1 y en caso de no estar unidos un 0.
+      </p>
+      <p>
+        La matriz quedaría de la siguiente forma:
+      </p>
+      
+      <p>
+        <m>
+          A= \begin{matrix} &amp; \begin{matrix} A &amp; B &amp; C &amp; D  \end{matrix} \\ 
+          \begin{matrix} A \\ B \\ C \\ D  \end{matrix} &amp;  
+          \begin{pmatrix} 
+          0 &amp; 1 &amp; 0 &amp; 1  \\
+          1 &amp; 0 &amp; 1 &amp; 1  \\
+          0 &amp; 1 &amp; 0 &amp; 1 \\ 
+          0 &amp; 0 &amp; 1 &amp; 0  
+          \end{pmatrix} 
+          \end{matrix}
+        </m>
+      </p>
+      
+    </solution>
+  </example>
+
+  <p>
+    Las operaciones con matrices nos permiten trasmitir nuevas informaciones sobre los grafos. 
+  </p>
+  <p>
+    Por ejemplo, si multiplicamos la matriz asociada al grafo por si misma tendremos las uniones entre dos vértices pasando por otro vértice intermedio. 
+  </p>
+  <p>
+    Si a este producto le sumamos la matriz asociada al grafo tendremos las uniones entre dos vértices directas y pasando por un vértice intermedio.
+  </p>
+
+  <example>
+    <statement>
+      <p>
+        Dado el siguiente grafo.
+      </p>
+      <p>
+        <image source="images/img_grafo-ejemplo-dirigido" width="50%"></image>
+      </p>
+      <p>
+        <ol marker="a)">
+          <li>
+            <p>
+              Hallar <m>A^2</m> y calcular cuántas uniones hay entre B y D pasando por un vértice intermedio.
+            </p>
+          </li>
+          <li>
+            <p>
+              Hallar <m>A^2+A</m> y decir cuantas conexiones hay entre B y D directamente y a traves de otro vértice intermedio.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        La matriz del grafo es la misma que en el ejemplo anterior:
+        <m> A= \begin{matrix} &amp; \begin{matrix} A &amp; B &amp; C &amp; D  \end{matrix} \\ 
+          \begin{matrix} A \\ B \\ C \\ D  \end{matrix} &amp;  
+          \begin{pmatrix} 
+          0 &amp; 1 &amp; 0 &amp; 1  \\
+          1 &amp; 0 &amp; 1 &amp; 1  \\
+          0 &amp; 1 &amp; 0 &amp; 1 \\ 
+          0 &amp; 0 &amp; 1 &amp; 0  
+          \end{pmatrix} 
+          \end{matrix} </m>
+      </p>
+      <p>
+        <ol>
+          <li>
+            <p>
+              <m> A^2 = \begin{pmatrix} 
+                0 &amp; 1 &amp; 0 &amp; 1  \\
+                1 &amp; 0 &amp; 1 &amp; 1  \\
+                0 &amp; 1 &amp; 0 &amp; 1 \\ 
+                0 &amp; 0 &amp; 1 &amp; 0  
+                \end{pmatrix} \begin{pmatrix} 
+                0 &amp; 1 &amp; 0 &amp; 1  \\
+                1 &amp; 0 &amp; 1 &amp; 1  \\
+                0 &amp; 1 &amp; 0 &amp; 1 \\ 
+                0 &amp; 0 &amp; 1 &amp; 0  
+                \end{pmatrix} = \begin{pmatrix} 
+                1 &amp; 0 &amp; 2 &amp; 1  \\
+                0 &amp; 2 &amp; 1 &amp; 2  \\
+                1 &amp; 0 &amp; 2 &amp; 1 \\ 
+                0 &amp; 1 &amp; 0 &amp; 1  
+                \end{pmatrix}  
+              </m>
+            </p>
+            <p>
+              Como vemos hay 2 conexiones entre B y D: B-A-D y B-C-D 
+            </p>
+          </li>
+          <li>
+            <p>
+              <m> A^2 +A = \begin{pmatrix} 
+                1 &amp; 0 &amp; 2 &amp; 1  \\
+                0 &amp; 2 &amp; 1 &amp; 2  \\
+                1 &amp; 0 &amp; 2 &amp; 1 \\ 
+                0 &amp; 1 &amp; 0 &amp; 1 
+                \end{pmatrix} \begin{pmatrix} 
+                0 &amp; 1 &amp; 0 &amp; 1  \\
+                1 &amp; 0 &amp; 1 &amp; 1  \\
+                0 &amp; 1 &amp; 0 &amp; 1 \\ 
+                0 &amp; 0 &amp; 1 &amp; 0  
+                \end{pmatrix} = \begin{pmatrix} 
+                1 &amp; 1 &amp; 2 &amp; 2  \\
+                1 &amp; 2 &amp; 2 &amp; 3  \\
+                1 &amp; 1 &amp; 2 &amp; 2 \\ 
+                0 &amp; 1 &amp; 1 &amp; 1  
+                \end{pmatrix}  
+              </m>
+            </p>
+            <p>
+              Como vemos hay 3 conexiones entre B y D: B-D, B-A-D y B-C-D (una directa dos a traves de otro vértice)
+            </p>
+          </li>
+        </ol>
+      </p>
+    </solution>
+  </example>
+  <p>
+    Ahora vamos a ver otro ejemplo con más de una conexión entre los vértices.
+  </p>
+  <example>
+    <p>
+      En una cierta provincia hay cuatro ciudades conectadas por lineas de autobús según la siguiente tabla:
+    </p>
+    <p>
+      
+      <tabular>
+        <row header="yes">
+          <cell halign="left"></cell>
+          <cell halign="center">A</cell>
+          <cell halign="center">B</cell>
+          <cell halign="center">C</cell>
+          <cell halign="center">D</cell>
+        </row>
+        <row class="odd">
+          <cell halign="left"><term>A</term></cell>
+          <cell halign="center">0</cell>
+          <cell halign="center">2</cell>
+          <cell halign="center">4</cell>
+          <cell halign="center">3</cell>
+        </row>
+        <row class="even">
+          <cell halign="left"><term>B</term></cell>
+          <cell halign="center">1</cell>
+          <cell halign="center">0</cell>
+          <cell halign="center">3</cell>
+          <cell halign="center">2</cell>
+        </row>
+        <row class="odd">
+          <cell halign="left"><term>C</term></cell>
+          <cell halign="center">3</cell>
+          <cell halign="center">2</cell>
+          <cell halign="center">0</cell>
+          <cell halign="center">2</cell>
+        </row>
+        <row class="odd">
+          <cell halign="left"><term>D</term></cell>
+          <cell halign="center">3</cell>
+          <cell halign="center">3</cell>
+          <cell halign="center">1</cell>
+          <cell halign="center">0</cell>
+        </row>
+      </tabular>
+      
+    </p>
+    <p>
+      Escribir la información en forma de matriz y calcular cuantas conexiones hay entre las ciudades directamente y con una escala.
+    </p>
+    <solution>
+      <p>
+        Escribimos la matriz de las conexiones entre las dos ciudades directamente:
+        <m>M = \begin{pmatrix} 
+          0 \amp 2 \amp 4 \amp 3 \\
+          1 \amp 0 \amp 3 \amp 2 \\
+          3 \amp 2 \amp 0 \amp 2 \\
+          3 \amp 3 \amp 1 \amp 0
+          \end{pmatrix}
+        </m>
+      </p>
+      <p>
+        Ahora hallamos <m>M^2</m> que serán las conexiones con una escala:
+        <me>
+          M^2 = \begin{pmatrix} 
+          0 \amp 2 \amp 4 \amp 3 \\
+          1 \amp 0 \amp 3 \amp 2 \\
+          3 \amp 2 \amp 0 \amp 2 \\
+          3 \amp 3 \amp 1 \amp 0
+          \end{pmatrix}
+          \begin{pmatrix} 
+          0 \amp 2 \amp 4 \amp 3 \\
+          1 \amp 0 \amp 3 \amp 2 \\
+          3 \amp 2 \amp 0 \amp 2 \\
+          3 \amp 3 \amp 1 \amp 0
+          \end{pmatrix} = 
+          \begin{pmatrix} 
+          23 \amp 17 \amp 9 \amp 12 \\
+          15 \amp 14 \amp  6 \amp 9 \\
+          8 \amp 12 \amp 20 \amp 13 \\
+          6 \amp 8 \amp 21 \amp 17
+          \end{pmatrix}
+        </me>
+      </p>
+      <p>
+        Las conexiones directas y con una escala serán:
+      </p>
+      <me>
+        \begin{pmatrix} 
+          23 \amp 17 \amp 9 \amp 12 \\
+          15 \amp 14 \amp  6 \amp 9 \\
+          8 \amp 12 \amp 20 \amp 13 \\
+          6 \amp 8 \amp 21 \amp 17
+          \end{pmatrix}+
+        \begin{pmatrix} 
+          0 \amp 2 \amp 4 \amp 3 \\
+          1 \amp 0 \amp 3 \amp 2 \\
+          3 \amp 2 \amp 0 \amp 2 \\
+          3 \amp 3 \amp 1 \amp 0
+          \end{pmatrix} = 
+          \begin{pmatrix} 
+          23 \amp 19 \amp 13 \amp 15 \\
+          16 \amp 14 \amp  9 \amp 11 \\
+          11 \amp 14 \amp 20 \amp 15 \\
+          9 \amp 11 \amp 22 \amp 17
+          \end{pmatrix}
+      </me>
+    </solution>
+  </example>
+</section>

@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec_sistemas-parametros">
+  <title>Sistemas con parámetros</title>
+  <p>
+    Los sistemas con parámetros son aquellos en los que el tipo de sistema depende de los valores de uno o varios parámetros.
+  </p>
+  <p>
+    Para calcular el tipo de sistema que es dependiendo del valor o valores del parámetro o parámetros utilizamos el teorema de Rouché-Fröbenius.
+  </p>
+  <example>
+    <statement>
+      <p>
+        Discutir, y resolver cuando sea posible, el sistema de ecuaciones lineales según los valores del parámetro <m>m</m>
+      </p>
+      <me>
+        \left\lbrace \begin{array}{rcl}
+        mx+y &amp; = &amp; 1 \\
+        x+my &amp; = &amp; m \\
+        2mx+2y &amp; = &amp; m+1
+        \end{array} \right.
+      </me>
+    </statement>
+    <solution>
+      <p>
+        Escribimos la matriz de los coeficientes y la matriz ampliada.
+      </p>
+
+      <p>
+        <me>
+          A=\begin{pmatrix}
+          m &amp; 1 \\
+          1 &amp; m \\
+          2m &amp; 2
+          \end{pmatrix} \qquad A^*=\begin{pmatrix}
+          m &amp; 1 &amp; 1 \\
+          1 &amp; m &amp; m \\
+          2m &amp; 2 &amp; m+1
+          \end{pmatrix}
+        </me>
+      </p>
+      <p>
+        Veamos los posibles rangos de las matrices y a partir de estos datos iniciamos el estudio.
+      </p>
+      <p>
+        <m>\text{rango} (A) \leq 2 \qquad \text{rango} (A^*) \leq 3</m>
+      </p>
+    
+      <p>
+        Empezamos estudiando el rango de <m>A^*</m> ya que si el rango de <m>A^*</m> es 3, el rango de <m>A</m> sería 2 y el sistema es incompatible.
+      </p>
+    
+      <p>
+        <m>
+          \begin{vmatrix}
+          m &amp; 1 &amp; 1 \\
+          1 &amp; m &amp; m \\
+          2m &amp; 2 &amp; m+1
+          \end{vmatrix}= m^3-m^2-m+1
+        </m>
+      </p>
+      <p>
+        Igualamos a cero y resolvemos: <m>m^3-m^2-m+1= 0 \Rightarrow m=1 \qquad m=-1</m>
+      </p>
+    
+      <p>
+        Por lo tanto, <m>\forall m \in \R - \{\pm 1\} \qquad \text{rango} (A^*)=3 \quad \text{rango} (A)= 2</m>. Sistema incompatible.
+      </p>
+    
+      <p>
+        Para 
+        <m>
+          m=-1 \qquad A=\begin{pmatrix}
+          -1 &amp; 1  \\
+           1 &amp; -1  \\
+          -2 &amp; 2  
+          \end{pmatrix} 
+          \qquad A^*=\begin{pmatrix}
+          -1 &amp; 1 &amp; 1 \\
+          1 &amp; -1 &amp; -1 \\
+          -2 &amp; 2 &amp; 0 
+          \end{pmatrix}
+        </m>
+      </p>
+    
+      <p>
+        Estudiamos el rango de <m>A</m>.
+      </p>
+    
+      <p>
+        Las tres filas son proporcionales, luego <m>\text{rango}(A)=1</m>
+      </p>
+    
+      <p>
+        Estudiamos el rango de <m>A^*</m>
+      </p>
+    
+      <p>
+        <m>
+          \begin{vmatrix}
+          -1 &amp; 1 \\
+          -2 &amp; 0
+          \end{vmatrix}= 2 \neq 0 \Rightarrow \text{rango}(A^*)=2
+        </m>
+      </p>
+    
+      <p>
+        Por lo tanto, para <m>m=-1</m> Sistema Incompatible.
+      </p>
+    
+      <p>
+        Para 
+        <m>
+          m=1 \qquad A=\begin{pmatrix}
+          1 &amp; 1  \\
+          1 &amp; 1  \\
+          2 &amp; 2  
+          \end{pmatrix} 
+          \qquad A^*=\begin{pmatrix}
+          1 &amp; 1 &amp; 1 \\
+          1 &amp; 1 &amp; 1 \\
+          2 &amp; 2 &amp; 2 
+          \end{pmatrix}
+        </m>.
+      </p>
+    
+      <p>
+        Estudiamos el rango de <m>A</m>.
+      </p>
+    
+      <p>
+        Las tres filas son proporcionales, luego <m>\text{rango}(A)=1</m>
+      </p>
+    
+      <p>
+        Estudiamos el rango de <m>A^*</m>
+      </p>
+    
+      <p>
+        Las tres filas son proporcionales, luego <m>\text{rango}(A^*)=1</m>
+      </p>
+    
+      <p>
+        Por lo tanto, para <m>m=1</m> Sistema Compatible Indeterminado.
+      </p>
+    
+      <p>
+        Resolvemos en este último caso.
+      </p>
+    
+      <p>
+        Como los rangos son 1, nos quedamos con una sola ecuación.
+      </p>
+    
+      <p>
+        <m>
+          x+y=1 \Rightarrow \left\lbrace \begin{array}{l}
+          x= 1- \lambda \\
+          y= \lambda 
+          \end{array} \right.
+        </m>
+      </p>
+    </solution>
+  </example>
+
+  <example>
+    <statement>
+      <p>
+        Dado el sistema de ecuaciones: 
+        <me>
+          S=\begin{sistematres}
+          x &amp; + &amp; y &amp; + &amp; z &amp; = &amp; 2 \\
+          2x &amp; + &amp; y &amp; &amp; &amp; = &amp; 0 \\
+          3x &amp; + &amp; 2y &amp; + &amp; az &amp; = &amp;2a 
+          \end{sistematres}
+        </me>
+      </p>
+    
+      <p>
+        <ol>
+          <li>
+            <p>
+              Demostrar que es compatible para todos los valores de <m>a</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Resolver en los casos en que sea compatible indeterminado.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <ol>
+          <li>
+            <p>
+              Formamos la matriz de los coeficientes y la matriz ampliada del sistema: 
+              <me>
+                A=\begin{pmatrix}
+                1 &amp; 1 &amp; 1 \\
+                2 &amp; 1 &amp; 0 \\
+                3 &amp; 2 &amp; a
+                \end{pmatrix}
+                \qquad
+                A^*=\begin{pmatrix}
+                1 &amp; 1 &amp; 1 &amp; 2 \\
+                2 &amp; 1 &amp; 0 &amp; 0 \\
+                3 &amp; 2 &amp; a &amp; 2a
+                \end{pmatrix}
+              </me>
+            </p>
+            <p>
+              Calculamos el determinante de la matriz <m>A</m>.
+            </p>
+            <p>
+              <me>
+                \begin{vmatrix}
+                1 &amp; 1&amp; 1 \\
+                2 &amp; 1 &amp; 0 \\
+                3 &amp; 2 &amp; a
+              \end{vmatrix}= a+0+4-3-0-2a=-a+1
+            </me>
+          </p>
+          <p>
+            Si el valor del determinante es distinto de cero el rango de <m>A</m> será <m>3</m>, en caso contrario será menor que <m>3</m>. Igualamos a cero:
+          </p>
+          <p>
+            <me>
+              -a+1=0 \rightarrow a=1
+            </me>
+          </p>
+          <p>
+            Ahora discutimos el sistema según los valores de <m>a</m>.
+          </p>
+          <p>
+            Si <m>a\neq 1 \rightarrow rg(A)=3</m>. Sabemos que <m>rg(A^*)\geq rg(A) =3</m>. Como la matriz <m>A^*</m> solo tiene <m>3</m> filas <m>rg(A^*)\leq 3</m>, por lo tanto, <m>rg(A^*)=3</m>.
+          </p>
+          <p>
+            En consecuencia: Si <m>a \neq 1 \rightarrow rg(A)=rg(A^*)=3=\text{número de incógnitas} \rightarrow</m> Sistema Compatible Determinado.
+          </p>
+           <p>
+            Si <m>a=1</m>
+          </p>
+          <p>
+            <me>
+              A=\begin{pmatrix}
+              1 &amp; 1 &amp; 1 \\
+              2 &amp; 1 &amp; 0 \\
+              3 &amp; 2 &amp; 1
+            \end{pmatrix}
+            \qquad
+            A^*=\begin{pmatrix}
+              1 &amp; 1 &amp; 1 &amp; 2 \\
+              2 &amp; 1 &amp; 0 &amp; 0 \\
+              3 &amp; 2 &amp; 1 &amp; 2
+            \end{pmatrix}
+            </me>
+          </p>
+          <p>
+            Calculamos el rango de <m>A</m>.
+          </p>
+          <p>
+            <me>
+              \begin{vmatrix}
+              1 &amp; 1 \\
+              2 &amp; 1
+              \end{vmatrix}= 1-2=-1 \neq 0 \rightarrow rg(A)=2
+            </me>
+          </p>
+          <p>
+            Estudiamos el rango de <m>A^*</m>
+          </p>
+          <p>
+            <me>
+              \begin{vmatrix}
+              1 &amp; 1&amp; 2 \\
+              2 &amp; 1 &amp; 0 \\
+              3 &amp; 2 &amp; 2
+              \end{vmatrix}= 2+0+8-6-0-4=0 \rightarrow rg(A^*)=2
+            </me>
+          </p>
+          <p>
+            En este caso <m>r(A)=rg(A^*)=2 &lt; \text{número de incognitas} \rightarrow</m>Sistema Compatible Indeterminado
+          </p>
+          <p>
+            Resumiendo <m>\left\lbrace 
+            \begin{array}{lll} 
+            a\neq 1 &amp; rg(A)=rg(A^*)=3=\text{nº incógnitas} &amp; \text{S.C.D.} \\
+            a=1 &amp; rg(A)=rg(A^*)=2 &lt;\text{nº incógnitas} &amp; \text{S.C.I.}
+            \end{array}
+            \right.</m>
+          </p>
+        </li>
+    
+        <li>
+          <p>
+          Resolvemos cuando <m>a=1</m>.
+          </p>
+      
+          <p>
+            Como el rango de las matrices es <m>2</m> tenemos que eliminar una ecuación y pasar una incógnita al otro lado.
+          </p>
+      
+          <p>
+            Como el determinante de orden <m>2</m> que es distinto de cero incluye la primera, la segunda fila y la primera y la segunda columna, eliminamos la tercera ecuación y pasamos la incógnita <m>z</m> al otro miembro, quedando el sistema de la siguiente forma:
+          </p>
+          <p>
+            <me>
+              \begin{sistematres}
+              x&amp;+&amp;y&amp;=&amp;2-z \\
+              2x&amp;+&amp;y&amp;=&amp;0
+              \end{sistematres}
+            </me>
+            </p>
+        
+            <p>
+              Lo resolvemos por Cramer:
+            </p>
+        
+            <p>
+              <me>
+                A=\begin{pmatrix}
+                1 &amp; 1 \\
+                2 &amp; 1
+                \end{pmatrix}
+                \Longrightarrow
+                \begin{vmatrix}
+                1 &amp; 1 \\
+                2 &amp; 1
+                \end{vmatrix}= 1-2=-1</me> <me>x=\dfrac{1}{-1} 
+                \begin{vmatrix}
+                2-z &amp; 1 \\
+                0 &amp; 1
+                \end{vmatrix} =-2+z \qquad 
+                y=\dfrac{1}{-1} 
+                \begin{vmatrix}
+                1 &amp; 2-z  \\
+                2 &amp; 0
+                \end{vmatrix} =4-2z
+              </me>
+            </p>
+          
+            <p>
+              Haciendo <m>z=\lambda</m>, la solución es: <m>(x,y,z)=(-2+\lambda , 4 - 2 \lambda , \lambda)</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </solution>
+  </example>
+  
+  <example>
+    <statement>
+      <p>
+        Discutir la compatibilidad del siguiente sistema de ecuaciones: 
+        <me>
+          S=\begin{sistematres}
+          x &amp; + &amp; ay &amp; + &amp; z &amp; = &amp; 1 \\
+          2x &amp; + &amp; y &amp; - &amp; z &amp; = &amp; 1 \\
+          3x &amp; + &amp; y &amp; + &amp; az &amp; = 2a 
+          \end{sistematres}
+        </me>
+        en función del parámetro <m>a</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Formamos la matriz de los coeficientes y la matriz ampliada del sistema: 
+        <me>
+          A=\begin{pmatrix}
+          1 &amp; a &amp; 1 \\
+          2 &amp; 1 &amp; -1 \\
+          3 &amp; 1 &amp; a
+          \end{pmatrix}
+          \qquad
+          A^*=\begin{pmatrix}
+          1 &amp; 1 &amp; 1 &amp; 1 \\
+          2 &amp; 1 &amp; -1 &amp; 1 \\
+          3 &amp; 1 &amp; a &amp; 2
+          \end{pmatrix}
+        </me>
+      </p>
+    
+      <p>
+        Calculamos el determinante de la matriz <m>A</m>.
+      </p>
+    
+      <p>
+        <me>
+          \begin{vmatrix}
+          1 &amp; a &amp; 1 \\
+          2 &amp; 1 &amp; -1 \\
+          3 &amp; 1 &amp; a
+          \end{vmatrix}= a-3a+2-3-2a^2+1=-2a^2-2a
+        </me>
+      </p>
+    
+      <p>
+        Si el valor del determinante es distinto de cero el rango de <m>A</m> será <m>3</m>, en caso contrario será menor que <m>3</m>. Igualamos a cero:
+      </p>
+    
+      <p>
+        <me>
+          -2a^2-2a=0 \rightarrow \left\lbrace \begin{array}{l} a=0 \\ a=-2 \end{array} \right.
+        </me>
+      </p>
+    
+      <p>
+        Ahora discutimos el sistema según los valores de <m>a</m>.
+      </p>
+    
+      <p>
+        Si <m>a\neq 0 \text{ y } a \neq -2\rightarrow rg(A)=3</m>. Sabemos que <m>rg(A^*)\geq rg(A) =3</m>. Como la matriz <m>A^*</m> solo tiene <m>3</m> filas <m>rg(A^*)\leq 3</m>, por lo tanto, <m>rg(A^*)=3</m>.
+      </p>
+    
+      <p>
+        En consecuencia: Si <m>a \neq 0  \text{ y } a \neq -2 \rightarrow rg(A)=rg(A^*)=3=\text{número de incógnitas} \rightarrow</m> Sistema Compatible Determinado.
+      </p>
+    
+      <p>
+        Si <m>a=0</m>
+      </p>
+    
+      <p>
+        <me>
+          A=\begin{pmatrix}
+          1 &amp; 0 &amp; 1 \\
+          2 &amp; 1 &amp; -1 \\
+          3 &amp; 1 &amp; 0
+          \end{pmatrix}
+          \qquad
+          A^*=\begin{pmatrix}
+          1 &amp; 0 &amp; 1 &amp; 1 \\
+          2 &amp; 1 &amp; -1 &amp; 1 \\
+          3 &amp; 1 &amp; 0 &amp; 2
+          \end{pmatrix}
+        </me>
+      </p>
+    
+      <p>
+        Calculamos el rango de <m>A</m>.
+      </p>
+    
+      <p>
+        <me>
+          \begin{vmatrix}
+          1 &amp; 0 \\
+          2 &amp; 1
+          \end{vmatrix}= 1-0=1 \neq 0 \rightarrow rg(A)=2
+        </me>
+      </p>
+    
+      <p>
+        Estudiamos el rango de <m>A^*</m>
+      </p>
+    
+      <p>
+        <me>
+          \begin{vmatrix}
+          1 &amp; 0&amp; 1 \\
+          2 &amp; 1 &amp; 1 \\
+          3 &amp; 1 &amp; 2
+          \end{vmatrix}= 2+0+2-3-1-0=0 \rightarrow rg(A^*)=2
+        </me>
+      </p>
+    
+      <p>
+        En este caso <m>r(A)=rg(A^*)=2 &lt; \text{número de incognitas} \rightarrow</m>Sistema Compatible Indeterminado
+      </p>
+    
+      <p>
+        Si <m>a=-2</m>
+      </p>
+    
+      <p>
+        <me>
+          A=\begin{pmatrix}
+          1 &amp; -2 &amp; 1 \\
+          2 &amp; 1 &amp; -1 \\
+          3 &amp; 1 &amp; -2
+          \end{pmatrix}
+          \qquad
+          A^*=\begin{pmatrix}
+          1 &amp; -2 &amp; 1 &amp; 1 \\
+          2 &amp; 1 &amp; -1 &amp; 1 \\
+          3 &amp; 1 &amp; -2 &amp; 2
+          \end{pmatrix}
+        </me>
+      </p>
+    
+      <p>
+        Calculamos el rango de <m>A</m>.
+      </p>
+    
+      <p>
+        <me>
+          \begin{vmatrix}
+          1 &amp; -2 \\
+          2 &amp; 1
+          \end{vmatrix}= 1+4=5 \neq 0 \rightarrow rg(A)=2
+        </me>
+      </p>
+    
+      <p>
+        Estudiamos el rango de <m>A^*</m>
+      </p>
+    
+      <p>
+        <me>
+          \begin{vmatrix}
+          1 &amp; -2 &amp; 1 \\
+          2 &amp; 1 &amp; 1 \\
+          3 &amp; 1 &amp; 2
+          \end{vmatrix}= 2-6+2-3-1+8=2 \rightarrow rg(A^*)=3
+        </me>
+      </p>
+    
+      <p>
+        En este caso <m>r(A)=2 \neq rg(A^*)=3 \rightarrow \text{Sistema Incompatible}</m>
+      </p>
+    
+      <p>
+        Resumiendo <m>\left\lbrace 
+        \begin{array}{lll} 
+        a\neq 1 \text{ y } a \neq -2 &amp; rg(A)=rg(A^*)=3=\text{nº incógnitas} &amp; \text{S.C.D.} \\
+        a=0 &amp; rg(A)=rg(A^*)=2 &lt;\text{nº incógnitas} &amp; \text{S.C.I.} \\
+        a=-2 &amp; rg(A)=2 \quad rg(A^*)=3 &amp; \text{S.I.}
+        \end{array}
+        \right.</m>
+      </p>
+    
+    </solution>
+  </example>
+  
+  <exercises>
+
+  
+    <exercise>
+      <statement>
+        <p>
+          Considera el siguiente sistema de ecuaciones lineales, 
+          <me>
+            \begin{sistematres}
+            x &amp; - &amp; y &amp; + &amp; mz &amp;= &amp; 0 \\
+            mx &amp; + &amp; 2y &amp; + &amp; z &amp; = &amp; 0 \\
+            -x &amp; + &amp; y &amp; + &amp; 2mz &amp; = &amp; 0
+            \end{sistematres}
+          </me>
+        </p>
+      
+        <p>
+          <ol>
+            <li>
+              <p>
+                Halla los valores del parámetro <m>m</m> para los que el sistema tiene una única solución.
+              </p>
+            </li>
+      
+            <li>
+              <p>
+                Halla los valores del parámetro <m>m</m> para los que el sistema tiene alguna solución distinta de la solución nula.
+              </p>
+            </li>
+      
+            <li>
+              <p>
+                Resuelve el sistema para <m>m=-2</m>.
+              </p>
+            </li>
+      
+          </ol>
+        </p>
+      
+      </statement>
+      <solution>
+        <p>
+          <ol>
+            <li>
+              <p>
+                <m>m \in \R-\{-2,0\}</m>  
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>m=-2</m> y <m>m=0</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>(x,y,z)=(\lambda,\lambda,0)</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Considera el siguiente sistema de ecuaciones lineales, 
+          <me>
+            \begin{sistematres}
+            x &amp; + &amp; (m+1)y &amp; + &amp; 2z &amp;= &amp; -1 \\
+            mx &amp; + &amp; y &amp; + &amp; z &amp; = &amp; m \\
+            (1-m)x &amp; + &amp; 2y &amp; + &amp; z &amp; = &amp; -m-1
+            \end{sistematres}
+          </me>
+        </p>
+      
+        <p>
+          <ol>
+            <li>
+              <p>
+                Discute el sistema según los valores del parámetro <m>m</m>.
+              </p>
+            </li>
+      
+            <li>
+              <p>
+                Resuelve el sistema para <m>m=2</m>. Para dicho valor de <m>m</m>, calcula, si es posible, una solución en la que <m>z=2</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+
+      </solution>
+    </exercise>
+
+  </exercises>
+
+</section>

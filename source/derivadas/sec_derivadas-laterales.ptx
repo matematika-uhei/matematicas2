@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+	<section xml:id="derivadas-laterales">
+		<title>Derivadas laterales</title>
+
+		<p>
+			La derivada de una función en un punto es un límite, por lo tanto, para que exista la derivada de una función en un punto tienen que existir los límites laterales y ser iguales.
+		</p>
+		<assemblage>
+			<title>Derivadas laterales</title>
+		
+			<p>
+				Las derivadas laterales de una función en un punto son:
+			</p>
+
+			<p>
+				<ul>
+					<li>
+						<p>
+							Derivada por la derecha: <me>f'(a^+)=\lim_{h \rightarrow 0^+} \dfrac{f(a+h)-f(a)}{h}</me>
+						</p>
+					</li>
+
+					<li>
+						<p>
+							Derivada por la izquierda: <me>f'(a^-)=\lim_{h \rightarrow 0^-} \dfrac{f(a+h)-f(a)}{h}</me>
+						</p>
+					</li>
+
+				</ul>
+			</p>
+		</assemblage>
+			<p>
+				Para que exista la derivada de la función en el punto tienen que existir ambas derivadas y ser iguales.
+			</p>
+		
+		<example>
+			<statement>
+				<p>
+					Hallar las derivadas laterales de la función <m>f(x)=\begin{cases} x^2+1 &amp; x \leq 1 \\ 2x &amp; x &gt; 1 \end{cases}</m> en el punto <m>x=1</m>
+				</p>
+			</statement>
+			<solution>
+				<p>
+					Primero hallamos cuanto vale <m>f(1)</m> y luega hallamos sus derivadas laterales.
+				</p>
+				
+				<p>
+					<m>f(1)=1^2+1 = 2</m>
+				</p>
+
+				<p>
+					<m>\displaystyle f'(1^+)=\lim_{h \rightarrow 0^+} \dfrac{2(1+h)-2}{h}= \lim_{h \rightarrow 0^+} \dfrac{2+2h-2}{h}=\lim_{h \rightarrow 0^+} \dfrac{2\cancel{h}}{\cancel{h}}= 2</m>
+				</p>
+
+				<p>
+					<m>\displaystyle f'(1^-)=\lim_{h \rightarrow 0^-} \dfrac{((1+h)^2+1) -2}{h}= \lim_{h \rightarrow 0^-} \dfrac{1+2h+h^2+1-2}{h}=\lim_{h \rightarrow 0^-} \dfrac{\cancel{h}(h+2)}{\cancel{h}}= 2</m>
+				</p>
+
+				<p>
+					Luego existe la derivada de la función en el punto y es igual a <m>2</m> : <m>f'(1)=2</m>
+				</p>
+			</solution>
+		</example>
+		
+		<subsection xml:id="derivabilidad-y-continuidad">
+			<title>Derivabilidad y continuidad</title>
+
+			<p>
+				Para que una función sea derivable en un punto <m>x=a</m> la función tiene que ser continua en ese punto.
+			</p>
+
+			<p>
+				Esta es la condición necesaria pero no suficiente para que una función sea derivable en un punto.
+			</p>
+
+			<p><ul>
+				<li>
+							<p>
+				<term>Si una función en un punto es continua entonces puede ser derivable o no ser derivable.</term>
+			</p>
+				</li>
+
+				<li>
+							<p>
+				<term>Si una función no es continua en un punto entonces no es derivable.</term>
+			</p>
+				</li>
+
+			</ul></p>
+
+			<p>
+				Estudiar la continuidad y derivabilidad de la función <m>f(x)=3x+|x+3|</m> en el punto <m>x=-3</m> Para calcular la continuidad y derivabilidad de esta función vamos a expresarla como una función definida a trozos.
+			</p>
+
+			<p>
+				<m>f(x)=3x+|x+3| = \begin{cases} 2x-3 &amp; x &lt; -3 \\ 4x+3 &amp; x \geq -3 \end{cases}</m>
+			</p>
+
+			<p>
+				Estudiamos la continuidad:
+			</p>
+
+			<p>
+				<me>f(-3)= 4\cdot(-3) +3 = -9</me>
+			</p>
+
+			<p>
+				<me>\displaystyle \left. \begin{array}{l} \displaystyle \lim_{x \rightarrow 3^-} (2x-3) = -9 \\ \displaystyle \lim_{x \rightarrow 3^+} (4x+3) = -9 \end{array} \right\rbrace \Rightarrow \lim_{x \rightarrow 3} f(x) = -9</me>
+			</p>
+
+			<p>
+				Como vemos existe la función y el límite en el punto y además son iguales, por lo tanto, la función es continua en el punto <m>x=-3</m>. Por lo tanto, la función puede ser derivable en dicho punto.
+			</p>
+
+			<p>
+				A continuación, estudiamos su derivabilidad:
+			</p>
+
+			<p>
+				<me>\displaystyle \left. \begin{array}{l}\displaystyle  f'(-3^-) = \lim_{ h \rightarrow 0^-} \dfrac{(2(-3+h)-3)-(-9)}{h} = \lim_{ h \rightarrow 0^-} \dfrac{2\cancel{h}}{\cancel{h}}= 2 \\ \displaystyle f'(-3^+)= \lim_{ h \rightarrow 0^+} \dfrac{(4(-3+h)+3)-(-9)}{h} = \lim_{ h \rightarrow 0^+} \dfrac{4\cancel{h}}{\cancel{h}}= 4 \end{array} \right\rbrace \Rightarrow \nexists f'(-3)</me>
+			</p>
+
+			<p>
+				La función no es derivable, ya que las derivadas laterales son distintas.
+			</p>
+
+			<p>
+				Sea <m>f(x)=\dfrac{|x|}{x^2+1}</m>. Estudiar la continuidad y derivabilidad de <m>f(x)</m>.
+			</p>
+
+			<p>
+				•
+			</p>
+
+			<p>
+				Calcula el valor de <m>a</m> y de <m>b</m> para que la función <m>f(x)=\left\{\begin{array}{cc} {x^{3} -x} &amp; {x\le 0} \\ {ax+b} &amp; {x&gt;0} \end{array}\right.</m>sea continua y derivable. Hacer la representación gráfica.
+			</p>
+
+			<p>
+				<m>\begin{cases} a=-1\\ b=0 \end{cases} \rightarrow f(x)=\left\{\begin{cases} {x^{3} -x} &amp; {x\le 0} \\ {-x} &amp; {x&gt;0} \end{cases}\right.</m>
+			</p>
+
+		</subsection>
+	</section>

@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec_problemas-sistemas">
+  <title>Problemas de sistemas</title>
+  <p>
+    Los sistemas de ecuaciones nos sirven para resolver problemas de la vida real.
+  </p>
+  <p>
+    Para resolver un problema con sistemas de ecuaciones podemos proceder de la siguiente forma:
+  </p>
+  <p>
+		<ul>
+			<li>
+				<p>
+					Determinaremos las incógnitas que aparecen en el problema.
+				</p>
+			</li>
+			<li>
+				<p>
+					Escribimos las ecuaciones del sistema con las condiciones del problema.
+				</p>
+			</li>
+			<li>
+				<p>
+					Planteamos el sistema de ecuaciones.
+				</p>
+			</li>
+			<li>
+				<p>
+					Discutimos el sistema de ecuaciones y lo resolvemos en el caso de que tenga solución.
+				</p>
+			</li>
+			<li>
+				<p>
+					Comrobamos que las soluciones sean coherentes.
+				</p>
+			</li>
+		</ul>
+  </p>
+  <example>
+    <statement>
+      <p>
+       Una empresa ha invertido 73000 euros en la compra de ordenadores portátiles de tres clases A, B y C, cuyos costes por unidad son de 2400, 1200 y 1000 euros, respectivamente. Sabiendo que, en total, ha adquirido 55 ordenadores y que la cantidad invertida en los de tipo A ha sido la misma que la invertida en los de tipo B, averiguar cuántos ordenadores ha comprdo de cada clase.
+      </p>
+    </statement>
+    <solution>
+      <p>
+				<ul>
+					<li>
+						<p>
+							Determinaremos las incógnitas que aparecen en el problema.
+						</p>
+						<me>
+							\begin{cases} x = \text{Ordenadores de la clase A} \\ y = \text{Ordenadores de la clase B} \\ z = \text{Ordenadores de la clase C} \end{cases}
+						</me>
+					</li>
+					<li>
+						<p>
+							Escribimos las ecuaciones del sistema con las condiciones del problema.
+						</p>
+						<p>
+							Invierte en la compra 73000 euros: 
+						</p>
+						<me>
+							2400x+1200y+1000z=73000
+						</me>
+						<p>
+							Compra en total 55 ordenadores:
+						</p>
+						<me>
+							x+y+z=55
+						</me>
+						<p>
+							La cantidad invertida en ordenadores de clase A es igual a la invertida en ordenadores de clase B:
+						</p>
+						<me>
+							2400x=1200y
+						</me>
+					</li>
+					<li>
+						<p>
+							Planteamos el sistema de ecuaciones.
+						</p>
+						<me>
+							\begin{cases} 2400x+1200y+1000z=73000 \\ x+y+z= 55 \\ 2400x=1200y \end{cases} \Rightarrow \begin{cases} 12x+6y+5z=365 \\ x+y+z= 55 \\ 2x-y=0 \end{cases}
+						</me>
+					</li>
+					<li>
+						<p>
+							Discutimos el sistema de ecuaciones y lo resolvemos en el caso de que tenga solución.
+						</p>
+						<p>
+							Escribimos las matrices del sistema:
+						</p>
+						<me>
+							A = \begin{pmatrix}
+							12 &amp; 6 &amp; 5 \\
+							1 &amp; 1 &amp; 1 \\
+							2 &amp; -1 &amp; 0
+							\end{pmatrix} \qquad A^* = \begin{pmatrix}
+							12 &amp; 6 &amp; 5 &amp; 365\\
+							1 &amp; 1 &amp; 1 &amp; 55\\
+							2 &amp; -1 &amp; 0 &amp; 0
+							\end{pmatrix}
+						</me>
+						<p>
+							<m>
+								\begin{vmatrix} A \end{vmatrix} =  \begin{vmatrix}
+							12 &amp; 6 &amp; 5 \\
+							1 &amp; 1 &amp; 1 \\
+							2 &amp; -1 &amp; 0
+							\end{vmatrix} = 9 \Rightarrow \begin{cases} \text{Rango}(A)= 3 \\  \text{Rango}(A^*)= 3 \end{cases} 
+							</m>
+						</p>
+						<p>
+							El sistema es compatible determinado, tiene una única solución. 
+						</p>
+						<p>
+							Resolvemos el sistema con la regla de Cramer:
+						</p>
+						<me>
+							x= \dfrac{\begin{vmatrix}
+							365 &amp; 6 &amp; 5 \\
+							55 &amp; 1 &amp; 1 \\
+							0 &amp; -1 &amp; 0
+							\end{vmatrix}}{\begin{vmatrix}
+							12 &amp; 6 &amp; 5 \\
+							1 &amp; 1 &amp; 1 \\
+							2 &amp; -1 &amp; 0
+							\end{vmatrix}} = \dfrac{90}{9} = 10
+						</me>
+						<me>
+							y= \dfrac{\begin{vmatrix}
+							12 &amp; 365 &amp; 5 \\
+							1 &amp; 55 &amp; 1 \\
+							2 &amp; 0 &amp; 0
+							\end{vmatrix}}{\begin{vmatrix}
+							12 &amp; 6 &amp; 5 \\
+							1 &amp; 1 &amp; 1 \\
+							2 &amp; -1 &amp; 0
+							\end{vmatrix}} = \dfrac{180}{9} = 20
+						</me> 
+						<me>
+							z= \dfrac{\begin{vmatrix}
+							12 &amp; 6 &amp; 365 \\
+							1 &amp; 1 &amp; 55 \\
+							2 &amp; -1 &amp; 0
+							\end{vmatrix}}{\begin{vmatrix}
+							12 &amp; 6 &amp; 5 \\
+							1 &amp; 1 &amp; 1 \\
+							2 &amp; -1 &amp; 0
+							\end{vmatrix}} = \dfrac{225}{9} = 25 
+						</me>
+						<p>
+							Compramos 10 ordenadores clase A, 20 clase B y 25 clase C.
+						</p>
+					</li>
+					<li>
+						<p>
+							Comprobamos que las soluciones sean coherentes.
+						</p>
+						<p>
+							Las condiciones del problema se cumplen y los valores no son contrarios a la realidad (por ejemplo que compremos una cantidad negativa de ordenadores de algún tipo).
+						</p>
+					</li>
+				</ul>
+			</p>
+        
+    </solution>
+  </example>
+
+  <example>
+    <statement>
+      <p>
+        Un hotel tiene habitaciones individuales (para una persona), dobles (para dos personas) y familiares (para cuatro personas). El hotel tiene un total de 144 habitaciones con una capacidad total de 312 personas; además, el número de habitaciones dobles es igual al triple de la suma de habitaciones
+				individuales y familiares. Plantear y resolver un sistema de ecuaciones lineales para determinar el número de habitaciones de cada tipo que tiene el hote
+      </p>
+    </statement>
+    <solution>
+       <p>
+				<ul>
+					<li>
+						<p>
+							Determinaremos las incógnitas que aparecen en el problema.
+						</p>
+						<me>
+							\begin{cases} x = \text{habitaciones individuales} \\ y = \text{Habitaciones dobles} \\ z = \text{Habitaciones familiares} \end{cases}
+						</me>
+					</li>
+					<li>
+						<p>
+							Escribimos las ecuaciones del sistema con las condiciones del problema.
+						</p>
+						<p>
+							Hay 144 habitaciones en total.
+						</p>
+						<me>
+							x+y+z=144
+						</me>
+						<p>
+							Hay 312 plazas en total:
+						</p>
+						<me>
+							x+2y+4z=312
+						</me>
+						<p>
+							El número de habitaciones dobles es igual al triple de la suma de habitaciones individuales y familiares:
+						</p>
+						<me>
+							y=3(x+z)
+						</me>
+					</li>
+					<li>
+						<p>
+							Planteamos el sistema de ecuaciones.
+						</p>
+						<me>
+							\begin{cases} x+y+z=144 \\ x+2y+4z= 312 \\ y=3(x+z) \end{cases} \Rightarrow \begin{cases} x+y+z=144 \\ x+2y+4z= 312 \\ -3x+y-3z=0 \end{cases}
+						</me>
+					</li>
+					<li>
+						<p>
+							Discutimos el sistema de ecuaciones y lo resolvemos en el caso de que tenga solución.
+						</p>
+						<p>
+							Escribimos las matrices del sistema:
+						</p>
+						<me>
+							A = \begin{pmatrix}
+							1 &amp; 1 &amp; 1 \\
+							1 &amp; 2 &amp; 4 \\
+							-3 &amp; 1 &amp; -3
+							\end{pmatrix} \qquad A^* = \begin{pmatrix}
+							1 &amp; 1 &amp; 1 &amp; 144 \\
+							1 &amp; 2 &amp; 4 &amp; 312 \\
+							-3 &amp; 1 &amp; -3 &amp; 0
+							\end{pmatrix}
+						</me>
+						<p>
+							<m>
+								\begin{vmatrix} A \end{vmatrix} =  \begin{vmatrix}
+							1 &amp; 1 &amp; 1 \\
+							1 &amp; 2 &amp; 4 \\
+							-3 &amp; 1 &amp; -3
+							\end{vmatrix} = -12  \Rightarrow \begin{cases} \text{Rango}(A)= 3 \\  \text{Rango}(A^*)= 3 \end{cases}
+							</m>
+						</p>
+						<p>
+							El sistema es compatible determinado, tiene una única solución. 
+						</p>
+						<p>
+							Resolvemos el sistema con la regla de Cramer:
+						</p>
+						<me>
+							x= \dfrac{\begin{vmatrix}
+							144 &amp; 1 &amp; 1 \\
+							312 &amp; 2 &amp; 4 \\
+							0 &amp; 1 &amp; -3
+							\end{vmatrix}}{\begin{vmatrix}
+							1 &amp; 1 &amp; 1 \\
+							1 &amp; 2 &amp; 4 \\
+							-3 &amp; 1 &amp; -3
+							\end{vmatrix}} = \dfrac{-192}{-12} = 16 
+						</me>
+						<me> 
+							y= \dfrac{\begin{vmatrix}
+							1 &amp; 144 &amp; 1 \\
+							1 &amp; 312 &amp; 4 \\
+							-3 &amp; 0 &amp; -3
+							\end{vmatrix}}{\begin{vmatrix}
+							1 &amp; 1 &amp; 1 \\
+							1 &amp; 2 &amp; 4 \\
+							-3 &amp; 1 &amp; -3
+							\end{vmatrix}} = \dfrac{-1296}{-12} = 108 
+						</me>
+						<me> 
+							z= \dfrac{\begin{vmatrix}
+							1 &amp; 1 &amp; 144 \\
+							1 &amp; 2 &amp; 312 \\
+							-3 &amp; 1 &amp; 0
+							\end{vmatrix}}{\begin{vmatrix}
+							1 &amp; 1 &amp; 1 \\
+							1 &amp; 2 &amp; 4 \\
+							-3 &amp; 1 &amp; -3
+							\end{vmatrix}} = \dfrac{-240}{-12} = 20 
+						</me>
+						<p>
+							Hay 16 habitaciones individuales, 108 dobles y 20 familiares.
+						</p>
+					</li>
+					<li>
+						<p>
+							Comprobamos que las soluciones sean coherentes.
+						</p>
+						<p>
+							Las condiciones del problema se cumplen y los valores no son contrarios a la realidad.
+						</p>
+					</li>
+				</ul>
+			</p>
+        
+    </solution>
+  </example>
+  
+  <example>
+    <statement>
+			<p>
+				Una tienda de informática vende pendrives de 32Gb, 64 Gb y 128 Gb, siendo sus precios 5€, 15€ y 20€, respectivamente. Un cliente ha comprado un total de 15 pendrives que le han costado 160 €. Sabiendo que el número de pendrives de 128 Gb que compró era la cuarta parte del resto. Calcular cuántos pendrives de cada clase compró el cliente. 
+			</p>
+       
+    </statement>
+    <solution>
+      <p>
+				<ul>
+					<li>
+						<p>
+							Determinaremos las incógnitas que aparecen en el problema.
+						</p>
+						<me>
+							\begin{cases} x = \text{Cantidad pendrives 32Gb} \\ y = \text{Cantidad pendrives 64Gb} \\ z = \text{Cantidad pendrives 128Gb} \end{cases}
+						</me>
+					</li>
+					<li>
+						<p>
+							Escribimos las ecuaciones del sistema con las condiciones del problema.
+						</p>
+						<p>
+							Compra 15 pendrives en total:
+						</p>
+						<me>
+							x+y+z=15
+						</me>
+						<p>
+							Los pendrives le han costado 160 €:
+						</p>
+						<me>
+							5x+15y+20z=160
+						</me>
+						<p>
+							El número de pendrives de 128 Gb que compró era la cuarta parte del resto:
+						</p>
+						<me>
+							z=\dfrac{x+y}{4}
+						</me>
+					</li>
+					<li>
+						<p>
+							Planteamos el sistema de ecuaciones.
+						</p>
+						<me>
+							\begin{cases} x+y+z=15 \\ 5x+15y+20z=160 \\ z=\dfrac{x+y}{4} \end{cases} \Rightarrow \begin{cases} x+y+z=15 \\ x+3y+4z= 32 \\ x+y-4z=0 \end{cases}
+						</me>
+					</li>
+					<li>
+						<p>
+							Discutimos el sistema de ecuaciones y lo resolvemos en el caso de que tenga solución.
+						</p>
+						<p>
+							Escribimos las matrices del sistema:
+						</p>
+						<me>
+							A = \begin{pmatrix}
+							1 &amp; 1 &amp; 1 \\
+							1 &amp; 3 &amp; 4 \\
+							1 &amp; 1 &amp; -4
+							\end{pmatrix} \qquad A^* = \begin{pmatrix}
+							1 &amp; 1 &amp; 1 &amp; 15 \\
+							1 &amp; 3 &amp; 4 &amp; 32 \\
+							1 &amp; 1 &amp; -4 &amp; 0
+							\end{pmatrix}
+						</me>
+						<p>
+							<m>
+								\begin{vmatrix} A \end{vmatrix} =  \begin{vmatrix}
+							1 &amp; 1 &amp; 1 \\
+							1 &amp; 4 &amp; 4 \\
+							1 &amp; 1 &amp; -4
+							\end{vmatrix} = -10  \Rightarrow \begin{cases} \text{Rango}(A)= 3 \\  \text{Rango}(A^*)= 3 \end{cases} 
+							</m>
+						</p>
+						<p>
+							El sistema es compatible determinado, tiene una única solución. 
+						</p>
+						<p>
+							Resolvemos el sistema con la regla de Cramer:
+						</p>
+						<me>
+							x= \dfrac{\begin{vmatrix}
+							15 &amp; 1 &amp; 1 \\
+							32 &amp; 3 &amp; 4 \\
+							0 &amp; 1 &amp; -4
+							\end{vmatrix}}{\begin{vmatrix}
+							1 &amp; 1 &amp; 1 \\
+							1 &amp; 3 &amp; 4 \\
+							1 &amp; 1 &amp; -4
+							\end{vmatrix}} = \dfrac{-80}{-10} = 8 
+						</me>
+						<me> 
+							y= \dfrac{\begin{vmatrix}
+							1 &amp; 15 &amp; 1 \\
+							1 &amp; 32 &amp; 4 \\
+							1 &amp; 0 &amp; -4
+							\end{vmatrix}}{\begin{vmatrix}
+							1 &amp; 1 &amp; 1 \\
+							1 &amp; 3 &amp; 4 \\
+							1 &amp; 1 &amp; -4
+							\end{vmatrix}} = \dfrac{-40}{-10} = 4 
+						</me>
+						<me> 
+							z= \dfrac{\begin{vmatrix}
+							1 &amp; 1 &amp; 15 \\
+							1 &amp; 3 &amp; 32 \\
+							1 &amp; 1 &amp; 0
+							\end{vmatrix}}{\begin{vmatrix}
+							1 &amp; 1 &amp; 1 \\
+							1 &amp; 3 &amp; 4 \\
+							1 &amp; 1 &amp; -4
+							\end{vmatrix}} = \dfrac{-30}{-10} = 3 
+						</me>
+						<p>
+							Compra 8 pendrives de 32Gb, 4 de 64Gb y 3 de 128Gb..
+						</p>
+					</li>
+					<li>
+						<p>
+							Comprobamos que las soluciones sean coherentes.
+						</p>
+						<p>
+							Las condiciones del problema se cumplen y los valores no son contrarios a la realidad.
+						</p>
+					</li>
+				</ul>
+			</p>
+        
+    
+    </solution>
+  </example>
+  
+	<subsection xml:id="sub_ejercicios-problemas-sistemas">
+		<title>Ejercicios</title>
+	
+
+  
+    <exercise>
+      <statement>
+        <p>
+					En un centro educativo se imparten enseñanzas de ESO, Bachillerato y Ciclos Formativos. Si sumamos el 20% del alumnado de ESO, con el 20% del alumnado de Bachillerato y el 40% del alumnado de Ciclos Formativos se obtienen 42 alumnos más que el 20% del alumnado total del centro. Asimismo si sumamos el número de alumnos de ESO más la mitad de los de Ciclos Formativos obtenemos 40 alumnos menos que el total de matriculados en Bachillerato. Si el centro tiene en total 1115 alumnos, hallar el número de matriculados en cada tipo de enseñanza.
+        </p>
+      
+      </statement>
+      <solution>
+        <p>
+					<m>
+						\begin{cases} \text{Alumnos en la ESO = } 380 \\ \text{Alumnos en Bachillerato = } 525 \\ \text{Alumnos en Ciclos Formativos = } 210 \end{cases}
+					</m>
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+					Un kiosko vende periódicos, libros y revistas. Los periódicos se venden a 1€, las revistas a 5€ y los libros a 12€. El importe total de las ventas realizadas la semana pasada ascendió a 1500 €. Por cada 3 revistas se vendieron 10 periódicos, y el importe de la venta de libros fue igual a la cuarta parte del importe total de las ventas de periódicos y revistas. ¿Cuántos libros, periódicos y revistas vendió el kiosko la semana pasada?
+        </p>
+      </statement>
+      <solution>
+				<p>
+					<p>
+					<m>
+						\begin{cases} \text{Periódicos = } 480 \\ \text{Revistas = } 144 \\ \text{Libros = } 25 \end{cases}
+					</m>
+        </p>
+				</p>
+      </solution>
+    </exercise>
+
+  </subsection>
+
+</section>

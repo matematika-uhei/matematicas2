@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec_ecuacion-plano" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Ecuaciones del plano</title>
+  <introduction>
+    <p>
+      La ecuación de un plano es la condición que tiene que cumplir un punto para pertenecer a dicho plano. Es decir, la ecuación de un plano nos indica todos los puntos que pertenecen a dicho plano.
+    </p>
+  </introduction>
+    
+    
+    <sidebyside widths="40% 60%" margins="auto" valign="middle">
+      <image xml:id="img-plano" width="75%">
+      <description>Recta en el espacio.</description>
+        <latex-image>
+         \begin{tikzpicture}[x={(-0.385cm,-0.385cm)},y={(1cm,0cm)},z={(0cm,1cm)},scale=1.5,
+          axis/.style={-latex,blue,thick},
+          vector/.style={-stealth,black,very thick},
+          posicion/.style={-stealth,black,dashed},
+          recta/.style={red,very thick}]
+
+          \coordinate (O) at (0,0,0);
+          \draw[axis] (O) -- (4,0,0) node[below] {x};
+          \draw[axis] (O) -- (0,3,0) node[below] {y};
+          \draw[axis] (O) -- (0,0,3) node[right] {z};
+
+          %\draw [fill=blue!50,opacity=0.8] (-2,-1,2)node{A} -- (5.5,5,5)node{B} -- (7.5,5,1)node{C} -- (0,-1,-2)node{D} -- cycle; 
+          \filldraw [fill=blue!50,opacity=0.8] (4,-1,1) -- (4,3,2) -- (4,4.5,4.5) -- (4,0.5,3.5) -- cycle; 
+
+          %\draw [fill=red,opacity=0.2] (0,1,1) -- (0,-1,3); 
+          \draw(4,1,2)[fill=black] circle(1pt);
+          \draw[posicion] (0,0,0) -- (4,1,2) node[below]{A};
+          \draw[vector] (4,1,2) -- (4,1.5,2.5);
+          \draw (3.75,1,2.25) node {$\vector{w}$};
+          \draw (4.5,2.1,2.75) node {$\lambda \vector{w}$};
+          \draw[posicion] (4,1.5,2.5) --(4,2,3);
+          \draw[vector] (4,1,2) node[above left] {$\vector{v}$}-- (4,0.5,2);
+          \draw[posicion] (4,1,2) -- (4,0,2) node[below right]{$\mu \vector{v}$};
+          \draw[posicion] (4,0,2) -- (4,1,3);
+          \draw[posicion] (4,2,3) -- (4,1,3);
+          \draw[posicion] (4,1,2) -- (4,1,3);
+          \draw[posicion] (0,0,0) -- (4,1,3);
+          \draw (O) node[below]{O};
+          \draw (4,1,3) node[above]{P};
+          \end{tikzpicture} 
+        </latex-image>
+      </image>
+      <stack>
+        <p>
+          Para hallar la ecuación de un plano en el espacio necesitamos saber un punto de dicho plano y dos vectores directores no paralelos.
+        </p>
+        <p>
+          En la imagen esta representado el plano <m>\pi</m> que pasa por el punto <m>A(x_1,y_1,z_1)</m> y tiene como vectores directores los vectores <m>\vec{v}=(v_1,v_2,v_3)</m> y <m>\vec{w}=(w_1,w_2,w_3)</m>. Este plano lo simbolizaremos como <m>\pi (A,\vec{v},\vec{w})</m>.
+        </p>
+      </stack>
+    </sidebyside>
+    <p>
+      Vamos a ver distintas formas de expresar este plano.
+    </p>
+    <subsection>
+      <title>Ecuación vectorial del plano</title>
+      <p>
+        Observando la figura vemos que :  <m> \vector{OP}=\vector{OA}+\vector{AP} </m>
+      </p>
+      <p>
+        Teniendo en cuenta que <m>\vector{AP}=\lambda \vector{w} + \mu \vector{v} </m> obtenemos:
+      </p>
+      <me>
+        \vector{OP}=\vector{OA}+ \lambda \vector{w} + \mu \vector{v}
+      </me>
+      <p>
+        Esta expresión se conoce como <term>ecuación vectorial</term> del plano.
+      </p>
+      <p> 
+        Si utilizamos las componentes de cada vector, la expresión queda de la siguiente forma:
+      </p>
+      <me>
+        (x,y,z)=(x_1,y_1,z_1)+\lambda (w_1,w_2,w_3) + \mu (v_1,v_2,v_3) \qquad \lambda \text{, }\mu  \in \R 
+      </me>
+    </subsection>
+    <subsection>
+      <title>Ecuaciones paramétricas</title>
+      <p>
+        Separando estas ecuaciones en coordenadas obtenemos:
+      </p>
+      <me>
+        \left\lbrace \begin{array}{c} 
+          x=x_1 + \lambda w_1  + \mu v_1\\
+          y=y_1 +  \lambda w_2  + \mu v_2\\
+          z=z_1 + \lambda w_3  + \mu v_3
+        \end{array} \right.
+      </me>
+      <p>
+        Estas expresiones se conocen como las <term>ecuaciones paramétricas</term> del plano.
+      </p>
+    </subsection>
+    <subsection>
+      <title>Ecuación general del plano</title>
+      <p>
+        Teniendo en cuenta que los vectores <m>\vector{w}</m>, <m>\vector{v}</m> y <m>\vector{AP}</m> son coplanarios:
+      </p>
+      <me>
+        \begin{vmatrix}
+        x-x_1 \amp u_1 \amp v_1 \\
+        y-y_1 \amp u_2 \amp v_2 \\
+        z-z_1 \amp u_3 \amp v_3
+        \end{vmatrix} =0 \Rightarrow Ax+By+Cz+d=0 
+      </me>
+      <p>
+        Esta expresión se conoce como <term>ecuación general</term> del plano.
+      </p>
+      <assemblage>
+        <title>Vector normal de un plano</title>
+        <p>
+          Es un vector perpendicular al plano. Si tenemos la ecuación general, un vector normal es <m>\vec{n}= (A,B,C)</m>
+        </p>
+      </assemblage>
+      <p>
+        Si conocemos un vector normal del plano <m>\vec{n}=(n_1,n_2,n_3)</m> y un punto del plano <m>A(x_1,y_1,z_1)</m> podemos hallar la ecuación general del plano de la siguiente forma:
+      </p>
+      <me>
+        (n_1,n_2,n_3)\cdot (x-x_1,y-y_1,z-z_1)=0
+      </me>
+    </subsection>
+    <example xml:id="exa_ecuacion-plano-tres-puntos">
+      <statement>
+        <p>
+          Hallar la ecuación general del plano que contiene a los puntos <m>A(0,1,1)</m>, <m>B(2,-1,1)</m> y <m>C(-1,-1,-1)</m>
+        </p>
+      </statement>
+      <solution>
+        <p> 
+          Para hallar un plano necesitamos un punto y dos vectores directores.
+        </p>
+        <p>
+          Si el plano contiene a los tres puntos, es evidente que los vectores que unen a dichos puntos serán vectores directores de dicho plano.
+        </p>
+        <p>
+          Por lo tanto, para hallar el plano tomaremos cualquiera de los puntos y dos vectores que unen estos puntos. En nuestro caso, vamos a coger el punto <m>A</m> y los vectores <m>\vector{AB}</m> y <m> \vector{AC}</m>.
+        </p>
+        <me>
+          \vector{AB}=(2,-2,0) \qquad \vector{AC}=(-1,-2,-2)
+        </me>
+        <p>
+          Hallamos la ecuación general:
+        </p>
+        <me>
+          \begin{vmatrix} 
+          x \amp y-1 \amp z-1 \\
+          2 \amp -2 \amp 0 \\
+          -1 \amp -2 \amp -2 \\
+          \end{vmatrix}= 4x +4y-6z+2 
+        </me>
+        <p>
+          La ecuación del plano pedido es: <m> 4x+4y-6z+2=0 </m>
+        </p>
+      </solution>
+    </example>
+    
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

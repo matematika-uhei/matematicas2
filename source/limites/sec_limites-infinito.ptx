@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<section xml:id="limites-infinito">
+	<title>Límites en el infinito</title>
+	<intrroduction>
+		<p>
+			
+		</p>
+	</intrroduction>
+	<assemblage>
+		<title>Definición de límites en el infinito</title>
+		<p>
+			 Si cuando <m>x</m> toma valores muy grandes y positivos, los valores de <m>f</m> se aproximan al número <m>l \Rightarrow \displaystyle \lim_{x \rightarrow +\infty} f(x)=l</m>
+		</p>
+		<p>
+			 Si cuando <m>x</m> toma valores muy grandes y negativos, los valores de <m>f</m> se aproximan al número <m>l \Rightarrow \displaystyle \lim_{x \rightarrow -\infty} f(x)=l</m>
+		</p>
+	</assemblage>
+	
+
+	<p>
+		Análogamente de define <m>\displaystyle \lim_{x \rightarrow -\infty} f(x)=l</m>
+	</p>
+
+	<p>
+		<m>\displaystyle \lim_{x \rightarrow +\infty} f(x)=+\infty</m> si cuando <m>x</m> toma valores muy grandes y positivos, los valores de <m>f</m> se hacen arbitrariamente grandes.
+	</p>
+
+	<p>
+		Análogamente de define <m>\displaystyle \lim_{x \rightarrow +\infty} f(x)=-\infty</m>, y <m>\displaystyle \lim_{x \rightarrow -\infty} f(x)=+\infty</m> y <m>\displaystyle \lim_{x \rightarrow -\infty} f(x)=-\infty</m>
+	</p>
+
+	<p>
+		<m>\displaystyle \lim_{x \rightarrow +\infty} [f(x)\pm g(x)]= \lim_{x \rightarrow +\infty} f(x) \pm  \lim_{x \rightarrow +\infty} g(x)</m>
+	</p>
+
+	<p>
+		<m>\displaystyle \lim_{x \rightarrow +\infty} [f(x)\cdot g(x)]=\lim_{x \rightarrow +\infty} f(x)\cdot \lim_{x \rightarrow +\infty}g(x)</m>
+	</p>
+
+	<p>
+		<m>\displaystyle \lim_{x \rightarrow +\infty} \left[ \dfrac{f(x)}{g(x)} \right] =\dfrac{\displaystyle \lim_{x \rightarrow +\infty} f(x)}{\displaystyle \lim_{x \rightarrow +\infty}g(x)}</m>
+	</p>
+
+	<p>
+		Si <m>f(x)&gt;0</m>, <m>\displaystyle \lim_{x \rightarrow +\infty} \left[ f(x)^{g(x)} \right] = \left[ \lim_{x \rightarrow +\infty} f(x) \right]^{\displaystyle \lim_{x \rightarrow +\infty} g(x) }</m>
+	</p>
+
+	<p>
+		<m>
+			\left. \begin{array}{l}
+			\text{Si } n \text{ es impar} \\
+			\text{o} \\
+			\text{Si }n \text{ es par y } f(x) \geq 0
+			\end{array} \right\rbrace \rightarrow \displaystyle \lim_{x \rightarrow +\infty} \sqrt[n]{f(x)}=\sqrt[n]{\displaystyle \lim_{x \rightarrow +\infty} f(x)}
+		</m>
+	</p>
+
+	<p>
+		Si <m>a&gt;0</m> y <m>f(x) &gt; 0</m>, <m>\displaystyle \lim_{x \rightarrow +\infty} \left[ \log_a f(x) \right] = \log_a \left[ \lim_{x \rightarrow +\infty} f(x) \right]</m>
+	</p>
+
+	<p>
+		Si <m>\displaystyle \lim_{x \rightarrow +\infty} f(x)=\pm \infty</m> y <m>\displaystyle \lim_{x \rightarrow +\infty} g(x)=\pm \infty</m>
+	</p>
+
+	<p>
+		<ul>
+			<li>
+				<p>
+					se dice que <m>f(x)</m> es un infinito de orden superior a <m>g(x)</m> si: <me>\lim_{x \rightarrow +\infty} \dfrac{f(x)}{g(x)}=\pm \infty \text{ o también } \lim_{x \rightarrow +\infty} \dfrac{g(x)}{f(x)}=0</me>
+				</p>
+			</li>
+
+			<li>
+				<p>
+					se dice que son infinitos del mismo orden si: <me>\lim_{x \rightarrow +\infty} \dfrac{f(x)}{g(x)}=l \neq 0</me>
+				</p>
+			</li>
+
+		</ul>
+	</p>
+
+	<p>
+		Tenemos que tener en cuenta:
+	</p>
+
+	<p>
+		<ol>
+			<li>
+				<p>
+					Dadas dos potencias de <m>x</m>, la de mayor exponente es un infinito de orden superior.
+				</p>
+			</li>
+
+			<li>
+				<p>
+					Dadas dos funciones exponenciales de bases mayores que 1, la de mayor base es un infinito de orden superior.
+				</p>
+			</li>
+
+			<li>
+				<p>
+					Cualquier función exponencial de base mayor que 1 es un infinito de orden superior a cualquier potencia de <m>x</m>.
+				</p>
+			</li>
+
+			<li>
+				<p>
+					Las potencias de <m>x</m> son infinitos de orden superior a las funciones logarítmicas.
+				</p>
+			</li>
+
+			<li>
+				<p>
+					Dos polinomios del mismo grado o dos exponenciales de la misma base son infinitos del mismo orden.
+				</p>
+			</li>
+
+		</ol>
+	</p>
+
+	<example>
+		<statement>
+			<p>
+				Hallar los siguientes límites:
+			</p>
+			<p>
+				<ol marker="a) ">
+					<li>
+						<p>
+							<m>\limite{+\infty}{\dfrac{x^3-3x^2+5}{2x^3-2x+1}}</m>
+						</p>
+					</li>
+
+					<li>
+						<p>
+							<m>\limite{+\infty}{\dfrac{x^4+2x+5}{2x^2+5x+1}}</m>
+						</p>
+					</li>
+
+					<li>
+						<p>
+							<m>\limite{+\infty}{\dfrac{x^3+6x^2-5x+10}{x^4-3x^3+5x+4}}</m>
+						</p>
+					</li>
+
+					<li>
+						<p>
+							<m>\limite{+\infty}{\dfrac{x^4+2x+5}{-2x^2+5x+1}}</m>
+						</p>
+					</li>
+
+					<li>
+						<p>
+							<m>\limite{-\infty}{\dfrac{x^3-3x^2+5}{2x^3-2x+1}}</m>
+						</p>
+					</li>
+
+					<li>
+						<p>
+							<m>\limite{-\infty}{\dfrac{x^4+2x+5}{2x^2+5x+1}}</m>
+						</p>
+					</li>
+
+					<li>
+						<p>
+							<m>\limite{-\infty}{\dfrac{x^3+6x^2-5x+10}{x^4-3x^3+5x+4}}</m>
+						</p>
+					</li>
+
+					<li>
+						<p>
+							<m>\limite{-\infty}{\dfrac{x^4+2x+5}{-2x^2+5x+1}}</m>
+						</p>
+					</li>
+
+				</ol>
+			</p>
+		</statement>
+		
+		<solution>
+			<p>
+				<ol marker="a) ">
+					<li>
+						<p>
+							<m>\limite{+\infty}{\dfrac{x^3-3x^2+5}{2x^3-2x+1}}  = \limite{+\infty}{\dfrac{x^3}{2x^3}}=\dfrac{1}{2}</m>
+						</p>
+					</li>
+
+					<li>
+						<p>
+							<m>\limite{+\infty}{\dfrac{x^4+2x+5}{2x^2+5x+1}}  = \limite{+\infty}{\dfrac{x^4}{2x^2}}=\dfrac{x^2}{2}=+\infty</m>
+						</p>
+					</li>
+
+					<li>
+						<p>
+							<m>\limite{+\infty}{\dfrac{x^3+6x^2-5x+10}{x^4-3x^3+5x+4}}  = \limite{+\infty}{\dfrac{x^3}{x^4}}=\dfrac{1}{x}=0</m>
+						</p>
+					</li>
+
+					<li>
+						<p>
+							<m>\limite{+\infty}{\dfrac{x^4+2x+5}{-2x^2+5x+1}}  = \limite{+\infty}{\dfrac{x^4}{-2x^2}}=\dfrac{x^2}{-2}=-\infty</m>
+						</p>
+					</li>
+
+					<li>
+						<p>
+							<m>\limite{-\infty}{\dfrac{x^3-3x^2+5}{2x^3-2x+1}}  = \limite{-\infty}{\dfrac{x^3}{2x^3}}=\dfrac{1}{2}</m>
+						</p>
+					</li>
+
+					<li>
+						<p>
+							<m>\limite{-\infty}{\dfrac{x^4+2x+5}{2x^2+5x+1}}  = \limite{-\infty}{\dfrac{x^4}{2x^2}}=\dfrac{x^2}{2}=+\infty</m>
+						</p>
+					</li>
+
+					<li>
+						<p>
+							<m>\limite{-\infty}{\dfrac{x^3+6x^2-5x+10}{x^4-3x^3+5x+4}}  = \limite{-\infty}{\dfrac{x^3}{x^4}}=\dfrac{1}{x}=0</m>
+						</p>
+					</li>
+
+					<li>
+						<p>
+							<m>\limite{-\infty}{\dfrac{x^4+2x+5}{-2x^2+5x+1}}  = \limite{-\infty}{\dfrac{x^4}{-2x^2}}=\dfrac{x^2}{-2}=-\infty</m>
+						</p>
+					</li>
+
+				</ol>
+			</p>
+		</solution>
+		
+	</example>
+	
+
+	
+
+	
+
+	<p>
+		Calcular los siguientes límites:
+	</p>
+
+	<p><ol>
+		<li>
+				<p>
+		<m>\displaystyle \lim_{x \rightarrow \infty} \dfrac{x^3+x^2-1}{2x^3-3x+5}</m>
+	</p>
+		</li>
+
+	</ol></p>
+
+	<p>
+		Calcular los siguientes límites.
+	</p>
+
+	<p>
+		(2)[label=)] <m>\displaystyle \lim_{x \to +\infty}{\dfrac{x^2-3x}{2x+5}}</m> <m>\displaystyle \lim_{x \to+\infty}{\dfrac{x^2-3x+2}{x^3-1}}</m> <m>\displaystyle \lim_{x \to+\infty}{\dfrac{x^2-3x+5}{3x^2-1}}</m> <m>\displaystyle \lim_{x \to+\infty}{\dfrac{2x+2}{\sqrt{x^2-2x+2}}}</m> <m>\displaystyle \lim_{x \to-\infty}{\dfrac{x^2-3x}{5-2x}}</m>
+	</p>
+
+	<p>
+		(5)[label=)] <m>\infty</m> <m>0</m> <m>\dfrac{1}{3}</m> <m>2</m> <m>\infty</m>
+	</p>
+
+	<p>
+		Calcular los siguientes límites:
+	</p>
+
+	<p>
+		(2)[label=)] <m>\displaystyle \lim_{x \to +\infty} { \left( \dfrac{3x-5}{3x-2} \right)^{2x^2}}</m>
+	</p>
+
+	<p>
+		<m>\displaystyle \lim_{x \to +\infty} { \left( \dfrac{5x-2}{5x+3} \right)^{3x}}</m>
+	</p>
+
+	<p>
+		<m>\displaystyle \lim_{x \to +\infty} { \left( \dfrac{2x^2-6x}{2x^2-x-5} \right)^{\frac{x^2}{2}}}</m>
+	</p>
+
+	<p>
+		<m>\displaystyle \lim_{x \to +\infty} { \left( \dfrac{4-3x}{5-3x} \right)^{x-3}}</m>
+	</p>
+
+	<p>
+		<m>\displaystyle \lim_{x \to 0} { \left( 1+3x \right)^{\frac{2}{x}}}</m>
+	</p>
+
+	<p>
+		(5)[label=)] <m>e^6</m> <m>e^{-3}</m> <m>0</m> <m>e^{\frac{1}{3}}</m> <m>e^6</m>
+	</p>
+</section>

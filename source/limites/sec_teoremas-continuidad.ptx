@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+
+<section xml:id="sec_teoremas-continuidad">
+	<title>Teoremas sobre continuidad</title>
+
+	<theorem>
+		<title>Teorema de la conservación del signo</title>
+		<p>
+			Si una función es continua en un punto <m>x=x_0</m> y <m>f(x_0)\neq 0</m>, existe un entorno de <m>x_0</m> en el cual la función tiene el mismo signo que <m>f(x_0)</m>.
+		</p>
+	</theorem>
+	<theorem>
+		<title>Teorema de Bolzano</title>
+		<p>
+			Si una función <m>f</m> es continua en un intervalo cerrado <m>[a,b]</m> y el signo de <m>f(a)</m> es distinto del signo de <m>f(b)</m>, entonces existe, al menos, un <m>c</m> perteneciente al intervalo <m>(a,b)</m> en el cual <m>f(c)=0</m>.
+		</p>
+
+		<p>
+			Simbolicamente:
+		</p>
+
+		<p>
+			<me>\left. \begin{array}{l} 
+					 f \text{ continua en }[a,b] \\
+					 \text{signo }\left[ f(a) \right] \neq  \text{signo }\left[ f(b) \right]
+					 \end{array}
+					 \right\rbrace \Rightarrow \exists c \in (a,b) | f(c)=0</me>
+		</p>
+
+	</theorem>
+		
+	<theorem>
+		<title>Teorema del valor intermedio.</title>
+		<p>
+			Si una función es continua en un intervalo cerrado <m>[a,b]</m> y si <m>k</m> es un número comprendido entre <m>f(a)</m> y <m>f(b)</m>, entonces existe un punto <m>c\in [a,b]</m> donde <m>f(c)=k</m>
+		</p>
+	</theorem>
+		
+	<theorem>
+		<title>Teorema de Weierstrass</title>
+		<p>
+			Si una función es continua en un intervalo cerrado <m>[a,b]</m> entonces:
+		</p>
+
+		<p>
+			<ul>
+				<li>
+					<p>
+						hay un punto <m>c \in [a,b]</m> donde <m>f</m> alcanza su valor máximo absoluto, es decir <m>f(c) \geq f(x)</m>, para cualquier valor <m>x \in [a,b]</m>
+					</p>
+				</li>
+
+				<li>
+					<p>
+						hay un punto <m>d \in [a,b]</m> donde <m>f</m> alcanza su valor mínimo absoluto, es decir <m>f(d) \leq f(x)</m>, para cualquier valor <m>x \in [a,b]</m>
+					</p>
+				</li>
+
+			</ul>
+		</p>
+	</theorem>
+		
+</section>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec_punto-simetrico" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Puntos simétricos</title>
+  <introduction>
+    <p>
+      Para hallar
+    </p>
+  </introduction>
+  <subsection xml:id="punto-simetrico-respecto-a-otro-punto">
+    <title>Punto simétrico respecto a otro punto</title>
+    <assemblage>
+      <p>
+	Para calcular el simétrico de un punto respecto de otro punto simplemente hay que tener en cuenta que el punto respecto al cual buscamos el simétrico es el punto medio entre el punto y su simétrico. Por lo tanto, <m>A=\dfrac{P+P'}{2}</m>
+      </p>
+    </assemblage>
+
+    <example>
+      <statement>
+	<p>
+	  Hallar el punto simétrico del punto <m>P(1,-1,2)</m> respecto del punto <m>A(-1,2,-3)</m>.
+	</p>
+      </statement>
+      <solution>
+	<p>
+	  El punto <m>A</m> es el punto medio entre <m>P</m> y Su simétrico <m>P'</m>, por lo tanto, <m>A=\dfrac{P+P'}{2}</m>
+	</p>
+
+	<p>
+	  <m>(-1,2,-3)=\dfrac{(1,-1,2)+P'}{2} \Rightarrow (-2,4,-6)-(1,-1,2)=P' \Rightarrow P'=(-3,5,-8)</m>
+	</p>
+      </solution>
+    </example>
+  </subsection>
+
+  <subsection xml:id="punto-simetrico-respecto-a-una-recta">
+    <title>Punto simétrico respecto a una recta</title>
+
+    <assemblage>
+      <p>
+	El símetrico de un punto <m>P</m> respecto a una recta <m>r</m> es el punto <m>P'</m> tal que la recta pasa por el punto medio del segmento <m>PP'</m> y es perpendicular al segmento <m>PP'</m>.
+      </p>
+    </assemblage>
+
+    <p>
+      Para hallar el punto simétrico de un punto <m>P</m> respecto a una recta <m>r</m> realizaremos el siguiente procedimiento:
+    </p>
+
+    <p>
+      <ul>
+	<li>
+	  <p>
+	    Hallamos el punto <m>M</m> proyección del punto <m>P</m> sobre la recta.
+	  </p>
+	</li>
+
+	<li>
+	  <p>
+	    Hallamos el punto simétrico <m>P'</m> teniendo en cuenta que el punto <m>M</m> es el punto medio entre <m>P</m> y <m>P'</m>.
+	  </p>
+	</li>
+
+      </ul>
+    </p>
+
+    <example>
+      <statement>
+	<p>
+	  Hallar el punto simétrico del punto <m>P(5,1,0)</m> respecto de la recta <m>r\equiv \begin{cases}
+	  x= 1+2\lambda \\ y=-1+3\lambda \\ z= -\lambda \end{cases}</m> Hallamos la proyección del punto <m>P</m> sobre la recta de la siguiente forma:
+	</p>
+      </statement>
+      <solution>
+	<p>
+	  <ul>
+	    <li>
+	      <p>
+		Hallamos el plano perpendicular a la recta que contiene a P. <m>\pi \bot r \Rightarrow 2x+3y-z+D=0</m>
+	      </p>
+
+	      <p>
+		<m>P \in \pi \Rightarrow 2\cdot 5 +3 \cdot 1 - 0+D=0 \Rightarrow D=-13</m>
+	      </p>
+
+	      <p>
+		El plano es: <m>\pi \equiv 2x+3y-z-13=0</m>
+	      </p>
+	    </li>
+
+	    <li>
+	      <p>
+		Hallamos el corte de la recta y el plano:
+	      </p>
+
+	      <p>
+		<m>2(1+2\lambda)+3(-1+3\lambda)-(-\lambda)-13=0 \Rightarrow \lambda =  1</m>
+	      </p>
+
+	      <p>
+		El punto <m>M</m> es: <m>M(3,2,-1)</m>
+	      </p>
+	    </li>
+
+	  </ul>
+	</p>
+
+	<p>
+	  Ahora calculamos el simétrico <m>P'</m> teniendo en cuenta que el punto <m>M</m> es el punto medio del segmento <m>PP'</m>.
+	</p>
+
+	<p>
+	  <m>\dfrac{x+5}{2}= 3 \qquad \dfrac{y+1}{2}=2 \qquad \dfrac{z+0}{2}=-1</m>
+	</p>
+
+	<p>
+	  <m>P'(1,3,-2)</m>
+	</p>
+      </solution>
+    </example>
+
+  </subsection>
+
+  <subsection xml:id="punto-simetrico-respecto-a-un-plano">
+    <title>Punto simétrico respecto a un plano</title>
+
+    <assemblage>
+      <p>
+	El punto simétrico de un punto <m>P</m> respecto a un plano <m>\pi</m> es otro punto <m>P'</m> tal que el plano contiene al punto medio del segmento <m>PP'</m> y es perpendicular al segmento <m>PP'</m>.
+      </p>
+    </assemblage>
+
+    <p>
+      Para hallar el punto simétrico de un punto <m>P</m> respecto a un plano <m>\pi</m> realizaremos el siguiente procedimiento:
+    </p>
+
+    <p>
+      <ul>
+	<li>
+	  <p>
+	    Hallamos el punto <m>M</m> proyección del punto <m>P</m> sobre el plano.
+	  </p>
+	</li>
+
+	<li>
+	  <p>
+	    Hallamos el punto simétrico <m>P'</m> teniendo en cuenta que el punto <m>M</m> es el punto medio entre <m>P</m> y <m>P'</m>.
+	  </p>
+	</li>
+
+      </ul>
+    </p>
+
+    <example>
+      <statement>
+	<p>
+	  Halla el punto simétrico de <m>P(1,0,4)</m> respecto al plano <m>\pi \equiv 2x-y+3z=0</m>
+	</p>
+      </statement>
+      <solution>
+	<p>
+	  Hallamos la proyección del punto <m>P</m> sobre el plano <m>\pi</m>.
+	</p>
+
+	<p><ul>
+	  <li>
+	    <p>
+	      Hallamos la recta perpendicular al plano que pasa por <m>P</m>
+	    </p>
+
+	    <p>
+	      <m>r \equiv \begin{cases} x=1+2\lambda \\ y=-\lambda \\ z=4+3\lambda \end{cases}</m>
+	    </p>
+	  </li>
+
+	  <li>
+	    <p>
+	      Calculamos el punto de corte de la recta y el plano, <m>M</m>. Este punto es el punto medio entre <m>P</m> y su simétrico <m>P'</m>
+	    </p>
+
+	    <p>
+	      <m>2(1+2\lambda)-(-\lambda)+3(4+3\lambda)=0 \Rightarrow 14\lambda +14=0 \Rightarrow \lambda=-1</m>
+	    </p>
+
+	    <p>
+	      El punto es: <m>M(-1,1,1)</m>
+	    </p>
+	  </li>
+
+	</ul></p>
+
+	<p>
+	  Como <m>M</m> es el punto medio entre <m>P</m> y <m>P'\Rightarrow Q=\dfrac{P+P'}{2} \Rightarrow P'=2Q-P</m>
+	</p>
+
+	<p>
+	  <m>P'=2(-1,1,1)-(1,0,4) \Rightarrow P'(-3,2,-2)</m>
+	</p>
+      </solution>
+    </example>
+  </subsection>
+
+</section>
+
+
+

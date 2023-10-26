@@ -1,0 +1,741 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercises xml:id="ex_normal" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <!-- You can ommit the title and just get the default "Exercises" -->
+	<title>Ejercicios Normal</title>
+	
+	<exercise>
+    <statement>
+      <p>
+        Las puntuaciones obtenidas en un test se distribuyen normalmente con media 76 y desviación típica 15. Calcular la puntuación por debajo de la cual se sitúan el 10% de los peores resultados y aquella por encima de la cual se sitúan el 15% de los mejores.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        Peores resultados (10%) <m>X=56.8</m>
+      </p>
+      <p>
+        Mejores resultados (15%) <m>X=91.6</m>
+      </p>
+    </answer>
+    <solution>
+      <p>
+        <m>X:N(73;15)</m>
+      </p>
+      <p>
+        <p>
+          Peores resultados (10%) 
+        </p>
+        <p>
+          <me>p(z \leq k_1)=0.1 \Rightarrow p(z \leq k_2)=0.9 \text{ siendo } k_1=-k_2</me>
+          <me>k_1=-k_2=-1.28</me>
+          <me>-1.28=\dfrac{X-76}{15} \Rightarrow X=56.8</me>
+        </p>
+        <p>
+          Mejores resultados (15%) 
+        </p>
+        <p>
+          <me>p(z \geq k)=0.15 \Rightarrow p(z \leq k)=0.85 \Rightarrow k=1.04</me>
+          <me>1.04=\dfrac{X-76}{15} \Rightarrow X=91.6</me>
+        </p>
+      </p>
+    </solution>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Una conocida marca de televisores afirma que la duración de sus aparatos sin efectuar reparaciones, sigue una distribución normal de media 9 años y desviación típica 1,2 años.
+      </p>
+      <p>
+        <ol>
+          <li>
+            <p>
+              Calcular la probabilidad de que un aparato de televisión dure entre 8 y 11 años.
+            </p>
+          </li>
+          <li>
+            <p>
+              El fabricante garantiza el buen funcionamiento de los televisores durante 5,5 años. ¿Qué porcentaje de televisores se espera que no cumplan la garantía?              
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        <ol>
+          <li>
+            <p>
+              <m>0.7492</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>0.0018</m>             
+            </p>
+          </li>
+        </ol>
+      </p>
+    </answer>
+    <solution>
+      <p>
+        <m>X:N(9; 1.2)</m>>
+      </p>
+      <p>
+        <ol>
+          <li>
+            <p>
+              <md>
+                <mrow>
+                  p(8 \leq X \leq 11) \amp = p \left( \dfrac{8-9}{1.2} \leq z \leq \dfrac{11-9}{1.2} \right) =p(-0.83 \leq z \leq 1.67)   
+                </mrow>
+                <mrow>
+                  \amp =p(z \leq 1.67)-p(z \leq -0.83)= p(z\leq 1.67)-p(z \geq 0.83)
+                </mrow>
+                \<mrow>
+                  \amp =p(z \leq 1.67)-[1-p(z \leq 0.83)]
+                </mrow>
+                <mrow>
+                  \amp  =0.9525-(1-0.7967)=0.7492
+                </mrow>
+              </md>
+            </p>
+          </li>
+          <li>
+            <p>
+              <md>
+                <mrow>
+                  p(X \leq 5.5) \amp = p \left( z \leq \dfrac{5.5-9}{1.2} \right)= p(z \leq -2.92) 
+                </mrow>
+                <mrow>
+                  \amp = p(z \geq 2.92)= 1-p(z \leq 2.92)
+                </mrow>
+                <mrow>
+                  \amp = 1-0.9982 = 0.0018
+                </mrow>
+              </md>         
+            </p>
+          </li>
+        </ol>
+      </p>
+    </solution>
+  </exercise>
+    
+    <exercise>
+      <statement>
+        <p>
+          En un examen, al que se presentaron 2000 estudiantes, las puntuaciones se distribuyeron normalmente, con media 72 y desviación típica 9.
+        </p>
+        <p>
+          <ol>
+            <li>
+              <p>
+                ¿Cuántos estudiantes obtuvieron una puntuación entre 60 y 80?
+              </p>
+            </li>
+            <li>
+              <p>
+                Si el 10% superior de los alumnos recibió la calificación de sobresaliente, ¿qué puntuación mínima había que tener para recibir tal calificación?
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <ol>
+            <li>
+              <p>
+                <m>\approx 1436</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>X=83.52</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </answer>
+      <solution>
+        <p>
+          Las puntuaciones siguen la distribución: <m>X:N(72;9)</m>
+        </p>
+        <p>
+          <ol>
+            <li>
+              <p>
+                <md>
+                  <mrow>
+                    p(60 \leq X \leq 80) \amp = p \left( \dfrac{60-72}{9} \leq z \leq \dfrac{80-72}{9} \right) =p(-1.33 \leq z \leq 0.88)   
+                  </mrow>
+                  <mrow>
+                    \amp =p(z \leq 0.88)-p(z \leq -1.33)= p(z\leq 0.88)-p(z \geq 1.33)
+                  </mrow>
+                  \<mrow>
+                    \amp =p(z \leq 0.88)-[1-p(z \leq 1.33)]
+                  </mrow>
+                  <mrow>
+                    \amp  =0.8106-(1-0.9082)=0.7182
+                  </mrow>
+                </md>
+              </p>
+              <p>
+                <me>
+                  \text{Número de estudiantes:} 2000 \cdot 0.7182 \approx 1436
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                <me>
+                  p(z \geq k)=0.1 \Rightarrow p(z \leq k)= 0.9 \Rightarrow k=1.28
+                </me>
+                <me>
+                  1.28 = \dfrac{X-72}{9} \Rightarrow X=83.52
+                </me>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </solution>
+    </exercise>
+    
+    <exercise>
+      <statement>
+        <p>
+          Según un estudio de la Asociación de Autoescuelas, el número de horas de prácticas necesarias para la obtención del permiso de conducir sigue una distribución normal de media 24 horas y desviación típica 3 horas.
+        </p>
+        <p>
+          <ol>
+            <li>
+              <p>
+                ¿Qué probabilidad hay de obtener el permiso de conducir con 20 horas de prácticas o menos?
+              </p>
+            </li>
+            <li>
+              <p>
+                ¿Cuántas horas de prácticas ha necesitado un conductor para obtener el permiso, si el 84,13% de los conductores ha necesitado más horas que él?
+              </p>
+            </li>
+          </ol>
+        </p>
+    </statement>
+    <answer>
+      <p>
+        <ol>
+          <li>
+            <p>
+              <m>0.1515</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              Menos de <m>21</m> horas
+            </p>
+          </li>
+        </ol>
+      </p>
+    </answer>
+    <solution>
+      <p>
+        <me>X:N(24;3)</me>
+      </p>
+      <p>
+        <ol>
+          <li>
+            <p>
+              <md>
+                <mrow>
+                  p(X \leq 20) \amp = p \left( z \leq \dfrac{20-24}{3} \right)= p(z \leq -1.33) 
+                </mrow>
+                <mrow>
+                  \amp = p(z \geq 1.33)= 1-p(z \leq 1.33)
+                </mrow>
+                <mrow>
+                  \amp = 1-0.8485 = 0.1515
+                </mrow>
+              </md>
+            </p>
+          </li>
+          <li>
+            <p>
+              <me>p(z \geq k_1)=0.8413 \Rightarrow p(z \leq k_2)=0.8413 \text{ siendo } k_1=-k_2</me>
+              <me>k_1=-k_2=-1.00</me>
+              <me>-1.00=\dfrac{X-24}{3} \Rightarrow X=21</me>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </solution>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        El peso de los recién nacidos de una localidad sigue una distribución normal de media 3300 gramos y desviación típica 465 gramos. Un recién nacido tiene bajo peso si su peso es inferior a 2500 gramos.
+      </p>
+      <p>
+        <ol>
+          <li>
+            <p>
+              ¿Cuál es la probabilidad de que un recién nacido en esta localidad tenga bajo peso?
+            </p>
+          </li>
+          <li>
+            <p>
+              ¿Cuál es la probabilidad de que un recién nacido en esta localidad tenga un peso entre 3500 y 4000 gramos?
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        <ol>
+          <li>
+            <p>
+              <m>0.0427</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>0.2681</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </answer>
+    <solution>
+      <p>
+        <me>X:N(3300;465)</me>
+      </p>
+      <p>
+        <ol>
+          <li>
+            <p>
+              <md>
+                <mrow>
+                  p(X \leq 2500) \amp = p \left(z \leq  \dfrac{2500-3300}{465} \right) = p (z \leq -1.72)
+                </mrow>
+                <mrow>
+                  \amp = p(z \geq 1.72)=1-p(z \leq 1.72)
+                </mrow>
+                <mrow>
+                  \amp 1-0.9573 = 0.0427
+                </mrow>
+              </md>
+            </p>
+          </li>
+          <li>
+            <p>
+              <md>
+                <mrow>
+                  p(3500 \leq X \leq 4000) \amp = p \left( \dfrac{3500-3300}{465} \leq z \leq \dfrac{4000-3300}{465} \right) = p (0.43 \leq z \leq 1.51)
+                </mrow>
+                <mrow>
+                  \amp = p(z \leq 1.51)-p(z \leq 0.43)
+                </mrow>
+                <mrow>
+                  \amp 0.9345-0.6664 = 0.2681
+                </mrow>
+              </md>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Un estudiante universitario de matemáticas ha comprobado que el tiempo que le cuesta llegar desde su casa a la universidad sigue una distribución normal de media 30 minutos y desviación típica 5 minutos.
+      </p>
+      <p>
+        <ol>
+          <li>
+            <p>
+              ¿Cuál es la probabilidad de que tarde menos de 40 minutos en llegar a la universidad?
+            </p>
+          </li>
+          <li>
+            <p>
+              ¿Cuál es la probabilidad de que tarde entre 20 y 40 minutos?
+            </p>
+          </li>
+          <li>
+            <p>
+              El estudiante, un día al salir de su casa, comprueba que faltan exactamente 40 minutos para que empiece la clase ¿Cuál es la probabilidad de que llegue tarde a clase?
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        <ol>
+          <li>
+            <p>
+              <m>0.9772</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>0.9544</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>0.0228</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </answer>
+    <solution>
+      <p>
+
+      </p>
+      <p>
+        <ol>
+          <li>
+            <p>
+              <me>p(X \leq 40)=p \left(z \leq  \dfrac{40-30}{5} \right) = p (z \leq 2.00)= 0.9772</me>
+            </p>
+          </li>
+          <li>
+            <p>
+              <md>
+                <mrow>
+                  p(20 \leq X \leq 40) \amp = p \left( \dfrac{20-30}{5} \leq z \leq \dfrac{40-30}{5} \right) = p (-2.00 \leq z \leq 2.00)
+                </mrow>
+                <mrow>
+                  \amp = p(z \leq 2.00)-p(z \leq -2.00)=p(z \leq 2.00)-[1-p(z \leq 2.00)]
+                </mrow>
+                <mrow>
+                  \amp 0.9772-(1-0.9772) = 0.9544
+                </mrow>
+              </md>
+            </p>
+          </li>
+          <li>
+            <p>
+              <me>p(X \geq 40)=1-p(X \leq 40)=1-0.9772=0.0228</me>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Se está estudiando la altura de la población adulta de una cierta ciudad y se observa que el modelo se rige por una distribución normal con media 1.75m y desviación típica 0.65m.
+      </p>
+      <p>
+        <ol>
+          <li>
+            <p>
+              Calcula la probabilidad de que, tomado un adulto al azar mida más de 1.85m.
+            </p>
+          </li>
+          <li>
+            <p>
+              Si se toma una muestra de 10000 personas ¿Cuántas personas medirán más de 1.85m?
+            </p>
+          </li>
+          <li>
+            <p>
+              Se observa que, de las 10000 personas de la muestra, 6500 miden menos de 1.90m, suponiendo que se mantiene la media ¿cuál sería la desviación típica?
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        <ol>
+          <li>
+            <p>
+              <m>0.4404</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>4404</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\sigma = 0.3896</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </answer>
+    <solution>
+      <p>
+        <m>X:N(1.75;0.65)</m>
+      </p>
+      <p>
+        <ol>
+          <li>
+            <p>
+              <md>
+                <mrow>
+                  p(X \geq 1.85) \amp = p \left( z \geq  \dfrac{1.85-1.75}{0.65} \right) 
+                </mrow>
+                <mrow>
+                  \amp = p(z \geq 0.15) =1-p(z \leq 0.15)
+                </mrow>
+                <mrow>
+                  \amp = 1-0.5596 = 0.4404
+                </mrow>
+              </md>
+            </p>
+          </li>
+          <li>
+            <p>
+              Personas = <m>0.4404 \cdot 10000 = 4404</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>p=\dfrac{6500}{10000}=0.65</m>
+            </p>
+            <p>
+              <m>p(z \leq k )=0.65 \rightarrow k = 0.385</m>
+            </p>
+            <p>
+              <m>0.38 = \dfrac{1.90-1.75}{\sigma} \Rightarrow \sigma = 0.3896</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        El peso en kilos de la población de un cierto país sigue una distribución normal de media 70 y desviación típica 10. Se selecciona un individuo al azar. 
+      </p>
+      <p>
+        <ol>
+          <li>
+            <p>
+              Calcule la probabilidad de que su peso se sitúe entre 65 y 75 kilos.
+            </p>
+          </li>
+        </ol>
+      </p>
+      <p>
+        <ol>
+          <li>
+            <p>
+              Se realiza una campaña de comida sana y esto repercute en el peso de la población, manteniendo la desviación típica pero ahora la probabilidad de que un individuo pese menos de 75 es 0.6. ¿Cuál es la nueva media?
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        <ol>
+          <li>
+            <p>
+              <m>0.383</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+      <p>
+        <ol>
+          <li>
+            <p>
+              <m>\mu = 72.5</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </answer>
+    <solution>
+      <p>
+        <m>X:N(70;10)</m>
+      </p>
+      <p>
+        <ol>
+          <li>
+            <p>
+              <md>
+                <mrow>
+                  p(65 \leq X \leq 75) \amp = p \left( \dfrac{65-70}{10} \leq z \leq \dfrac{75-70}{10} \right) = p (-0.50 \leq z \leq 0.50)
+                </mrow>
+                <mrow>
+                  \amp = p(z \leq 0.50)-p(z \leq -0.50)=p(z \leq 0.50)-[1-p(z \leq 0.50)]
+                </mrow>
+                <mrow>
+                  \amp 0.6915-(1-0.6915) = 0.383
+                </mrow>
+              </md>
+            </p>
+          </li>
+        </ol>
+      </p>
+      <p>
+        <ol>
+          <li>
+            <p>
+              <m>p(z \leq k )=0.6 \rightarrow k = 0.25</m>
+            </p>
+            <p>
+              <m>0.25 = \dfrac{75-\mu}{10} \Rightarrow \mu = 72.5</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Se tiene un suceso con variable aleatoria <m>X</m> que sigue una distribución normal de media <m>\mu = 30</m> y desviación típica <m>\sigma=10</m>. Calcula:
+      </p>
+      <p>
+        <ol>
+          <li>
+            <p>
+              La probabilidad de que <m>X \leq 20</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Se hace una revisión de los datos y se observa que la probabilidad del 50% se alcanza en el valor <m>X \leq 35</m> y la probabilidad del 75% se alcanza en el valor <m>X \leq 40</m>. ¿Cuáles son las nuevas media y
+desviación típica?.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        <ol>
+          <li>
+            <p>
+              <m>0.1587</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m> \mu = 35 \qquad \sigma = 7.41</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </answer>
+    <solution>
+      <p>
+        <m>X:N(30;10)</m>
+      </p>
+      <p>
+        <ol>
+          <li>
+            <p>
+              <md>
+                <mrow>
+                  p(X \geq 20) \amp = p \left( z \geq  \dfrac{20-30}{10} \right) 
+                </mrow>
+                <mrow>
+                  \amp = p(z \geq 1.00) =1-p(z \leq 1.00)
+                </mrow>
+                <mrow>
+                  \amp = 1-0.8413 = 0.1587
+                </mrow>
+              </md>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>p(z \leq k_1 )=0.5 \Rightarrow k_1 = 0 \rightarrow 0 = \dfrac{35-\mu}{\sigma} \Rightarrow \mu = 35</m>
+            </p>
+            <p>
+              <m>p(z \leq k_2 )=0.75 \Rightarrow k_2 = 0.675 \rightarrow 0.675 = \dfrac{40-35}{\sigma} \Rightarrow \sigma = 7.41</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        En una pumarada la producción en  kilogramos de cada manzano sigue una distribución normal de media <m>\mu = 50</m> kilogramos y desviación típica <m> \sigma = 10</m> kilogramos. Calcula:
+      </p>
+      <p>
+        <ol>
+          <li>
+            <p>
+              La proporción de árboles que dan entre 30 y 60 kilogramos.
+            </p>
+          </li>
+          <li>
+            <p>
+              El número de kilogramos por árbol a los que no llegan o igualan el 60 % de los árboles.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        <ol>
+          <li>
+            <p>
+              <m>0.8185</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>52.5</m> kg.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </answer>
+    <solution>
+      <p>
+        <m>X:N(50;10)</m>
+      </p>
+      <p>
+        <ol>
+          <li>
+            <p>
+              <md>
+                <mrow>
+                  p(30 \leq X \leq 60) \amp = p \left( \dfrac{30-50}{10} \leq z \leq \dfrac{60-50}{10} \right) = p (-2.00 \leq z \leq 1.00)
+                </mrow>
+                <mrow>
+                  \amp = p(z \leq 1.00)-p(z \leq -2.00)=p(z \leq 1.00)-[1-p(z \leq 2.00)]
+                </mrow>
+                <mrow>
+                  \amp 0.8413-(1-0.9772) = 0.8185
+                </mrow>
+              </md>
+            </p>
+          </li>
+          <li>
+            <p>
+              <p>
+                <m>p(z \leq k )=0.6 \Rightarrow k_ = 0.25 \rightarrow 0.25 = \dfrac{X-50}{10} \Rightarrow X = 52.5</m>
+              </p>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </solution>
+  </exercise>
+</exercises>

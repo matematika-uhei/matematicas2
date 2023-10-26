@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<section xml:id="limite-de-una-funcion-en-un-punto-limites-laterales">
+	<title>Límite de una función en un punto. Límites laterales</title>
+	
+	<p>
+		Consideremos las funciones <m>f(x)=\dfrac{x^2-1}{x-1}</m>, <m>g(x)=\dfrac{|x-1|}{x-1}</m> y <m>h(x)=\dfrac{1}{(x-1)^2}</m>.
+	</p>
+	<p>
+		Estas tres funciones no existen en <m>x=1</m> pero vamos a ver que ocurre en los alrededores de <m>x=1</m>, es decir, cuando <m>x</m> se aproxima a <m>1</m>.
+	</p>
+
+	<p>
+		Consideremos la primera función: <m>f(x)=\dfrac{x^2-1}{x-1}</m>.
+	</p>
+	<p>
+			Para saber que ocurre en los alrededores de <m>x=1</m> construyamos una tabla de valores cada vez más cercanos a <m>x=1</m> con valores más pequeños y más grandes de <m>1</m> y la gráfica.
+	</p>
+	<sidebyside widths="60% 35%" valigns="middle middle">
+		<stack>
+			<p>
+				<me>\begin{array}{c|cccc}
+					x &amp; 0.9 &amp; 0.99 &amp; 0.999 &amp; 0.9999 \\
+					\hline
+					f(x) &amp; 1.9 &amp; 1.99 &amp; 1.999 &amp; 1.9999 
+					\end{array}
+				</me> 
+				<me>
+					x \to 1^- \Rightarrow f(x) \to 2
+				</me> 
+				<me>
+					\begin{array}{c|cccc}
+					x &amp; 1.1 &amp; 1.01 &amp; 1.001 &amp; 1.0001 \\
+					\hline
+					f(x) &amp; 2.1 &amp; 2.01 &amp; 2.001 &amp; 2.0001 
+					\end{array}
+				</me> 
+				<me>
+					x \to 1^+ \Rightarrow f(x) \to 2
+				</me>
+			</p>
+		
+		</stack>
+		<stack>
+			<image xml:id="img_limites-funcion-1" width="25%" source="images/img_limites-funcion-1"></image>
+		</stack>
+	
+	</sidebyside>
+	
+		
+		
+		
+		<p>
+			Vemos que a medida que <m>x</m> se aproxima a <m>1</m> la función se aproxima a <m>2</m>. 
+		</p>
+		<p>
+			A partir de esta información podemos definir intuitivamente el concepto de límite de una función en un punto.
+		</p>	
+		
+		<assemblage>
+			<title>Límite de una función en un punto</title>
+			<p>
+				El límite de una función <m>f(x)</m> cuando <m>x</m> se aproxima a <m>a</m>, con <m>x \neq a</m>,  es <m>L</m> si el valor de <m>f(x)</m> se puede acercar arbitrariamente (todo lo que deseemos) a <m>L</m> a medida que <m>x</m> se aproxima a <m>a</m>. Se expresa de la siguiente forma:
+			</p>
+			<me>
+				\limite{a}{f(x)}=L
+			</me>
+	</assemblage>
+	
+		<p>
+			Para calcular el límite de una función en un punto podemos hacer una tabla de valores aproximandonos a <m>a</m> y hallar el valor al cual se aproxima.
+		</p>
+		<p>
+			También podemos dibujar su gráfica y ver que ocurre cuando nos aproximamos a <m>x=a</m>
+		</p>
+.
+		<p>
+			Consideremos la segunda función: <m>f(x)=\dfrac{|x-1|}{x-1}</m>.
+		</p>
+		<sidebyside widths="60% 35%" valigns="middle middle">
+			<p>
+				<me>
+					\begin{array}{c|cccc}
+					x &amp; 0.9 &amp; 0.99 &amp; 0.999 &amp; 0.9999 \\
+					\hline
+					f(x) &amp; -1 &amp; -1 &amp; -1 &amp; -1 
+					\end{array}
+				</me>
+				<me>
+					x \to 1^- \Rightarrow f(x) \to -1
+				</me> 
+					<me>
+						\begin{array}{c|cccc}
+					x &amp; 1.1 &amp; 1.01 &amp; 1.001 &amp; 1.0001 \\
+					\hline
+					f(x) &amp; 1 &amp; 1 &amp; 1 &amp; 1 
+					\end{array}
+				</me>
+				<me>
+					x \to 1^+ \Rightarrow f(x) \to 1
+				</me>
+			</p>
+			<image xml:id="img_limites-funcion-2" width="25%" source="images/img_limites-funcion-2"></image>
+		</sidebyside>
+		<p>
+			Vemos que a medida que <m>x</m> se aproxima a <m>1</m> la función se aproxima a valores distintos según nos acerquemos por la izquierda o por la derecha. Por lo tanto, la función no se aproxima a un valor, esto quiere decir que no existe el límite.
+		</p>
+
+		<p>
+			A partir de esta información podemos definir intuitivamente los conceptos de límites laterales de una función en un punto.
+		</p>
+
+		<assemblage>
+			<title>Límites laterales</title>
+
+			<p>
+				<term>Límite por la izquierda: </term>El límite de una función <m>f(x)</m> cuando <m>x</m> se aproxima a <m>a</m> por la izquierda es <m>L</m> si el valor de <m>f(x)</m> se puede acercar arbitrariamente (todo lo que deseemos) a <m>L</m> a medida que <m>x</m> se aproxima a <m>a</m> por la izquierda de este valor, es decir, por valores más pequeños que <m>a</m>. Se expresa de la siguiente forma: <me>\limite{a^-}{f(x)}=L</me>
+			</p>
+
+			<p>
+				<term>Límite por la derecha: </term>El límite de una función <m>f(x)</m> cuando <m>x</m> se aproxima a <m>a</m> por la derecha es <m>L</m> si el valor de <m>f(x)</m> se puede acercar arbitrariamente (todo lo que deseemos) a <m>L</m> a medida que <m>x</m> se aproxima a <m>a</m> por la derecha de este valor, es decir, por valores más grandes que <m>a</m>. Se expresa de la siguiente forma: <me>\limite{a^+}{f(x)}=L</me>
+			</p>
+
+			<p>
+				Para que exista el límite de una función en un punto tienen que existir los límites laterales y ser iguales, ya que el límite de una función en un punto es único. 
+				<me>
+					\limite{a}{f(x)}=L  \Leftrightarrow \left( \limite{a^-}{f(x)}=L \right) \wedge  \left( \limite{a^+}{f(x)}=L \right)
+				</me>
+			</p>
+		</assemblage>
+		
+		<p>
+			Consideremos la tercera función: <m>f(x)=\dfrac{1}{(x-1)^2}</m>.
+		</p>
+
+		<sidebyside widths="60% 35%" valigns="middle middle">
+		<p>
+			<me>
+				\begin{array}{c|cccc}
+				x &amp; 0.9 &amp; 0.99 &amp; 0.999 &amp; 0.9999 \\
+				\hline
+				f(x) &amp;  10^2 &amp;  10^4 &amp;  10^6 &amp;  10^8 
+				\end{array}
+			</me> 
+			<me>
+				x \to 1^- \Rightarrow f(x) \to +\infty
+			</me> 
+			<me>
+				\begin{array}{c|cccc}
+				x &amp; 1.1 &amp; 1.01 &amp; 1.001 &amp; 1.0001 \\
+				\hline
+				f(x) &amp;  10^2 &amp;  10^4 &amp;  10^6 &amp;  10^8 
+				\end{array}
+			</me> 
+			<me>
+				x \to 1^+ \Rightarrow f(x) \to +\infty
+			</me>
+		</p>
+		<image xml:id="img_limites-funcion-3" width="25%" source="images/img_limites-funcion-3"></image>
+		</sidebyside>
+
+		<p>
+			Vemos que a medida que <m>x</m> se aproxima a <m>1</m> la función se hacen cada vez más grandes hasta hacerse infinito. A partir de esta información podemos definir intuitivamente los conceptos de límites infinitos de una función en un punto.
+		</p>
+
+
+		<assemblage>
+			<title>Límites infinitos.</title>
+
+			<p>
+				<alert>Límites infinitos por la izquierda:</alert>
+			</p>
+
+			<p>
+				Si los valores de <m>f(x)</m> aumentan sin límite a medida que los valores de <m>x</m> (donde <m>x&lt;a</m>) se acerca al número <m>a</m>, entonces decimos que el límite es el infinito positivo. <me>\limite{a^-}{f(x)}=+\infty</me> Si los valores de <m>f(x)</m> disminuyen sin límite a medida que los valores de <m>x</m> (donde <m>x&lt;a</m>) se acerca al número <m>a</m>, entonces decimos que el límite es el infinito negativo. <me>\limite{a^-}{f(x)}=-\infty</me>
+			</p>
+
+			<p>
+				<alert>Límites infinitos por la derecha:</alert>
+			</p>
+
+			<p>
+				Si los valores de <m>f(x)</m> aumentan sin límite a medida que los valores de <m>x</m> (donde <m>x&gt;a</m>) se acerca al número <m>a</m>, entonces decimos que el límite es el infinito positivo. <me>\limite{a^+}{f(x)}=+\infty</me> Si los valores de <m>f(x)</m> disminuyen sin límite a medida que los valores de <m>x</m> (donde <m>x&gt;a</m>) se acerca al número <m>a</m>, entonces decimos que el límite es el infinito negativo. <me>\limite{a^+}{f(x)}=-\infty</me>
+			</p>
+
+			<p>
+				Si los valores de <m>f(x)</m> aumentan sin límite a medida que los valores de <m>x</m> (donde <m>x \neq a</m>) se acerca al número <m>a</m>, entonces decimos que el límite es el infinito positivo. <me>\limite{a}{f(x)}=+\infty</me> Si los valores de <m>f(x)</m> disminuyen sin límite a medida que los valores de <m>x</m> (donde <m>x\neq a</m>) se acerca al número <m>a</m>, entonces decimos que el límite es el infinito negativo. <me>\limite{a}{f(x)}=-\infty</me>
+			</p>
+		</assemblage>
+		<subsection xml:id="sub_asintotas-verticales">
+			<title>Asíntotas verticales</title>
+			<p>
+				Una función <m>f(x)</m> presenta una asíntota vertical en el punto de abscisas <m>x=a</m> si a medida que nos acercamos a dicho punto la función se hace infinitamente grande o infinitamente pequeña.				
+			</p>
+			<p>
+				Es decir, el límite de la función cuando <m>x</m> tiende a <m>a</m> es infinito o menos infinito.
+			</p>
+		</subsection>
+		
+	</section>

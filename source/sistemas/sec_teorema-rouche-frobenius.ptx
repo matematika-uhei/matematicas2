@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec_teorema-rouche-frobenius">
+  <title>Teorema de Rouché-Fröbenius</title>
+  <assemblage>
+		<title>Teorema de Rouché-Fröbenius</title>
+    <p>
+      Un sistema de <m>m</m> ecuaciones lineales con <m>n</m> incógnitas es compatible (tiene solución) si y solo si el rango de la matriz de los coeficientes coincide con el rango de la matriz ampliada.
+    </p>
+
+    <p>
+      El sistema es compatible <m>\Leftrightarrow  \text{rango}(A)=\text{rango}(A^*)</m>
+    </p>
+  </assemblage>
+
+  <p>
+    <term>Consecuencias del teorema de Rouché-Fröbenius</term>
+  </p>
+
+  <p>
+    <ul>
+      <li>
+        <p>
+          Si <m>\text{rango}(A) \neq \text{rango}(A^*)</m> entonces el sistema es incompatible.
+        </p>
+      </li>
+      <li>
+        <p>
+          Si <m>\text{rango}(A)=\text{rango}(A^*)</m> entonces el sistema es compatible.
+        </p>
+        <p>
+          <ul>
+            <li>
+              <p>
+                Si <m>\text{rango}(A)=\text{rango}(A^*)=n</m> entonces el sistema de determinado.
+              </p>
+            </li>
+            <li>
+              <p>
+                Si <m>\text{rango}(A)=\text{rango}(A^*)&lt;n</m> entonces el sistema es indeterminado.
+              </p>
+            </li>
+          </ul>
+        </p>
+      </li>
+    </ul>
+  </p>
+
+  <example>
+    <statement>
+      <p>
+        Estudiar la compatibilidad de los siguientes sistemas de ecuaciones utilizando el teorema de Rouché-Fröbenius:
+      </p>
+			<p>
+				<ol marker="a)" cols="2">
+					<li>
+						<p>
+							<m>
+								\begin{cases}
+								2x +5y+ 2z=1 \\
+								x-y-z=0 \\
+								2x+3y+4z=2
+								\end{cases}
+							</m>
+						</p>
+						</li>
+					<li>
+						<p>
+							<m>
+								\begin{cases}
+								x + z=2 \\
+								-x+y+2z=0 \\
+								-x+2y+5z=2
+								\end{cases}
+							</m>
+						</p>
+						</li>
+						<li>
+							<p>
+								<m>
+									\begin{cases}
+									x  + y  - z=2 \\
+									2x-y+2z=-2 \\
+									3x+z=1
+									\end{cases}
+								</m>
+							</p>
+						</li>
+					</ol>
+				</p>
+      
+    </statement>
+    <solution>
+			<p>
+				<ol marker="a)">
+					<li>
+						<p>
+							Escribimos la matriz de los coeficientes y la matriz ampliada del sistema:
+						</p>
+						<p>
+							<me>
+								A=\begin{pmatrix}
+								3 &amp; 5 &amp; 2 \\
+								1 &amp; -1 &amp; -1 \\
+								2 &amp; 3 &amp; 4 
+								\end{pmatrix}
+							\qquad 
+								A^*=\begin{pmatrix}
+								3 &amp; 5 &amp; 2 &amp; 1 \\
+								1 &amp; -1 &amp; -1 &amp; 0 \\
+								2 &amp; 3 &amp; 4 &amp; 2
+								\end{pmatrix}
+							</me>
+						</p>
+						<p>
+							Estudiamos el rango de la matriz <m>A</m>:
+						</p>
+						<p>
+							<m>
+								\begin{vmatrix}
+								3 &amp; 5 \\
+								1 &amp; -1
+								\end{vmatrix}=-8 \neq 0
+							</m>
+							Orlamos:
+							<m>
+								\begin{vmatrix}
+								3 &amp; 5 &amp; 2 \\
+								1 &amp; -1 &amp; -1 \\
+								2 &amp; 3 &amp; 4 
+								\end{vmatrix}=-23 \neq 0  \Rightarrow \text{rango}(A)= 3
+							</m>
+						</p>
+						
+						<p>
+							Estudiamos el rango de la matriz <m>A^*</m>:
+						</p>
+						
+						<p>
+							Sabemos, por un lado que <m> \text{rango}(A^*) \geq \text{rango}(A)=3</m> y, por otro lado, que <m>\text{rango}(A^*) \leq 3</m>, ya que, en este caso, la matriz <m>A^*</m> solo tiene tres filas.
+						</p>
+						<p>
+							Por lo tanto, <m>\text{rango}(A^*)=3</m>
+						</p>
+						<p>
+								<m>\left. \begin{array}{r} \text{rango}(A) = \text{rango}(A^*)=3 \\ n = 3 \end{array} \right\rbrace \Rightarrow </m>
+								Sistema compatible determinado.
+						</p>
+					</li>
+					<li>
+						<p>
+							Escribimos la matriz de los coeficientes y la matriz ampliada del sistema:
+						</p>
+						<p>
+							<me>
+								A=\begin{pmatrix}
+								1 &amp; 0 &amp; 1 \\
+								-1 &amp; 1 &amp; 2 \\
+								-1 &amp; 2 &amp; 5 
+								\end{pmatrix}
+							\qquad 
+								A^*=\begin{pmatrix}
+								1 &amp; 0 &amp; 1 &amp; 2 \\
+								-1 &amp; 1 &amp; 2 &amp; 0 \\
+								-1 &amp; 2 &amp; 5 &amp; 2
+								\end{pmatrix}
+							</me>
+						</p>
+						<p>
+							Estudiamos el rango de la matriz <m>A</m>:
+						</p>
+						<p>
+							<m>
+								\begin{vmatrix}
+								1 &amp; 0 \\
+								-1 &amp; 1
+								\end{vmatrix}=1 \neq 0
+							</m>
+							Orlamos:
+							<m>
+								\begin{vmatrix}
+								1 &amp; 0 &amp; 1 \\
+								-1 &amp; 1 &amp; 2 \\
+								-1 &amp; 2 &amp; 5 
+								\end{vmatrix}=0 \Rightarrow \text{rango}(A)= 2
+							</m>
+						</p>
+						
+						<p>
+							Estudiamos el rango de la matriz <m>A^*</m>:
+						</p>
+						
+						<p>
+							<m>
+								\begin{vmatrix}
+								1 &amp; 0 \\
+								-1 &amp; 1
+								\end{vmatrix}=1 \neq 0
+							</m>
+							Orlamos:
+							<m>
+								\begin{cases} 
+								\begin{vmatrix}
+								1 &amp; 0 &amp; 1 \\
+								-1 &amp; 1 &amp; 2 \\
+								-1 &amp; 2 &amp; 5 
+								\end{vmatrix}=0
+								\\ \\ 
+								\begin{vmatrix}
+								1 &amp; 0 &amp; 2 \\
+								-1 &amp; 1 &amp; 0 \\
+								-1 &amp; 2 &amp; 2 
+								\end{vmatrix}=0 
+								\end{cases} \Rightarrow \text{rango}(A^*)=2
+							</m>
+						</p>
+						<p>
+								<m>\left. \begin{array}{r} \text{rango}(A) = \text{rango}(A^*)=2 \\ n = 3 \end{array} \right\rbrace \Rightarrow </m>
+								Sistema compatible indeterminado.
+						</p>
+					</li>
+					<li>
+						<p>
+							Escribimos la matriz de los coeficientes y la matriz ampliada del sistema:
+						</p>
+						<p>
+							<me>
+								A=\begin{pmatrix}
+								1 &amp; 1 &amp; -1 \\
+								2 &amp; -1 &amp; 2 \\
+								3 &amp; 0 &amp; 1 
+								\end{pmatrix}
+								\qquad
+								A^*=\begin{pmatrix}
+								1 &amp; 1 &amp; -1 &amp; 2 \\
+								2 &amp; -1 &amp; 2 &amp; -2 \\
+								3 &amp; 0 &amp; 1 &amp; 1
+								\end{pmatrix}
+							</me>
+						</p>
+						<p>
+							Estudiamos el rango de las matriz <m>A</m>:
+						</p>
+						<p>
+							<m>
+								\begin{vmatrix}
+								1 &amp; 1 \\
+								2 &amp; -1
+								\end{vmatrix}=-3 \neq 0
+							</m> 
+							Orlamos:
+							<m>
+								\begin{vmatrix}
+								1 &amp; 1 &amp; -1 \\
+								2 &amp; -1 &amp; 2 \\
+								3 &amp; 0 &amp; 1 
+								\end{vmatrix}=0 \Rightarrow \text{rango}(A)=2.
+							</m> 
+						</p>
+						<p>
+							Ahora calculamos el rango de la matriz <m>A^*</m>:
+						</p>
+						<p>
+							<m>
+								\begin{vmatrix}
+								1 &amp; 1 \\
+								2 &amp; -1
+								\end{vmatrix}=-3 \neq 0
+							</m>
+							Orlamos: 
+							<m>
+								\begin{cases} 
+								\begin{vmatrix}
+								1 &amp; 1 &amp; -1 \\
+								2 &amp; -1 &amp; 2 \\
+								3 &amp; 0 &amp; 1 
+								\end{vmatrix}=0
+								\\ \\
+								\begin{vmatrix}
+								1 &amp; 1 &amp; 2 \\
+								2 &amp; -1 &amp; -2 \\
+								3 &amp; 0 &amp; 1 
+								\end{vmatrix} = -3 \neq 0
+								\end{cases} \Rightarrow \text{rg}(A^*)=3
+							</m>
+						</p>
+						<p>
+							<m>\text{rg}(A)=2 \neq \text{rg}(A^*)=3 \Rightarrow </m>
+							Sistema  incompatible.
+						</p>
+					</li>
+				</ol>
+			</p>
+      
+    </solution>
+  </example>
+</section>

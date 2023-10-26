@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec_producto-mixto" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Producto Mixto</title>
+  <introduction>
+    <p>
+        En esta sección veremos el producto mixto de tres vectores, sus propiedades y sus aplicaciones.
+    </p>
+  </introduction>
+
+  <assemblage xml:id="ass_producto-mixto">
+    <title>Producto mixto de tres vectores</title>
+    <p>
+      Se llama  producto mixto de tres vectores <m>\vec{u}</m>,<m>\vec{v}</m> y <m>\vec{w}</m>, y se designa por <m>[\vec{u},\vec{v},\vec{w}]</m> a:
+    </p>
+    <p>
+      <me>[\vec{u},\vec{v},\vec{w}]=\vec{u}\cdot(\vec{v} \times \vec{w})</me>
+    </p>
+  </assemblage>
+
+  <subsection xml:id="sub_expresion-analitica-producto-mixto">
+    <title>Expresión analitica del producto mixto.</title>
+    <assemblage xml:id="ass-expresion-analitica-producto-mixto">
+      <title>Expresión analitica del producto mixto.</title>
+      <p>
+        Si <m>\vec{u}(u_1,u_2,u_3)</m>, <m>\vec{v}(v_1,v_2,v_3)</m> y <m>\vec{w}(w_1,w_2,w_3)</m> entonces :
+      </p>
+      <p>
+        <me> 
+          [\vec{u},\vec{v},\vec{w}]= 
+            \begin{vmatrix}
+              u_1 \amp u_2 \amp u_3 \\
+              v_1 \amp v_2 \amp v_3\\
+              w_1 \amp w_2 \amp w_3
+            \end{vmatrix}
+        </me>
+      </p>
+    </assemblage>
+  </subsection>
+
+  <subsection xml:id="sub_propiedades-producto-mixto">
+    <title>Propiedades del producto mixto</title>
+    <p>
+      <ul marker="a)">
+        <li>
+          <p>
+            Si permutamos la posición de dos vectores, el producto mixto cambia de signo:
+          </p>
+          <me>
+            \left[ \vec{u},\vec{v},\vec{w} \right] = - \left[ \vec{v},\vec{u},\vec{w} \right] 
+          </me>
+        </li>
+        <li>
+          <p>
+            Si multiplicamos un vector por un número real, el producto mixto queda multiplicado por dicho número:
+          </p>
+          <me>
+            \left[ \vector{ku},\vec{v},\vec{w} \right] = k \left[ \vec{v},\vec{u},\vec{w} \right] 
+          </me>
+        </li>
+        <li>
+          <p>
+            Si expresamos un vector como la suma de dos vectores, el producto mixto es igual a la suma de los dos productos mixtos:
+          </p>
+          <me>
+            \left[ \vector{u+v},\vec{w},\vec{t} \right] =  \left[ \vec{u},\vec{w},\vec{t} \right]+\left[ \vec{v},\vec{w},\vec{t} \right] 
+          </me>
+        </li>
+      </ul>
+    </p>
+  </subsection>
+
+  <subsection xml:id="sub_aplicaciones-producto-mixto">
+    <title>Aplicaciones del producto mixto</title>
+    <p>
+      El valor absoluto del producto mixto es el volumen del paralelepípedo que forman los tres vectores.
+    </p>
+    <figure>
+      <caption>Volumen paralelepipedo</caption>
+      <image xml:id="img-suma-vectores" source="images/promixto" width="50%">
+      <description>Suma de vectores en forma gráfica.</description>
+      </image>
+    </figure>
+    <me>\text{Volumen}=|[\vec{u},\vec{v},\vec{w}]|</me>
+  </subsection>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
