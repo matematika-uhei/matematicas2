@@ -52,35 +52,8 @@
     <p>
       Ponemos los vectores con un mismo origen y hacemos el paralelogramo formado por dichos vectores y la suma es la diagonal de dicho paralelogramo.
     </p>
-    <figure>
-      <caption>Suma de vectores</caption>
-      <image xml:id="img-suma-vectores-1" width="100%">
-      <description>Suma de vectores en forma gráfica.</description>
-        <latex-image>
-          \begin{tikzpicture}
-          \tkzDefPoints{0/0/A, 2/3/B,3/2/C, 5/1/D, 6/0/E, 8/3/F, 10/2/G, 11/0/H, 13/3/I, 15/2/J, 13/-1/K}
-          \tkzDrawSegment[-latex](A,B)
-          \tkzDrawSegment[-latex](C,D)
-          \tkzDrawSegment[-latex](E,F)
-          \tkzDrawSegment[-latex](F,G)
-          \tkzDrawSegment[-latex,color=red](E,G)
-          \tkzLabelSegment[left](A,B){$\vec{v}$}
-          \tkzLabelSegment[above right](C,D){$\vec{w}$}
-          \tkzLabelSegment[left](E,F){$\vec{v}$}
-          \tkzLabelSegment[above right](F,G){$\vec{w}$}
-          \tkzLabelSegment[below right,color=red](E,G){$\vec{v}+\vec{w}$}
-          \tkzDrawSegment[-latex](H,I)
-          \tkzDrawSegment[dotted,-latex](I,J)
-          \tkzDrawSegment[dotted,-latex](K,J)
-          \tkzDrawSegment[-latex](H,K)
-          \tkzDrawSegment[-latex,color=red](H,J)
-          \tkzLabelSegment[left](H,I){$\vec{v}$}
-          \tkzLabelSegment[below left](H,K){$\vec{w}$}
-          \tkzLabelSegment[below right,color=red](H,J){$\vec{v}+\vec{w}$}
-          \end{tikzpicture}
-        </latex-image>
-      </image>
-    </figure>
+    <image xml:id="img_suma-vectores-1" width="100%" />
+      
   </subsection>
   
   <subsection xml:id="subsec_producto-numero-vector">
@@ -107,38 +80,7 @@
         </li>
       </ul>
     </p>
-    <figure>
-    <caption>Producto de un número real por un vector.</caption>
-      <image xml:id="img-producto-numero-vector" width="100%">
-      <description>Producto de un número real por un vector en forma gráfica.</description>
-        <latex-image>
-          \begin{tikzpicture}
-          \tkzDefPoints{0/0/A, 2/1/B, 6/0/C, 7/0.5/D, 2/0/E, 6/2/F, 4/0/G, 6/1/H, 13/3/I, 15/2/J, 13/-1/K}
-          \tkzDrawSegment[-latex](A,B)
-          \tkzDrawSegment[latex-](C,D)
-          \tkzDrawSegment[-latex](E,F)
-          \tkzDrawSegment[latex-](G,H)
-          \tkzLabelSegment[above left](A,B){$\vec{v}$}
-          \tkzLabelSegment[above left](C,D){$-\frac{1}{2}\vec{v}$}
-          \tkzLabelSegment[above left](E,F){$2\vec{v}$}
-          \tkzLabelSegment[above left](G,H){$-\vec{v}$}
-          \end{tikzpicture}
-        </latex-image>
-      </image>
-    </figure>
+    
+    <image xml:id="img_producto-numero-vector" width="100%" />
   </subsection>
 </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
