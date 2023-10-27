@@ -34,7 +34,7 @@
   </assemblage>
 
   
-  <image xml:id="img_producto-vectorial" width="50%" />
+  <image source="images/geometria/img_producto-vectorial" width="50%" />
 
 
   <subsection xml:id="sub_propiedades-producto-vectorial">

@@ -64,7 +64,7 @@
             </li>
         </ul>
     </p>
-    <image xml:id="img_sistema-referencia-canonico" width="50%" />
+    <image source="images/geometria/img_sistema-referencia-canonico" width="50%" />
 
 	<p>
         Cualquier vector en el espacio se puede poner como <m>\vec{v}=\lambda_ 1 \cdot \vec{i}+\lambda_2 \cdot \vec{j}+\lambda_3 \cdot \vec{k}</m> siendo las componentes de este vector <m>\left( \lambda_1, \lambda_2,\lambda_3 \right)</m>

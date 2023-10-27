@@ -52,7 +52,7 @@
     <p>
       Ponemos los vectores con un mismo origen y hacemos el paralelogramo formado por dichos vectores y la suma es la diagonal de dicho paralelogramo.
     </p>
-    <image xml:id="img_suma-vectores-1" width="100%" />
+    <image source="images/geometria/img_suma-vectores-1" width="100%" />
       
   </subsection>
   
@@ -81,6 +81,6 @@
       </ul>
     </p>
     
-    <image xml:id="img_producto-numero-vector" width="100%" />
+    <image source="images/geometria/img_producto-numero-vector" width="100%" />
   </subsection>
 </section>
