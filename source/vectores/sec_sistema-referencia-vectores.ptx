@@ -64,32 +64,8 @@
             </li>
         </ul>
     </p>
-    <figure>
-    <caption>Sistema de referencia canónico.</caption>
-      <image xml:id="img-sistema-referencia-canonico" width="50%">
-      <description>Sistema de referencia canónico.</description>
-        <latex-image>
-            \begin{tikzpicture}[x={(-0.5cm,-0.5cm)},y={(1cm,0cm)},z={(0cm,1cm)},
-                axis/.style={-latex,blue,thick},
-                vector/.style={-stealth,red,very thick},
-                posicion/.style={-stealth,black,dashed},
-                recta/.style={red,very thick}]
+    <image xml:id="img_sistema-referencia-canonico" width="50%" />
 
-                \coordinate (O) at (0,0,0);
-                \draw[axis] (O) -- (4,0,0) node[below] {x};
-                \draw[axis] (O) -- (0,3,0) node[below] {y};
-                \draw[axis] (O) -- (0,0,3) node[right] {z};
-
-                \draw[vector] (0,0,0) -- (0,0,1)node[left]{$\vec{k}$};
-                \draw[vector] (0,0,0) -- (0,1,0)node[above]{$\vec{j}$};;
-                \draw[vector] (0,0,0) -- (1,0,0)node[left]{$\vec{i}$};;
-                \draw (O) node[below right]{$O$};
-                \draw(O)[fill=black] circle(1.5pt);
-            \end{tikzpicture}
-        </latex-image>
-      </image>
-    </figure>
-	
 	<p>
         Cualquier vector en el espacio se puede poner como <m>\vec{v}=\lambda_ 1 \cdot \vec{i}+\lambda_2 \cdot \vec{j}+\lambda_3 \cdot \vec{k}</m> siendo las componentes de este vector <m>\left( \lambda_1, \lambda_2,\lambda_3 \right)</m>
     </p>
