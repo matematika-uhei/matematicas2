@@ -89,6 +89,13 @@
       <publication>publication/publication2.ptx</publication>
       <output-dir>output/web/vectores</output-dir>
     </target>
+    <target name="print-vectores">
+      <format>pdf</format>
+      <source>source/articulo_vectores.ptx</source>
+      <publication>publication/publication2.ptx</publication>
+      <output-dir>output/print/vectores</output-dir>
+      <xsl>xsl/apc-latex-art.xsl</xsl>
+    </target>
     <target name="geometria">
       <format>html</format>
       <source>source/articulo_geometria.ptx</source>
